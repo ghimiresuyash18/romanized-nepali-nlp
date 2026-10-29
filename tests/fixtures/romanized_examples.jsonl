@@ -1,0 +1,109 @@
+{"id": "ord_001", "category": "ordinary", "text": "namaste sathi haru k cha khabar?", "expected_label": "neutral", "notes": "Standard greeting"}
+{"id": "ord_002", "category": "ordinary", "text": "aaja ma dherai khusi chu.", "expected_label": "positive", "notes": "Expression of happiness"}
+{"id": "ord_003", "category": "ordinary", "text": "bhat khanu bhayo ta aaja?", "expected_label": "neutral", "notes": "Casual question about meal"}
+{"id": "ord_004", "category": "ordinary", "text": "yo geet sunera man shanta huncha.", "expected_label": "positive", "notes": "Positive musical experience"}
+{"id": "ord_005", "category": "ordinary", "text": "mero phone harayo k garne hola.", "expected_label": "negative", "notes": "Distress about lost phone"}
+{"id": "ord_006", "category": "ordinary", "text": "bholi bihana bhetaula hai sabaijana.", "expected_label": "neutral", "notes": "Scheduling meeting"}
+{"id": "ord_007", "category": "ordinary", "text": "aaja ko din kasto aalas lagdo bhayo.", "expected_label": "negative", "notes": "Boredom/fatigue"}
+{"id": "ord_008", "category": "ordinary", "text": "kathmandu ma dherai dhulo cha.", "expected_label": "negative", "notes": "Complaint about dust"}
+{"id": "ord_009", "category": "ordinary", "text": "yo thau sachhai sundar raicha.", "expected_label": "positive", "notes": "Compliment on scenic place"}
+{"id": "ord_010", "category": "ordinary", "text": "tapaiko ghar kata tira parcha ni?", "expected_label": "neutral", "notes": "Polite inquiry"}
+{"id": "ord_011", "category": "ordinary", "text": "sadhai yastai hos sabailai subhakamana.", "expected_label": "positive", "notes": "Well wishes"}
+{"id": "ord_012", "category": "ordinary", "text": "aaja college bida cha re.", "expected_label": "neutral", "notes": "Notice of holiday"}
+{"id": "ord_013", "category": "ordinary", "text": "kaam garda garda thakai lagyo.", "expected_label": "negative", "notes": "Tiredness after work"}
+{"id": "ord_014", "category": "ordinary", "text": "yo naya movie herna janu parla.", "expected_label": "neutral", "notes": "Intention to watch movie"}
+{"id": "ord_015", "category": "ordinary", "text": "chhito aaunus samaya bhai sakyo.", "expected_label": "neutral", "notes": "Time reminder"}
+{"id": "ord_016", "category": "ordinary", "text": "timilai dekhera dherai khusi lagyo.", "expected_label": "positive", "notes": "Warm personal greeting"}
+{"id": "ord_017", "category": "ordinary", "text": "kehi bujhina feri bhandinus na.", "expected_label": "neutral", "notes": "Request for explanation"}
+{"id": "ord_018", "category": "ordinary", "text": "sarai jhyau lagyo aaja ta malai.", "expected_label": "negative", "notes": "Expression of annoyance"}
+{"id": "ord_019", "category": "ordinary", "text": "dhanyabad hajurko madat ko lagi.", "expected_label": "positive", "notes": "Thankfulness"}
+{"id": "ord_020", "category": "ordinary", "text": "gharma sabailai mero namaskar.", "expected_label": "neutral", "notes": "Family greetings"}
+{"id": "var_001", "category": "spelling_variation", "text": "yo ta ramro cha", "expected_label": "positive", "notes": "Baseline spelling"}
+{"id": "var_002", "category": "spelling_variation", "text": "yo ta raamro cha", "expected_label": "positive", "notes": "Elongated vowel a"}
+{"id": "var_003", "category": "spelling_variation", "text": "yo ta ramroo cha", "expected_label": "positive", "notes": "Elongated vowel o"}
+{"id": "var_004", "category": "spelling_variation", "text": "yo ta ramrooo cha", "expected_label": "positive", "notes": "Extended vowel ending"}
+{"id": "var_005", "category": "spelling_variation", "text": "yo kasto ramro chha", "expected_label": "positive", "notes": "Aspirated chha variant"}
+{"id": "var_006", "category": "spelling_variation", "text": "yo kasto ramro chaa", "expected_label": "positive", "notes": "Lengthened chaa"}
+{"id": "var_007", "category": "spelling_variation", "text": "derai maza aayo", "expected_label": "positive", "notes": "Shortened dherai to derai"}
+{"id": "var_008", "category": "spelling_variation", "text": "dheraiii maza aayo", "expected_label": "positive", "notes": "Lengthened dheraiii"}
+{"id": "var_009", "category": "spelling_variation", "text": "dheraii ramro thau", "expected_label": "positive", "notes": "Double i"}
+{"id": "var_010", "category": "spelling_variation", "text": "tapai kasto hununcha", "expected_label": "neutral", "notes": "Standard honorific"}
+{"id": "var_011", "category": "spelling_variation", "text": "tapaai kasto hununcha", "expected_label": "neutral", "notes": "Vowel duplication tapaai"}
+{"id": "var_012", "category": "spelling_variation", "text": "tw kasto chhas", "expected_label": "neutral", "notes": "Colloquial tw for ta/tan"}
+{"id": "var_013", "category": "spelling_variation", "text": "hoina hola yesto", "expected_label": "neutral", "notes": "Standard hoina"}
+{"id": "var_014", "category": "spelling_variation", "text": "haina hola yesto", "expected_label": "neutral", "notes": "Variant haina"}
+{"id": "var_015", "category": "spelling_variation", "text": "k gardai xau sathi", "expected_label": "neutral", "notes": "Using x for chha (xau)"}
+{"id": "var_016", "category": "spelling_variation", "text": "mero phn ma chaldaina", "expected_label": "negative", "notes": "Short abbreviation phn"}
+{"id": "var_017", "category": "spelling_variation", "text": "kina yesto vako hola", "expected_label": "negative", "notes": "Using v instead of bh (vako)"}
+{"id": "var_018", "category": "spelling_variation", "text": "sabai kura thik xan", "expected_label": "positive", "notes": "Using x for chha (xan)"}
+{"id": "cs_001", "category": "code_switching", "text": "yo project ekdam cool cha bro.", "expected_label": "positive", "notes": "English slang cool and bro"}
+{"id": "cs_002", "category": "code_switching", "text": "please malai support garnus na.", "expected_label": "neutral", "notes": "English verbs please and support"}
+{"id": "cs_003", "category": "code_switching", "text": "Check out this link https://hamro.com/news for details.", "expected_label": "neutral", "notes": "Full URL with English phrase"}
+{"id": "cs_004", "category": "code_switching", "text": "@anil_k timro video dami thiyo yar!", "expected_label": "positive", "notes": "Social handle mention @anil_k"}
+{"id": "cs_005", "category": "code_switching", "text": "#NepalKoPride ma sabai nepali unite hunu parcha.", "expected_label": "positive", "notes": "Hashtag inclusion"}
+{"id": "cs_006", "category": "code_switching", "text": "mero 9841000000 ma call garna saknu huncha.", "expected_label": "neutral", "notes": "Phone number digits"}
+{"id": "cs_007", "category": "code_switching", "text": "delivery charge Rs 150 dherai mahango bhayo.", "expected_label": "negative", "notes": "Currency Rs and numeric charge"}
+{"id": "cs_008", "category": "code_switching", "text": "contact me at info@hamroservice.np for order.", "expected_label": "neutral", "notes": "Email address in text"}
+{"id": "cs_009", "category": "code_switching", "text": "total waste of time ra money ho yo.", "expected_label": "negative", "notes": "English idiom mixed with Nepali copula"}
+{"id": "cs_010", "category": "code_switching", "text": "customer service ekdam pathetic cha worst experience.", "expected_label": "negative", "notes": "Heavy English adjectives"}
+{"id": "cs_011", "category": "code_switching", "text": "amazing quality, best purchase ever bhanchu ma ta.", "expected_label": "positive", "notes": "English compliment clause"}
+{"id": "cs_012", "category": "code_switching", "text": "app crash vairacha repeatedly login garda.", "expected_label": "negative", "notes": "Tech vocabulary crash and login"}
+{"id": "cs_013", "category": "code_switching", "text": "discount code SAVE20 halera kinna milcha.", "expected_label": "neutral", "notes": "Alphanumeric promo code"}
+{"id": "cs_014", "category": "code_switching", "text": "Update 2.5 pachi performance smooth bhayo.", "expected_label": "positive", "notes": "Software version number"}
+{"id": "cs_015", "category": "code_switching", "text": "Visit www.nepalkhata.org for forms.", "expected_label": "neutral", "notes": "www URL"}
+{"id": "cs_016", "category": "code_switching", "text": "DM me on @insta_nepal for collab.", "expected_label": "neutral", "notes": "Social media acronym and handle"}
+{"id": "cs_017", "category": "code_switching", "text": "50% off ma payeko item genuine raicha.", "expected_label": "positive", "notes": "Percentage and English words"}
+{"id": "punc_001", "category": "punctuation_emoji", "text": "kasto ramro geet ❤️❤️", "expected_label": "positive", "notes": "Heart emojis"}
+{"id": "punc_002", "category": "punctuation_emoji", "text": "kasto naramro service 😡👎", "expected_label": "negative", "notes": "Angry face and thumbs down"}
+{"id": "punc_003", "category": "punctuation_emoji", "text": "aaja ko match jitiyo 🔥🔥🔥", "expected_label": "positive", "notes": "Fire emojis"}
+{"id": "punc_004", "category": "punctuation_emoji", "text": "kina yesto gareko??? k faida bhayo???", "expected_label": "negative", "notes": "Repeated question marks"}
+{"id": "punc_005", "category": "punctuation_emoji", "text": "wowww!!! unbelievable performance!!!", "expected_label": "positive", "notes": "Multiple exclamation marks"}
+{"id": "punc_006", "category": "punctuation_emoji", "text": "thikai cha :), bholi bhetaula :D", "expected_label": "positive", "notes": "Emoticon faces"}
+{"id": "punc_007", "category": "punctuation_emoji", "text": "man dukhyo :'( kina yesto", "expected_label": "negative", "notes": "Crying emoticon"}
+{"id": "punc_008", "category": "punctuation_emoji", "text": "nepal jindabad 🇳🇵🇳🇵", "expected_label": "positive", "notes": "Flag emojis"}
+{"id": "punc_009", "category": "punctuation_emoji", "text": "haha sarai funny thiyo yaar 😂🤣", "expected_label": "positive", "notes": "Laughing emojis"}
+{"id": "punc_010", "category": "punctuation_emoji", "text": "timilai thaha cha ... ma kina aayina ...", "expected_label": "neutral", "notes": "Ellipses"}
+{"id": "punc_011", "category": "punctuation_emoji", "text": "k bhannu ra khub garyau (sarcastic)", "expected_label": "negative", "notes": "Parenthetical remark"}
+{"id": "punc_012", "category": "punctuation_emoji", "text": "bhetnu parcha bro 👍💯", "expected_label": "positive", "notes": "Hundred and thumbs up"}
+{"id": "punc_013", "category": "punctuation_emoji", "text": "sad news sunera aashu aayo 😭💔", "expected_label": "negative", "notes": "Loud crying and broken heart"}
+{"id": "punc_014", "category": "punctuation_emoji", "text": "aaja ta party ho 🎉🥳🍻", "expected_label": "positive", "notes": "Celebration emojis"}
+{"id": "punc_015", "category": "punctuation_emoji", "text": "yesto ni huncha ra ???!!", "expected_label": "negative", "notes": "Mixed punctuation marks"}
+{"id": "punc_016", "category": "punctuation_emoji", "text": "dhanyabad 🙏 namaste", "expected_label": "positive", "notes": "Folded hands emoji"}
+{"id": "punc_017", "category": "punctuation_emoji", "text": "bore lagyo 🥱😴", "expected_label": "negative", "notes": "Sleepy emojis"}
+{"id": "neg_001", "category": "negation_intensifier", "text": "yo mobile ramro chaina.", "expected_label": "negative", "notes": "Negated quality chaina"}
+{"id": "neg_002", "category": "negation_intensifier", "text": "yo mobile bilkul ramro chaina.", "expected_label": "negative", "notes": "Intensifier bilkul with negation"}
+{"id": "neg_003", "category": "negation_intensifier", "text": "ekdam ramro khana thiyo.", "expected_label": "positive", "notes": "Intensifier ekdam positive"}
+{"id": "neg_004", "category": "negation_intensifier", "text": "dherai naramro behaving garyo.", "expected_label": "negative", "notes": "Intensifier dherai with negative word"}
+{"id": "neg_005", "category": "negation_intensifier", "text": "malai yo geet mann parena.", "expected_label": "negative", "notes": "Dislike negation mann parena"}
+{"id": "neg_006", "category": "negation_intensifier", "text": "malai dherai mann paryo.", "expected_label": "positive", "notes": "Strong positive preference"}
+{"id": "neg_007", "category": "negation_intensifier", "text": "khasai ramro lagena malai ta.", "expected_label": "negative", "notes": "Mild negative khasai"}
+{"id": "neg_008", "category": "negation_intensifier", "text": "khana na ramro thiyo na naramro.", "expected_label": "neutral", "notes": "Neither good nor bad (neutral)"}
+{"id": "neg_009", "category": "negation_intensifier", "text": "ekdamai babbbal movie cha hernus.", "expected_label": "positive", "notes": "Slang intensifier babbbal"}
+{"id": "neg_010", "category": "negation_intensifier", "text": "sarai jhur kura garyau yar.", "expected_label": "negative", "notes": "Slang intensifier jhur"}
+{"id": "neg_011", "category": "negation_intensifier", "text": "kehi pani thik chaina yaha.", "expected_label": "negative", "notes": "Absolute negation kehi pani"}
+{"id": "neg_012", "category": "negation_intensifier", "text": "kati ramro muskaan ho.", "expected_label": "positive", "notes": "Exclamatory intensifier kati"}
+{"id": "neg_013", "category": "negation_intensifier", "text": "kati naramro bhagya mero.", "expected_label": "negative", "notes": "Exclamatory negative"}
+{"id": "neg_014", "category": "negation_intensifier", "text": "aliali ramro cha tara dherai hoina.", "expected_label": "neutral", "notes": "Diminutive aliali"}
+{"id": "neg_015", "category": "negation_intensifier", "text": "halka ramro thiyo program.", "expected_label": "neutral", "notes": "Diminutive halka"}
+{"id": "neg_016", "category": "negation_intensifier", "text": "achammai ramro painting banayecha.", "expected_label": "positive", "notes": "Intensifier achammai"}
+{"id": "neg_017", "category": "negation_intensifier", "text": "ek ratti pani mann parena.", "expected_label": "negative", "notes": "Idiomatic negation ek ratti"}
+{"id": "edge_001", "category": "edge_cases", "text": "", "expected_label": "neutral", "notes": "Empty text string"}
+{"id": "edge_002", "category": "edge_cases", "text": "   ", "expected_label": "neutral", "notes": "Whitespace-only string"}
+{"id": "edge_003", "category": "edge_cases", "text": "\t\n  \t", "expected_label": "neutral", "notes": "Tabs and newlines"}
+{"id": "edge_004", "category": "edge_cases", "text": "???", "expected_label": "neutral", "notes": "Only punctuation marks"}
+{"id": "edge_005", "category": "edge_cases", "text": "1234567890", "expected_label": "neutral", "notes": "Only digits"}
+{"id": "edge_006", "category": "edge_cases", "text": "https://broken-url-with-no-spaces.com/path?arg=1#top", "expected_label": "neutral", "notes": "Only a long complex URL"}
+{"id": "edge_007", "category": "edge_cases", "text": "nepālī mānchhe rāmro chha", "expected_label": "positive", "notes": "Accented Latin characters ā and ī"}
+{"id": "edge_008", "category": "edge_cases", "text": "RAMRO KURA GAREKO HO SABAILE", "expected_label": "positive", "notes": "ALL CAPS text"}
+{"id": "edge_009", "category": "edge_cases", "text": "rAmRo MaNcHe kHaTaM kAm", "expected_label": "negative", "notes": "Alternating mixed case"}
+{"id": "edge_010", "category": "edge_cases", "text": "ramro\u200bcha\u200bhai", "expected_label": "positive", "notes": "Text containing zero-width spaces"}
+{"id": "edge_011", "category": "edge_cases", "text": "yo ta http:// incomplete url", "expected_label": "neutral", "notes": "Malformed or broken URL protocol"}
+{"id": "edge_012", "category": "edge_cases", "text": "contact me @", "expected_label": "neutral", "notes": "Dangling @ symbol without username"}
+{"id": "edge_013", "category": "edge_cases", "text": "trending # today", "expected_label": "neutral", "notes": "Dangling hashtag without topic"}
+{"id": "edge_014", "category": "edge_cases", "text": "@@@ ### $$$ %%% ^^^", "expected_label": "neutral", "notes": "Symbol sequences without alphanumeric text"}
+{"id": "edge_015", "category": "edge_cases", "text": "👍👍👍👍👍", "expected_label": "positive", "notes": "Only emojis"}
+{"id": "edge_016", "category": "edge_cases", "text": "a", "expected_label": "neutral", "notes": "Single letter text"}
+{"id": "edge_017", "category": "edge_cases", "text": "ok", "expected_label": "neutral", "notes": "Minimal 2-character text"}
+{"id": "edge_018", "category": "edge_cases", "text": "nepal \u00e9tudiant café style", "expected_label": "neutral", "notes": "Foreign Latin diacritics"}
+{"id": "edge_019", "category": "edge_cases", "text": "bistārō jānos na hajur", "expected_label": "neutral", "notes": "Macron diacritics for Nepali transliteration"}
+{"id": "edge_020", "category": "edge_cases", "text": "mero email test..name@invalid-domain..com thiyo", "expected_label": "neutral", "notes": "Malformed email with consecutive dots"}
