@@ -68,3 +68,31 @@ def test_cli_tokenize_html_export(tmp_path):
     content = html_file.read_text(encoding="utf-8")
     assert "<!DOCTYPE html>" in content
     assert "dherai" in content
+
+
+def test_cli_preprocess_positional():
+    res = run_cli("preprocess", "yo ta raamro chha")
+    assert res.returncode == 0
+    assert res.stdout.strip() == "yo ta ramro cha"
+
+
+def test_cli_preprocess_format_json():
+    res = run_cli("preprocess", "dheraiii maza aayo", "--format", "json")
+    assert res.returncode == 0
+    data = json.loads(res.stdout)
+    assert data["raw_text"] == "dheraiii maza aayo"
+    assert data["normalized_text"] == "dherai maza aayo"
+    assert "normalize_variants_conservative" in data["steps"]
+
+
+def test_cli_preprocess_format_diff():
+    res = run_cli("preprocess", "raamro", "--format", "diff")
+    assert res.returncode == 0
+    assert "- raamro" in res.stdout
+    assert "+ ramro" in res.stdout
+
+
+def test_cli_preprocess_stdin():
+    res = run_cli("preprocess", "-", input_text="  kasto   chha   ")
+    assert res.returncode == 0
+    assert res.stdout.strip() == "kasto cha"

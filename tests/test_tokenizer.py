@@ -95,9 +95,7 @@ def test_alphanumeric_tokens():
         assert actual == expected_texts, f"Alphanumeric mismatch for {text!r}: {actual}"
         # All should be WORD (not UNKNOWN)
         for t in tokens:
-            assert t.category != TokenCategory.UNKNOWN, (
-                f"UNKNOWN token {t.text!r} in {text!r}"
-            )
+            assert t.category != TokenCategory.UNKNOWN, f"UNKNOWN token {t.text!r} in {text!r}"
 
 
 def test_compound_emojis():
@@ -181,9 +179,7 @@ def test_accuracy_against_expected_tokens_fixture():
             # Accept WORD in place of ENGLISH_WORD: audit removed the distinction.
             exp_cat = exp["category"]
             act_cat = act.category.value
-            if act_cat == exp_cat or (
-                exp_cat == "ENGLISH_WORD" and act_cat == "WORD"
-            ):
+            if act_cat == exp_cat or (exp_cat == "ENGLISH_WORD" and act_cat == "WORD"):
                 matched += 1
 
     accuracy = matched / total_expected

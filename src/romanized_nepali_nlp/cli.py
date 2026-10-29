@@ -8,6 +8,8 @@ import sys
 from pathlib import Path
 from typing import List, Optional
 
+from romanized_nepali_nlp.normalization import generate_diff
+from romanized_nepali_nlp.pipeline import PipelineConfig, PreprocessingPipeline
 from romanized_nepali_nlp.spans import (
     format_html,
     format_markdown,
@@ -66,6 +68,51 @@ def create_parser() -> argparse.ArgumentParser:
         "--no-apostrophes",
         action="store_true",
         help="Split intra-word apostrophes into separate tokens",
+    )
+
+    # Preprocess subcommand
+    preprocess_parser = subparsers.add_parser(
+        "preprocess", help="Normalize and preprocess Romanized Nepali text"
+    )
+    preprocess_parser.add_argument(
+        "text",
+        nargs="?",
+        default=None,
+        help="Input text to preprocess (or pass '-' to read from stdin)",
+    )
+    preprocess_parser.add_argument(
+        "-f",
+        "--file",
+        type=str,
+        default=None,
+        help="Path to a file to read input text from",
+    )
+    preprocess_parser.add_argument(
+        "--format",
+        choices=["text", "json", "diff"],
+        default="text",
+        help="Output format (default: text)",
+    )
+    preprocess_parser.add_argument(
+        "--lowercase",
+        action="store_true",
+        help="Convert text to lowercase (disabled by default)",
+    )
+    preprocess_parser.add_argument(
+        "--reduce-repetitions",
+        action="store_true",
+        help="Bound elongated repeated characters",
+    )
+    preprocess_parser.add_argument(
+        "--no-variants",
+        action="store_true",
+        help="Disable spelling variant normalization",
+    )
+    preprocess_parser.add_argument(
+        "--variant-policy",
+        choices=["conservative", "aggressive"],
+        default="conservative",
+        help="Variant normalization policy (default: conservative)",
     )
 
     return parser
@@ -132,6 +179,29 @@ def run_tokenize(args: argparse.Namespace) -> int:
     return 0
 
 
+def run_preprocess(args: argparse.Namespace) -> int:
+    text = read_input_text(args)
+
+    config = PipelineConfig(
+        lowercase=args.lowercase,
+        reduce_repetitions=args.reduce_repetitions,
+        normalize_variants=not args.no_variants,
+        variant_policy=args.variant_policy,
+    )
+    pipeline = PreprocessingPipeline(config=config)
+    result = pipeline.preprocess(text)
+
+    if args.format == "json":
+        sys.stdout.write(json.dumps(result.to_dict(), ensure_ascii=False, indent=2) + "\n")
+    elif args.format == "diff":
+        diff_view = generate_diff(result.raw_text, result.normalized_text)
+        sys.stdout.write(diff_view + "\n")
+    else:
+        sys.stdout.write(result.normalized_text + "\n")
+
+    return 0
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     parser = create_parser()
     args = parser.parse_args(argv)
@@ -142,6 +212,8 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     if args.subcommand == "tokenize":
         return run_tokenize(args)
+    if args.subcommand == "preprocess":
+        return run_preprocess(args)
 
     return 0
 

@@ -16,14 +16,15 @@ MENTION_PATTERN = r"@[a-zA-Z0-9_]+"
 HASHTAG_PATTERN = r"#[a-zA-Z0-9_]+"
 NUMBER_PATTERN = r"\b\d+(?:[.,]\d+)*%?\b"
 
-# Fix 2: compound emojis – match base + skin-tone modifiers + ZWJ sequences as one token.
+# Fix 2: compound emojis, flags, skin-tone modifiers, and ZWJ sequences as one token.
 EMOJI_PATTERN = (
+    r"(?:[\U0001f1e6-\U0001f1ff]{2})|"  # Regional indicator pair (national flags)
     r"(?:"
     r"[\U00010000-\U0010ffff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55]"
     r")"
     r"(?:"
-    r"\ufe0f?"           # optional variation selector-16
-    r"(?:\u200d"         # optional ZWJ + following glyph
+    r"\ufe0f?"  # optional variation selector-16
+    r"(?:\u200d"  # optional ZWJ + following glyph
     r"(?:[\U00010000-\U0010ffff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55])"
     r"\ufe0f?"
     r")*"
