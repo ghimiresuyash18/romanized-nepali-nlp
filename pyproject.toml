@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "NLP toolkit for Romanized Nepali text: tokenization, normalization, and sentiment baseline"
 readme = "README.md"
 authors = [{ name = "NLP Team" }]
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.10"
 dependencies = []
 
