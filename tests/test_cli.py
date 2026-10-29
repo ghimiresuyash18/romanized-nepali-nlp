@@ -28,7 +28,6 @@ def test_cli_tokenize_positional():
     assert "ramro" in res.stdout
     assert "WORD" in res.stdout
     assert "bro" in res.stdout
-    assert "ENGLISH_WORD" in res.stdout
 
 
 def test_cli_tokenize_format_json():

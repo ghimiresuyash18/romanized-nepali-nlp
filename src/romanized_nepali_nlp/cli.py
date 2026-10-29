@@ -58,11 +58,6 @@ def create_parser() -> argparse.ArgumentParser:
         help="Save an interactive HTML token visualization to the specified filepath",
     )
     tokenize_parser.add_argument(
-        "--no-english",
-        action="store_true",
-        help="Do not classify loanwords as ENGLISH_WORD; categorize all as WORD",
-    )
-    tokenize_parser.add_argument(
         "--no-hyphens",
         action="store_true",
         help="Split intra-word hyphens into separate tokens",
@@ -101,7 +96,6 @@ def run_tokenize(args: argparse.Namespace) -> int:
     tokenizer = Tokenizer(
         allow_apostrophes=not args.no_apostrophes,
         allow_hyphens=not args.no_hyphens,
-        classify_english=not args.no_english,
     )
 
     tokens = tokenizer.tokenize(text)
