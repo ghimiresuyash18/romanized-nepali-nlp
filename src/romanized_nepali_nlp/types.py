@@ -108,9 +108,7 @@ class PreprocessingResult:
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> PreprocessingResult:
-        protected = [
-            ProtectedSpan.from_dict(span) for span in data.get("protected_spans", [])
-        ]
+        protected = [ProtectedSpan.from_dict(span) for span in data.get("protected_spans", [])]
         return cls(
             raw_text=data["raw_text"],
             normalized_text=data["normalized_text"],
