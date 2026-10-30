@@ -1,6 +1,6 @@
 # Data
 
-This repository includes small, public-safe datasets for running the examples. It does **not** include the full scraped corpus.
+This repository includes public-safe benchmark data and processed snapshots for running the examples. It does **not** include the original raw scraped corpus.
 
 The processed corpus below comes from [Boredoom17/Nepali-Flow-Roman](https://huggingface.co/datasets/Boredoom17/Nepali-Flow-Roman), licensed **CC BY 4.0**, by Aadarsha Chhetri. Keep this attribution with any redistributed copy.
 
