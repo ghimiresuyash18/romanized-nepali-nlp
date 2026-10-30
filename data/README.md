@@ -2,12 +2,16 @@
 
 This repository includes small, public-safe datasets for running the examples. It does **not** include the full scraped corpus.
 
+The processed corpus below comes from [Boredoom17/Nepali-Flow-Roman](https://huggingface.co/datasets/Boredoom17/Nepali-Flow-Roman), licensed **CC BY 4.0**, by Aadarsha Chhetri. Keep this attribution with any redistributed copy.
+
 ## Included
 
 - `processed/spelling_challenge.jsonl`: 150 spelling-variation challenge examples.
 - `processed/spelling_challenge_manifest.json`: challenge-set metadata and SHA-256 hash.
 - `processed/baseline_phase5/benchmark.jsonl`: 15-record public benchmark.
 - `processed/error_analysis.jsonl`: reviewed error metadata.
+- `processed/nepali_flow_roman_full/`: processed full corpus snapshot.
+- `processed/nepali_flow_roman_v2/`: processed v2 corpus snapshot.
 - `../tests/fixtures/romanized_examples.jsonl`: 106 labeled examples used by tests and the baseline demo.
 
 Run the included workflows from the repository root:

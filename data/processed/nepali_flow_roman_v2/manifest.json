@@ -1,0 +1,15 @@
+{
+  "dataset": "Boredoom17/Nepali-Flow-Roman",
+  "revision": "pinned-snapshot",
+  "downloaded_at": "2026-10-30T11:20:00Z",
+  "rows_downloaded": 307999,
+  "source_license_field": "CC BY 4.0",
+  "upstream_attribution": "Aadarsha Chhetri. (2026). Nepali-Flow-Roman.",
+  "local_sha256": "ce2fbfef5cfe8c7c9d4d49714420921b88af00f6d09cf73fb5ad26b6007c560c",
+  "processing_version": "0.1.0",
+  "notes": [
+    "Unlabeled external corpus",
+    "YouTube comments in Latin script"
+  ],
+  "source_url": "https://huggingface.co/datasets/Boredoom17/Nepali-Flow-Roman"
+}
