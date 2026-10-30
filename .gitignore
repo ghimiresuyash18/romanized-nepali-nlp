@@ -16,8 +16,10 @@ htmlcov/
 # Ignore large raw and processed datasets (fixtures in tests/fixtures are used for testing)
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/README.md
 data/interim/*
 !data/interim/.gitkeep
+!data/interim/README.md
 data/processed/*
 !data/processed/.gitkeep
-
+!data/processed/README.md
