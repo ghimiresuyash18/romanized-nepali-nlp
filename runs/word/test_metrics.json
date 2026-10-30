@@ -1,0 +1,185 @@
+{
+  "total_records": 15,
+  "accuracy": 0.6667,
+  "macro_f1": 0.6243,
+  "weighted_f1": 0.6519,
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "per_class": {
+    "negative": {
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444,
+      "support": 4
+    },
+    "neutral": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714,
+      "support": 5
+    },
+    "positive": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571,
+      "support": 6
+    }
+  },
+  "confusion_matrix": {
+    "negative": {
+      "negative": 2,
+      "neutral": 0,
+      "positive": 2
+    },
+    "neutral": {
+      "negative": 3,
+      "neutral": 2,
+      "positive": 0
+    },
+    "positive": {
+      "negative": 0,
+      "neutral": 0,
+      "positive": 6
+    }
+  },
+  "bootstrap_ci": {
+    "accuracy": [
+      0.4,
+      0.8667
+    ],
+    "macro_f1": [
+      0.3521,
+      0.8474
+    ]
+  },
+  "slices": [
+    {
+      "name": "spelling_variation",
+      "count": 4,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "note": null
+    },
+    {
+      "name": "negation",
+      "count": 1,
+      "accuracy": null,
+      "macro_f1": null,
+      "note": "insufficient_samples (n=1 < 3)"
+    },
+    {
+      "name": "emojis",
+      "count": 3,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "note": null
+    },
+    {
+      "name": "code_switching",
+      "count": 5,
+      "accuracy": 0.4,
+      "macro_f1": 0.2667,
+      "note": null
+    },
+    {
+      "name": "short_text",
+      "count": 4,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "note": null
+    },
+    {
+      "name": "special_tokens",
+      "count": 2,
+      "accuracy": null,
+      "macro_f1": null,
+      "note": "insufficient_samples (n=2 < 3)"
+    }
+  ],
+  "error_count": 5,
+  "errors": [
+    {
+      "id": "cs_002",
+      "text": "please malai support garnus na.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3658,
+      "scores": {
+        "negative": 0.36580496368181786,
+        "neutral": 0.3511907979383569,
+        "positive": 0.2830042383798252
+      },
+      "text_length": 31,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "cs_006",
+      "text": "mero 9841000000 ma call garna saknu huncha.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3854,
+      "scores": {
+        "negative": 0.3853717048085445,
+        "neutral": 0.28726767717252055,
+        "positive": 0.327360618018935
+      },
+      "text_length": 43,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "ord_003",
+      "text": "bhat khanu bhayo ta aaja?",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3658,
+      "scores": {
+        "negative": 0.36580521268651084,
+        "neutral": 0.2886799900517884,
+        "positive": 0.34551479726170076
+      },
+      "text_length": 25,
+      "slice_tags": []
+    },
+    {
+      "id": "cs_007",
+      "text": "delivery charge Rs 150 dherai mahango bhayo.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4565,
+      "scores": {
+        "negative": 0.27875044824350964,
+        "neutral": 0.2647108763069603,
+        "positive": 0.4565386754495301
+      },
+      "text_length": 44,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "neg_010",
+      "text": "sarai jhur kura garyau yar.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3825,
+      "scores": {
+        "negative": 0.30534626150612826,
+        "neutral": 0.31217562042430946,
+        "positive": 0.38247811806956233
+      },
+      "text_length": 27,
+      "slice_tags": [
+        "negation"
+      ]
+    }
+  ]
+}

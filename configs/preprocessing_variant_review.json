@@ -1,0 +1,20 @@
+{
+  "unicode_form": "NFC",
+  "strip_zero_width": true,
+  "collapse_whitespace": true,
+  "preserve_newlines": true,
+  "lowercase": false,
+  "reduce_repetitions": true,
+  "max_repeats": 2,
+  "normalize_variants": true,
+  "variant_policy": "conservative",
+  "protected_modes": {
+    "URL": "preserve",
+    "EMAIL": "preserve",
+    "MENTION": "preserve",
+    "HASHTAG": "preserve",
+    "EMOJI": "preserve",
+    "NUMBER": "preserve"
+  },
+  "failure_policy": "skip_with_warning"
+}

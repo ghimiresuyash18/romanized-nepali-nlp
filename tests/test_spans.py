@@ -92,6 +92,15 @@ def test_format_terminal_and_markdown():
     assert "| `k` | `WORD` |" in md
     assert "| `?` | `PUNCTUATION` |" in md
 
+    # Check pipe and backtick escaping in markdown
+    special_tokens = [
+        Token(text="|", category=TokenCategory.PUNCTUATION, start=0, end=1),
+        Token(text="`", category=TokenCategory.PUNCTUATION, start=2, end=3),
+    ]
+    special_md = format_markdown(special_tokens)
+    assert r"| `\|` |" in special_md
+    assert r"| `\`` |" in special_md
+
     j = format_tokens_json(tokens)
     assert '"text": "k"' in j
 
@@ -99,7 +108,13 @@ def test_format_terminal_and_markdown():
 def test_format_html():
     text = "namaste 🙏"
     tokens = [
-        Token(text="namaste", category=TokenCategory.WORD, start=0, end=7),
+        Token(
+            text="namaste",
+            category=TokenCategory.WORD,
+            start=0,
+            end=7,
+            metadata={"note": "it's <script>alert(1)</script>"},
+        ),
         Token(text="🙏", category=TokenCategory.EMOJI, start=8, end=9),
     ]
     html_output = format_html(tokens, text, title="Demo Test")
@@ -108,3 +123,6 @@ def test_format_html():
     assert "🙏" in html_output
     assert "WORD" in html_output
     assert "EMOJI" in html_output
+    # Unescaped script tags must not be present
+    assert "<script>" not in html_output
+    assert "&lt;script&gt;" in html_output

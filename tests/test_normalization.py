@@ -69,6 +69,12 @@ def test_bounded_repetition_reduction():
     assert changed is True
     assert reduced == "ramroo dheraii geet"
 
+    # Numbers and prices must NEVER be truncated
+    num_text = "Rs 1000000 and 9800000000 thiyo"
+    num_res, num_changed = reduce_repetitions(num_text, max_repeats=2)
+    assert num_changed is False
+    assert num_res == num_text
+
     # No repeats over limit
     unchanged, c = reduce_repetitions("ramro cha", max_repeats=2)
     assert c is False
@@ -79,16 +85,22 @@ def test_protected_spans_preserve_mode():
     text = "Visit https://hamro.com/news, @anil_k for #Nepal 🇳🇵"
     masked, protected_spans, p_map = mask_protected_spans(text)
 
-    # Placeholders should be present in masked text
-    assert "<__PROTECTED_URL_0__>" in masked
-    assert "<__PROTECTED_MENTION_1__>" in masked
-    assert "<__PROTECTED_HASHTAG_2__>" in masked
-    assert "<__PROTECTED_EMOJI_3__>" in masked
+    # Placeholders should be present in masked text and map
+    assert any(p.endswith("_URL_0__>") for p in p_map)
+    assert any(p.endswith("_MENTION_1__>") for p in p_map)
+    assert any(p.endswith("_HASHTAG_2__>") for p in p_map)
+    assert any(p.endswith("_EMOJI_3__>") for p in p_map)
     assert len(protected_spans) == 4
 
     # Restoration in preserve mode recovers original text
     restored = restore_protected_spans(masked, p_map, modes={"URL": "preserve"})
     assert restored == text
+
+    # Verify collision resistance against literal placeholder text in user input
+    collision_text = "User typed <__PROTECTED_NUMBER_0__> and 9841000000"
+    m_coll, _, map_coll = mask_protected_spans(collision_text)
+    r_coll = restore_protected_spans(m_coll, map_coll)
+    assert r_coll == collision_text
 
 
 def test_protected_spans_replace_and_remove_modes():
@@ -100,6 +112,8 @@ def test_protected_spans_replace_and_remove_modes():
     assert "<NUMBER>" in restored
     assert "9841000000" not in restored
     assert "info@hamro.np" not in restored
+    # Check that removing EMAIL does not leave orphan double spaces
+    assert restored == "Call <NUMBER> or email"
 
 
 def test_generate_diff():

@@ -1,0 +1,10 @@
+{"id": "norm_01", "description": "Positive copula", "raw": "ramro cha", "expected_negation": false}
+{"id": "norm_02", "description": "Negative copula chaina", "raw": "ramro chaina", "expected_negation": true}
+{"id": "norm_03", "description": "Negative verb lagena", "raw": "ramro lagena", "expected_negation": true}
+{"id": "norm_04", "description": "Sentiment negation man parena", "raw": "man parena", "expected_negation": true}
+{"id": "norm_05", "description": "Intensifier positive", "raw": "ekdam ramro", "expected_negation": false}
+{"id": "norm_06", "description": "Demonstrative negation clause", "raw": "yo kura ramro lagena", "expected_negation": true}
+{"id": "norm_07", "description": "Past negative copula thiyena", "raw": "movie ramro thiyena", "expected_negation": true}
+{"id": "norm_08", "description": "Negation with repetition and emoji", "raw": "aaja bilkul ramro chainaaa 😡", "expected_negation": true}
+{"id": "norm_09", "description": "Protected URL and handle with negation", "raw": "@user check https://hamro.com/status ramro chaina", "expected_negation": true}
+{"id": "norm_10", "description": "Aspirated negation variant chhainah", "raw": "yo kura chhainah thik", "expected_negation": true}

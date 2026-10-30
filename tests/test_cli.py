@@ -52,6 +52,16 @@ def test_cli_tokenize_stdin():
     assert "nepal" in res.stdout
     assert "jindabad" in res.stdout
 
+    # Test streaming lines with brackets
+    res_stream = run_cli(
+        "tokenize", "-", "--format", "brackets", input_text="pahilo line\ndosro line"
+    )
+    assert res_stream.returncode == 0
+    lines = res_stream.stdout.strip().splitlines()
+    assert len(lines) == 2
+    assert lines[0] == "[pahilo|WORD] [line|WORD]"
+    assert lines[1] == "[dosro|WORD] [line|WORD]"
+
 
 def test_cli_tokenize_diagnostics():
     res = run_cli("tokenize", "hello @user ???", "--diagnostics")

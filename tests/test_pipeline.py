@@ -22,6 +22,19 @@ def test_pipeline_preserves_raw_text():
     assert len(result.steps) > 0
     assert result.metadata["pipeline_fingerprint"] == config.fingerprint()
 
+    # Protected span offsets must accurately slice normalized text
+    assert len(result.protected_spans) == 1
+    span = result.protected_spans[0]
+    assert result.normalized_text[span.start : span.end] == "https://hamro.com"
+    assert result.raw_text[span.raw_start : span.raw_end] == "https://hamro.com"
+
+
+def test_pipeline_invalid_failure_policy_raises():
+    import pytest
+
+    with pytest.raises(ValueError, match="Invalid failure_policy"):
+        PipelineConfig(failure_policy="fail-fast")
+
 
 def test_pipeline_idempotence():
     # Applying the pipeline a second time to its own output should not alter normalized text
@@ -66,15 +79,44 @@ def test_pipeline_batch_processing():
     assert results[2].normalized_text == "dherai maza aayo"
 
 
-def test_pipeline_failure_policy():
-    # Test fallback policy when custom step or error happens
-    config = PipelineConfig(failure_policy="skip_with_warning")
-    pipeline = PreprocessingPipeline(config=config)
+def test_pipeline_failure_policy(monkeypatch):
+    from unittest.mock import MagicMock
 
-    # Normal run does not fail
-    res = pipeline.preprocess("normal text")
-    assert len(res.warnings) == 0
-    assert res.normalized_text == "normal text"
+    import pytest
+
+    # 1. fail_fast raises exception
+    p_fail = PreprocessingPipeline(PipelineConfig(failure_policy="fail_fast"))
+    monkeypatch.setattr(
+        p_fail,
+        "tokenizer",
+        MagicMock(tokenize=MagicMock(side_effect=RuntimeError("tokenizer crash"))),
+    )
+    with pytest.raises(RuntimeError, match="tokenizer crash"):
+        p_fail.preprocess("test text")
+
+    # 2. skip_with_warning falls back and logs warning
+    p_skip = PreprocessingPipeline(PipelineConfig(failure_policy="skip_with_warning"))
+    monkeypatch.setattr(
+        p_skip,
+        "tokenizer",
+        MagicMock(tokenize=MagicMock(side_effect=RuntimeError("tokenizer crash"))),
+    )
+    res_skip = p_skip.preprocess("test text")
+    assert res_skip.normalized_text == "test text"
+    assert any("tokenizer crash" in w for w in res_skip.warnings)
+    assert res_skip.steps == ["fallback_keep_original"]
+
+    # 3. keep_original falls back with raw error in warnings
+    p_orig = PreprocessingPipeline(PipelineConfig(failure_policy="keep_original"))
+    monkeypatch.setattr(
+        p_orig,
+        "tokenizer",
+        MagicMock(tokenize=MagicMock(side_effect=RuntimeError("tokenizer crash"))),
+    )
+    res_orig = p_orig.preprocess("test text")
+    assert res_orig.normalized_text == "test text"
+    assert res_orig.warnings == ["tokenizer crash"]
+    assert res_orig.steps == ["fallback_keep_original"]
 
 
 def test_pipeline_over_fixture_corpus():
@@ -97,3 +139,14 @@ def test_pipeline_over_fixture_corpus():
     for r, res in zip(records, results):
         assert res.raw_text == r["text"]
         assert isinstance(res.normalized_text, str)
+
+
+def test_pipeline_repetition_reduction_with_protected_tokens():
+    cfg = PipelineConfig(reduce_repetitions=True)
+    pipe = PreprocessingPipeline(cfg)
+    for _ in range(50):
+        res = pipe.preprocess("ramrooo dheraiii https://example.com/test @user 🔥")
+        assert "<__PROTECTED_" not in res.normalized_text
+        assert "https://example.com/test" in res.normalized_text
+        assert "@user" in res.normalized_text
+        assert "🔥" in res.normalized_text

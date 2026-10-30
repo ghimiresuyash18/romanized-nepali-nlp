@@ -1,0 +1,15 @@
+{"id": "var_015", "gold_label": "neutral", "predicted_label": "negative", "scores": {"negative": 0.3975, "neutral": 0.3194, "positive": 0.283}, "raw_text": "k gardai xau sathi"}
+{"id": "cs_002", "gold_label": "neutral", "predicted_label": "negative", "scores": {"negative": 0.4776, "neutral": 0.2657, "positive": 0.2567}, "raw_text": "please malai support garnus na."}
+{"id": "cs_006", "gold_label": "neutral", "predicted_label": "negative", "scores": {"negative": 0.4127, "neutral": 0.3054, "positive": 0.282}, "raw_text": "mero 9841000000 ma call garna saknu huncha."}
+{"id": "ord_003", "gold_label": "neutral", "predicted_label": "negative", "scores": {"negative": 0.361, "neutral": 0.2992, "positive": 0.3398}, "raw_text": "bhat khanu bhayo ta aaja?"}
+{"id": "ord_017", "gold_label": "neutral", "predicted_label": "negative", "scores": {"negative": 0.4117, "neutral": 0.336, "positive": 0.2523}, "raw_text": "kehi bujhina feri bhandinus na."}
+{"id": "ord_009", "gold_label": "positive", "predicted_label": "positive", "scores": {"negative": 0.2733, "neutral": 0.2735, "positive": 0.4533}, "raw_text": "yo thau sachhai sundar raicha."}
+{"id": "cs_001", "gold_label": "positive", "predicted_label": "positive", "scores": {"negative": 0.2699, "neutral": 0.2984, "positive": 0.4317}, "raw_text": "yo project ekdam cool cha bro."}
+{"id": "edge_008", "gold_label": "positive", "predicted_label": "positive", "scores": {"negative": 0.34, "neutral": 0.2234, "positive": 0.4366}, "raw_text": "RAMRO KURA GAREKO HO SABAILE"}
+{"id": "punc_001", "gold_label": "positive", "predicted_label": "positive", "scores": {"negative": 0.354, "neutral": 0.2505, "positive": 0.3955}, "raw_text": "kasto ramro geet ❤️❤️"}
+{"id": "var_001", "gold_label": "positive", "predicted_label": "positive", "scores": {"negative": 0.233, "neutral": 0.1857, "positive": 0.5813}, "raw_text": "yo ta ramro cha"}
+{"id": "punc_005", "gold_label": "positive", "predicted_label": "neutral", "scores": {"negative": 0.309, "neutral": 0.3526, "positive": 0.3385}, "raw_text": "wowww!!! unbelievable performance!!!"}
+{"id": "var_016", "gold_label": "negative", "predicted_label": "negative", "scores": {"negative": 0.4062, "neutral": 0.3212, "positive": 0.2726}, "raw_text": "mero phn ma chaldaina"}
+{"id": "cs_007", "gold_label": "negative", "predicted_label": "positive", "scores": {"negative": 0.2669, "neutral": 0.2056, "positive": 0.5275}, "raw_text": "delivery charge Rs 150 dherai mahango bhayo."}
+{"id": "neg_010", "gold_label": "negative", "predicted_label": "negative", "scores": {"negative": 0.37, "neutral": 0.2738, "positive": 0.3563}, "raw_text": "sarai jhur kura garyau yar."}
+{"id": "punc_017", "gold_label": "negative", "predicted_label": "negative", "scores": {"negative": 0.4703, "neutral": 0.2708, "positive": 0.2589}, "raw_text": "bore lagyo 🥱😴"}

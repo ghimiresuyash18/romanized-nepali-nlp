@@ -1,0 +1,20 @@
+{"id": "rev_001", "text": "ramrooooo 😍", "category_label": "emoji_repetition", "notes": "One word token ramrooooo with repetition intact, one emoji token 😍"}
+{"id": "rev_002", "text": "yo kura ramro lagena", "category_label": "negation", "notes": "Ordinary Romanized Nepali negation clause preserved as 4 separate words"}
+{"id": "rev_003", "text": "delivery charge Rs 150 dherai mahango bhayo", "category_label": "currency_number", "notes": "Rs as word, 150 as number"}
+{"id": "rev_004", "text": "movie ekdam ramro cha", "category_label": "code_switching", "notes": "English word movie in Romanized Nepali context"}
+{"id": "rev_005", "text": "@username kasto cha?", "category_label": "social_mention", "notes": "Social mention @username with question mark punctuation"}
+{"id": "rev_006", "text": "#nepal ramro cha", "category_label": "social_hashtag", "notes": "Hashtag token #nepal followed by Romanized words"}
+{"id": "rev_007", "text": "Visit https://example.com now", "category_label": "url", "notes": "Full URL recognized without loss"}
+{"id": "rev_008", "text": "bhat khanu bhayo ta?", "category_label": "colloquial_question", "notes": "Ambiguous word ta preserved as separate WORD token"}
+{"id": "rev_009", "text": "yo mobile ramro chaina", "category_label": "negation", "notes": "Negation chaina preserved"}
+{"id": "rev_010", "text": "malai man parena", "category_label": "negation", "notes": "Sentiment negation man parena intact"}
+{"id": "rev_011", "text": "“Bhagwan man ma birajman”", "category_label": "smart_quotes", "notes": "Unicode smart quotes parsed as punctuation without breaking words"}
+{"id": "rev_012", "text": "Aaja… timro maya", "category_label": "ellipsis", "notes": "Unicode ellipsis U+2026 parsed as punctuation"}
+{"id": "rev_013", "text": "price is ₹500 only", "category_label": "currency_symbol", "notes": "Rupee symbol recognized without crash"}
+{"id": "rev_014", "text": "discount of £800 today", "category_label": "currency_symbol", "notes": "Pound symbol recognized without unknown status"}
+{"id": "rev_015", "text": "haami nepālī mānchhe", "category_label": "latin_diacritics", "notes": "Indic Romanized vowels ā, ī, ē preserved in WORD"}
+{"id": "rev_016", "text": "kṛṣṇa bhagwan ko līlā", "category_label": "latin_extended", "notes": "Latin extended characters ṛ and ṣ preserved in WORD"}
+{"id": "rev_017", "text": "it’s a good day", "category_label": "curly_apostrophe", "notes": "Curly apostrophe U+2019 keeps word intact"}
+{"id": "rev_018", "text": "don’t worry sathi", "category_label": "curly_apostrophe", "notes": "Negative contraction don’t preserved as single WORD"}
+{"id": "rev_019", "text": "bullet points: • katha • kavita", "category_label": "bullet_punctuation", "notes": "Bullet point U+2022 recognized as punctuation"}
+{"id": "rev_020", "text": "yo k ho ⁉ kasto achamma ‼", "category_label": "expressive_punctuation", "notes": "Double exclamation and question glyphs recognized as punctuation"}

@@ -1,0 +1,10 @@
+{"id": "rec1", "text": "ramro chha yo geet", "label": "positive", "source": "youtube"}
+{"id": "rec2", "text": "ramro chha yo geet", "label": "positive", "source": "youtube"}
+{"id": "rec3", "text": "dherai naramro film", "label": "negative", "source": "twitter"}
+{"id": "rec4", "text": "  Dherai   naramro film  ", "label": "negative", "source": "twitter"}
+{"id": "rec5", "text": "thik thikai ho", "label": "positive", "source": "reddit"}
+{"id": "rec6", "text": "thik thikai ho", "label": "negative", "source": "reddit"}
+{"id": "rec7", "text": "yo ta sarhai ramro", "label": "positive", "source": "youtube"}
+{"id": "rec8", "text": "kasto hawa manche", "label": "negative", "source": "reddit"}
+{"id": "rec9", "text": "aaja ma ghar janchhu", "label": "neutral", "source": "twitter"}
+{"id": "rec10", "text": "bholi bhetumla sathi", "label": "neutral", "source": "twitter"}

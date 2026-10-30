@@ -1,0 +1,13 @@
+{
+  "unicode_form": "",
+  "strip_zero_width": false,
+  "collapse_whitespace": false,
+  "preserve_newlines": true,
+  "lowercase": false,
+  "reduce_repetitions": false,
+  "max_repeats": 2,
+  "normalize_variants": false,
+  "variant_policy": "conservative",
+  "protected_modes": {},
+  "failure_policy": "keep_original"
+}

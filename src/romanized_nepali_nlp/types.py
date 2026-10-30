@@ -26,14 +26,6 @@ class TokenCategory(str, Enum):
     UNKNOWN = "UNKNOWN"
 
 
-class Severity(str, Enum):
-    """Validation issue severity levels."""
-
-    ERROR = "error"
-    WARNING = "warning"
-    INFO = "info"
-
-
 @dataclass
 class ProtectedSpan:
     """Span of text marked to be protected during text normalization."""
@@ -42,6 +34,8 @@ class ProtectedSpan:
     end: int
     category: str
     text: str
+    raw_start: Optional[int] = None
+    raw_end: Optional[int] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -53,6 +47,8 @@ class ProtectedSpan:
             end=int(data["end"]),
             category=str(data["category"]),
             text=str(data["text"]),
+            raw_start=data.get("raw_start"),
+            raw_end=data.get("raw_end"),
         )
 
 
@@ -115,83 +111,5 @@ class PreprocessingResult:
             steps=list(data.get("steps", [])),
             warnings=list(data.get("warnings", [])),
             protected_spans=protected,
-            metadata=dict(data.get("metadata", {})),
-        )
-
-
-@dataclass
-class DatasetRecord:
-    """Standardized representation of a single corpus or dataset record."""
-
-    id: str
-    text: str
-    label: Optional[str] = None
-    source: Optional[str] = None
-    split: Optional[str] = None
-    metadata: Dict[str, Any] = field(default_factory=dict)
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> DatasetRecord:
-        return cls(
-            id=str(data["id"]),
-            text=str(data["text"]),
-            label=data.get("label"),
-            source=data.get("source"),
-            split=data.get("split"),
-            metadata=dict(data.get("metadata", {})),
-        )
-
-
-@dataclass
-class ValidationIssue:
-    """Issue detected during dataset validation or quality check."""
-
-    severity: Severity
-    message: str
-    row_id: Optional[str] = None
-    field: Optional[str] = None
-    category: str = "general"
-
-    def to_dict(self) -> Dict[str, Any]:
-        result = asdict(self)
-        result["severity"] = self.severity.value
-        return result
-
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> ValidationIssue:
-        return cls(
-            severity=Severity(data["severity"]),
-            message=str(data["message"]),
-            row_id=data.get("row_id"),
-            field=data.get("field"),
-            category=data.get("category", "general"),
-        )
-
-
-@dataclass
-class Prediction:
-    """Model output for a given record, including probabilities and model version."""
-
-    record_id: str
-    predicted_label: str
-    class_scores: Dict[str, float]
-    gold_label: Optional[str] = None
-    model_version: str = "0.1.0"
-    metadata: Dict[str, Any] = field(default_factory=dict)
-
-    def to_dict(self) -> Dict[str, Any]:
-        return asdict(self)
-
-    @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> Prediction:
-        return cls(
-            record_id=str(data["record_id"]),
-            predicted_label=str(data["predicted_label"]),
-            class_scores={k: float(v) for k, v in data.get("class_scores", {}).items()},
-            gold_label=data.get("gold_label"),
-            model_version=str(data.get("model_version", "0.1.0")),
             metadata=dict(data.get("metadata", {})),
         )

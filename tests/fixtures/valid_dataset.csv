@@ -1,0 +1,11 @@
+id,text,label,source
+rec1,ramro chha yo geet,positive,youtube
+rec2,ramro chha yo geet,positive,youtube
+rec3,dherai naramro film,negative,twitter
+rec4,"  Dherai   naramro film  ",negative,twitter
+rec5,thik thikai ho,positive,reddit
+rec6,thik thikai ho,negative,reddit
+rec7,yo ta sarhai ramro,positive,youtube
+rec8,kasto hawa manche,negative,reddit
+rec9,aaja ma ghar janchhu,neutral,twitter
+rec10,bholi bhetumla sathi,neutral,twitter

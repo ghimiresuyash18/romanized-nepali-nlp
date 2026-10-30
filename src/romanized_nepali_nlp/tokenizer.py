@@ -14,18 +14,18 @@ URL_PATTERN = r"https?://[^\s<>\"]+|www\.[^\s<>\"]+"
 EMAIL_PATTERN = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 MENTION_PATTERN = r"@[a-zA-Z0-9_]+"
 HASHTAG_PATTERN = r"#[a-zA-Z0-9_]+"
-NUMBER_PATTERN = r"\b\d+(?:[.,]\d+)*%?\b"
+NUMBER_PATTERN = r"\b\d+(?:[.,]\d+)*(?:%|\b)"
 
 # Fix 2: compound emojis, flags, skin-tone modifiers, and ZWJ sequences as one token.
 EMOJI_PATTERN = (
     r"(?:[\U0001f1e6-\U0001f1ff]{2})|"  # Regional indicator pair (national flags)
     r"(?:"
-    r"[\U00010000-\U0010ffff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55]"
+    r"[\U0001f300-\U0001faff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55]"
     r")"
     r"(?:"
     r"\ufe0f?"  # optional variation selector-16
     r"(?:\u200d"  # optional ZWJ + following glyph
-    r"(?:[\U00010000-\U0010ffff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55])"
+    r"(?:[\U0001f300-\U0001faff]|[\u2600-\u27ff\u2300-\u23ff\u2b50\u2b55])"
     r"\ufe0f?"
     r")*"
     r"[\U0001f3fb-\U0001f3ff]?"  # optional skin-tone modifier
@@ -35,14 +35,20 @@ EMOJI_PATTERN = (
 # Fix 5: common ASCII emoticons before generic punctuation so :D / :( survive intact.
 EMOTICON_PATTERN = r"(?:[:;=8B][-']?[)D(\[\]/\\OpP]|>?:\s*\()"
 
+# Unicode punctuation runs, quotation marks, ellipsis, currency, bullets, and symbols
 PUNCTUATION_RUN_PATTERN = (
-    r"\?+|!+|(?:\?+!+|!+\?+)+|\.{2,}|"
-    r"[.,;:!_?()\[\]{}\"\'\-\/\\—–@#$%^&*+=<>~`|]"
+    r"(?:\?|!|⁉|‼)+|[.…]{2,}|…|"
+    r"[.,;:!_?()\[\]{}\"\'\-\/\\—–―‐‑@#$%^&*+=<>~`|•·°₹£€¥“”‘’«»„‟‹›]"
 )
 
-# Fix 1: alphanumeric tokens (iphone15, SAVE20, covid19).
-# Must require at least one digit to avoid stealing pure-letter words from WORD.
-ALPHANUM_PATTERN = r"[a-zA-Z\u00C0-\u024F][a-zA-Z\u00C0-\u024F\u0300-\u036F]*[0-9][a-zA-Z0-9]*"
+# Fix 1: alphanumeric tokens (iphone15, SAVE20, Covid-19, covid19, 5g, 10th, 4k).
+# Must require both letters and digits to avoid stealing pure-letter words or pure numbers.
+LATIN_CHARS = r"a-zA-Z\u00C0-\u024F\u0300-\u036F\u1E00-\u1EFF"
+
+ALPHANUM_PATTERN = (
+    rf"(?:[{LATIN_CHARS}][{LATIN_CHARS}0-9\-]*[0-9][{LATIN_CHARS}0-9\-]*|"
+    rf"\b\d+(?:[.,]\d+)*[{LATIN_CHARS}][{LATIN_CHARS}0-9\-]*)"
+)
 
 # Fix 6: group contiguous non-Latin, non-space characters (e.g. Devanagari runs) as
 # one UNKNOWN token instead of one per codepoint.
@@ -70,14 +76,14 @@ class Tokenizer:
         # Build dynamic word regex based on punctuation configuration
         word_intra = ""
         if allow_apostrophes and allow_hyphens:
-            word_intra = r"[\'\-]"
+            word_intra = r"[\'’\-‐‑]"
         elif allow_apostrophes:
-            word_intra = r"\'"
+            word_intra = r"[\'’]"
         elif allow_hyphens:
-            word_intra = r"\-"
+            word_intra = r"[\-‐‑]"
 
         # Pure-Latin words (no digits) – diacritics included
-        latin_chars = r"a-zA-Z\u00C0-\u024F\u0300-\u036F"
+        latin_chars = LATIN_CHARS
         if word_intra:
             pure_word = f"[{latin_chars}]+(?:{word_intra}[{latin_chars}]+)*"
         else:
@@ -91,10 +97,10 @@ class Tokenizer:
             f"(?P<URL>{URL_PATTERN})|"
             f"(?P<MENTION>{MENTION_PATTERN})|"
             f"(?P<HASHTAG>{HASHTAG_PATTERN})|"
+            f"(?P<ALPHANUM>{ALPHANUM_PATTERN})|"
             f"(?P<NUMBER>{NUMBER_PATTERN})|"
             f"(?P<EMOJI>{EMOJI_PATTERN})|"
             f"(?P<EMOTICON>{EMOTICON_PATTERN})|"
-            f"(?P<ALPHANUM>{ALPHANUM_PATTERN})|"
             f"(?P<WORD>{pure_word})|"
             f"(?P<PUNCTUATION>{PUNCTUATION_RUN_PATTERN})|"
             f"(?P<UNKNOWN>{UNKNOWN_PATTERN})"
@@ -152,13 +158,15 @@ class Tokenizer:
             if category == TokenCategory.HASHTAG and self.extract_hashtag_word:
                 metadata["inner_word"] = raw_text.lstrip("#")
 
+            normalized = raw_text if category == TokenCategory.URL else raw_text.lower()
+
             tokens.append(
                 Token(
                     text=raw_text,
                     category=category,
                     start=start,
                     end=end,
-                    normalized_text=raw_text.lower(),
+                    normalized_text=normalized,
                     metadata=metadata,
                 )
             )

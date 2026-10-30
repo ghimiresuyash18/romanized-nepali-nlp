@@ -16,8 +16,11 @@ from romanized_nepali_nlp.normalization import (
     reduce_repetitions,
     restore_protected_spans,
 )
+from romanized_nepali_nlp.tokenizer import Tokenizer
 from romanized_nepali_nlp.types import PreprocessingResult, ProtectedSpan
 from romanized_nepali_nlp.variants import VariantNormalizer
+
+VALID_FAILURE_POLICIES = {"fail_fast", "skip_with_warning", "keep_original"}
 
 
 @dataclass
@@ -44,6 +47,13 @@ class PipelineConfig:
         }
     )
     failure_policy: str = "skip_with_warning"  # 'fail_fast', 'skip_with_warning', 'keep_original'
+
+    def __post_init__(self) -> None:
+        if self.failure_policy not in VALID_FAILURE_POLICIES:
+            raise ValueError(
+                f"Invalid failure_policy: {self.failure_policy!r}. "
+                f"Must be one of {sorted(VALID_FAILURE_POLICIES)}"
+            )
 
     def to_dict(self) -> Dict[str, Any]:
         return asdict(self)
@@ -72,8 +82,13 @@ class PipelineConfig:
 class PreprocessingPipeline:
     """Orchestrates ordered normalization steps while strictly preserving raw text."""
 
-    def __init__(self, config: Optional[PipelineConfig] = None) -> None:
+    def __init__(
+        self,
+        config: Optional[PipelineConfig] = None,
+        tokenizer: Optional[Tokenizer] = None,
+    ) -> None:
         self.config = config or PipelineConfig()
+        self.tokenizer = tokenizer or Tokenizer(validate_spans=False)
         self.variant_normalizer: Optional[VariantNormalizer] = None
 
         if self.config.normalize_variants:
@@ -102,19 +117,21 @@ class PreprocessingPipeline:
             # 1. Mask protected spans (URLs, Emojis, Mentions, etc.)
             curr_text, protected_spans, placeholder_map = mask_protected_spans(
                 curr_text,
+                tokenizer=self.tokenizer,
                 modes=self.config.protected_modes,
             )
             if placeholder_map:
                 steps.append("protect_special_tokens")
 
             # 2. Unicode normalization
-            curr_text, uni_steps, uni_warn = normalize_unicode(
-                curr_text,
-                form=self.config.unicode_form,
-                strip_zero_width=self.config.strip_zero_width,
-            )
-            steps.extend(uni_steps)
-            warnings.extend(uni_warn)
+            if self.config.unicode_form:
+                curr_text, uni_steps, uni_warn = normalize_unicode(
+                    curr_text,
+                    form=self.config.unicode_form,
+                    strip_zero_width=self.config.strip_zero_width,
+                )
+                steps.extend(uni_steps)
+                warnings.extend(uni_warn)
 
             # 3. Repetition reduction (optional)
             if self.config.reduce_repetitions:
@@ -149,10 +166,11 @@ class PreprocessingPipeline:
 
             # 7. Restore or format protected spans
             if placeholder_map:
-                curr_text = restore_protected_spans(
+                curr_text, protected_spans = restore_protected_spans(
                     curr_text,
                     placeholder_map,
                     modes=self.config.protected_modes,
+                    return_spans=True,
                 )
                 steps.append("restore_special_tokens")
 

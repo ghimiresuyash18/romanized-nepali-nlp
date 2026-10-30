@@ -1,0 +1,5 @@
+{"id": "m1", "text": "valid text", "label": "positive"}
+{"id": "m2", "text": "bad json
+{"id": "m3", "text": "   ", "label": "positive"}
+{"id": "m4", "text": "something", "label": "maybe"}
+{"id": "m5", "label": "neutral"}

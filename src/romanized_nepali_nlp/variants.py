@@ -7,9 +7,8 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_RESOURCE_PATH = (
-    Path(__file__).parent.parent.parent / "resources" / "romanized_variants.json"
-)
+DEFAULT_RESOURCE_PATH = Path(__file__).parent / "resources" / "romanized_variants.json"
+LATIN_WORD_REGEX = re.compile(r"\b[a-zA-Z\u00C0-\u024F\u0300-\u036F]+\b")
 
 
 class VariantNormalizer:
@@ -33,7 +32,10 @@ class VariantNormalizer:
     def load_resource(self) -> None:
         """Load and filter spelling variants according to the configured policy."""
         if not self.path.exists():
-            return
+            raise FileNotFoundError(
+                f"Variants resource not found at {self.path}. "
+                "Ensure package resources are installed properly."
+            )
 
         with open(self.path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -100,7 +102,6 @@ class VariantNormalizer:
             return w
 
         # Match Latin words including diacritics
-        pattern = re.compile(r"\b[a-zA-Z\u00C0-\u024F\u0300-\u036F]+\b")
-        result = pattern.sub(replace_match, text)
+        result = LATIN_WORD_REGEX.sub(replace_match, text)
 
         return result, applied

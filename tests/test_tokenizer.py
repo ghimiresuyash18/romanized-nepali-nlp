@@ -29,12 +29,18 @@ def test_accented_latin_characters():
 
 
 def test_url_and_trailing_punctuation():
-    text = "Visit https://hamro.com/news, or email info@hamro.np!"
+    text = "Visit https://hamro.com/News?ID=1, or email info@hamro.np!"
     tokens = tokenize(text)
 
     url_tok = tokens[1]
-    assert url_tok.text == "https://hamro.com/news"
+    assert url_tok.text == "https://hamro.com/News?ID=1"
     assert url_tok.category == TokenCategory.URL
+    # URL normalization must preserve casing consistently whether trailing punctuation exists or not
+    assert url_tok.normalized_text == "https://hamro.com/News?ID=1"
+
+    # Also test standalone URL without trailing punctuation
+    url_standalone = tokenize("https://hamro.com/News?ID=1")[0]
+    assert url_standalone.normalized_text == "https://hamro.com/News?ID=1"
 
     comma_tok = tokens[2]
     assert comma_tok.text == ","
@@ -89,6 +95,13 @@ def test_alphanumeric_tokens():
         ("SAVE20", ["SAVE20"]),
         ("covid19 update", ["covid19", "update"]),
         ("pulsar220", ["pulsar220"]),
+        ("5g", ["5g"]),
+        ("4k", ["4k"]),
+        ("10th", ["10th"]),
+        ("1st", ["1st"]),
+        ("3D", ["3D"]),
+        ("100m", ["100m"]),
+        ("2.5kg", ["2.5kg"]),
     ]:
         tokens = tokenize(text)
         actual = [t.text for t in tokens]
@@ -184,3 +197,15 @@ def test_accuracy_against_expected_tokens_fixture():
 
     accuracy = matched / total_expected
     assert accuracy >= 0.95, f"Tokenizer accuracy {accuracy:.2%} is below 95% threshold"
+
+
+def test_emoji_range_constrained():
+    # Linear B ideogram U+10000 should be UNKNOWN, not EMOJI
+    toks = tokenize("\U00010000")
+    assert len(toks) == 1
+    assert toks[0].category == TokenCategory.UNKNOWN
+
+    # Standard emojis remain EMOJI
+    emoji_toks = tokenize("🔥 🇳🇵 👍🏻 👨‍👩‍👦")
+    for t in emoji_toks:
+        assert t.category == TokenCategory.EMOJI

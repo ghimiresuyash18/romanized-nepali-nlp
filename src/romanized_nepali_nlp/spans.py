@@ -94,7 +94,7 @@ def get_diagnostics(tokens: List[Token], text: str) -> Dict[str, Any]:
     }
 
 
-def format_terminal(tokens: List[Token], text: str | None = None) -> str:
+def format_terminal(tokens: List[Token]) -> str:
     """Format tokens as readable bracketed text: [text|CATEGORY]."""
     return " ".join(f"[{t.text}|{t.category.value}]" for t in tokens)
 
@@ -142,9 +142,10 @@ def format_html(
         if t.metadata:
             meta_tooltip += f"&#10;Meta: {json.dumps(t.metadata)}"
 
+        escaped_tooltip = html.escape(meta_tooltip, quote=True)
         style = f"background-color: {color}22; border-color: {color}; color: {color};"
         badge = (
-            f"<span class='token' style='{style}' title='{meta_tooltip}'>"
+            f"<span class='token' style='{style}' title='{escaped_tooltip}'>"
             f"<span class='text'>{escaped_text}</span>"
             f"<sub class='cat'>{t.category.value}</sub>"
             f"</span>"
@@ -239,7 +240,10 @@ def format_markdown(tokens: List[Token]) -> str:
     ]
     for i, t in enumerate(tokens, 1):
         norm = t.normalized_text if t.normalized_text is not None else "-"
+        # Escape pipe and backtick characters to avoid breaking Markdown table cells
+        safe_text = t.text.replace("|", r"\|").replace("`", r"\`")
+        safe_norm = norm.replace("|", r"\|").replace("`", r"\`")
         lines.append(
-            f"| {i} | `{t.text}` | `{t.category.value}` | {t.start} | {t.end} | `{norm}` |"
+            f"| {i} | `{safe_text}` | `{t.category.value}` | {t.start} | {t.end} | `{safe_norm}` |"
         )
     return "\n".join(lines)

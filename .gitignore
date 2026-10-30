@@ -10,3 +10,14 @@ build/
 .venv/
 env/
 .DS_Store
+.coverage
+htmlcov/
+
+# Ignore large raw and processed datasets (fixtures in tests/fixtures are used for testing)
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+

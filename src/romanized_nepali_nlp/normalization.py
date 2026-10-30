@@ -5,7 +5,8 @@ from __future__ import annotations
 import difflib
 import re
 import unicodedata
-from typing import Dict, List, Optional, Set, Tuple
+import uuid
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from romanized_nepali_nlp.tokenizer import Tokenizer
 from romanized_nepali_nlp.types import ProtectedSpan, TokenCategory
@@ -46,6 +47,7 @@ ZERO_WIDTH_STRIP_CHARS = (
 
 IRREGULAR_SPACES_REGEX = re.compile(f"[{IRREGULAR_SPACES}]")
 ZERO_WIDTH_STRIP_REGEX = re.compile(f"[{ZERO_WIDTH_STRIP_CHARS}]")
+DEFAULT_REPETITION_PATTERN = re.compile(r"([a-zA-Z\u00C0-\u024F\u0300-\u036F\u1E00-\u1EFF])\1{2,}")
 
 
 def normalize_unicode(
@@ -120,12 +122,21 @@ def reduce_repetitions(
     text: str,
     max_repeats: int = 2,
 ) -> Tuple[str, bool]:
-    """Bound repeated character sequences (e.g. 'ramrooo' -> 'ramroo')."""
+    """Bound repeated character sequences (e.g. 'ramrooo' -> 'ramroo').
+
+    Restricted to alphabetic letters to preserve numbers and repeated symbols.
+    """
     if not text or max_repeats < 1:
         return text, False
 
-    # Regex matches runs of length > max_repeats and truncates to max_repeats
-    pattern = re.compile(r"(.)\1{" + str(max_repeats) + r",}")
+    # Match consecutive runs of letters only (excluding digits and punctuation)
+    pattern = (
+        DEFAULT_REPETITION_PATTERN
+        if max_repeats == 2
+        else re.compile(
+            r"([a-zA-Z\u00C0-\u024F\u0300-\u036F\u1E00-\u1EFF])\1{" + str(max_repeats) + r",}"
+        )
+    )
     replacement = r"\1" * max_repeats
     result = pattern.sub(replacement, text)
     return result, result != text
@@ -173,20 +184,29 @@ def mask_protected_spans(
     # Sort in ascending order
     spans_to_mask.sort(key=lambda s: s[0])
 
-    # Build masked string
+    # Build masked string with unique per-run digit nonce to prevent collisions with user text
+    # and avoid being mangled by reduce_repetitions (which only targets letters).
+    nonce = str(uuid.uuid4().int)[:10]
     parts: List[str] = []
     last_idx = 0
 
     for i, (start, end, cat, original_text, _mode) in enumerate(spans_to_mask):
-        placeholder = f"<__PROTECTED_{cat}_{i}__>"
+        placeholder = f"<__PROTECTED_{nonce}_{cat}_{i}__>"
         parts.append(text[last_idx:start])
         parts.append(placeholder)
         last_idx = end
 
         protected_spans.append(
-            ProtectedSpan(start=start, end=end, category=cat, text=original_text)
+            ProtectedSpan(
+                start=start,
+                end=end,
+                category=cat,
+                text=original_text,
+                raw_start=start,
+                raw_end=end,
+            )
         )
-        placeholder_map[placeholder] = (original_text, cat)
+        placeholder_map[placeholder] = (original_text, cat, start, end)
 
     parts.append(text[last_idx:])
     masked_text = "".join(parts)
@@ -196,31 +216,81 @@ def mask_protected_spans(
 
 def restore_protected_spans(
     text: str,
-    placeholder_map: Dict[str, Tuple[str, str]],
+    placeholder_map: Dict[str, Any],
     modes: Optional[Dict[str, str]] = None,
-) -> str:
-    """Restore placeholders according to configured modes (preserve, replace, remove)."""
+    return_spans: bool = False,
+) -> str | Tuple[str, List[ProtectedSpan]]:
+    """Restore placeholders according to configured modes (preserve, replace, remove).
+
+    If return_spans=True, returns (restored_text, normalized_protected_spans) where
+    span start/end offsets accurately reference positions in the restored text.
+    """
     if not placeholder_map:
-        return text
+        return (text, []) if return_spans else text
 
     active_modes = modes or {}
     result = text
+    restored_spans: List[ProtectedSpan] = []
 
-    for placeholder, (original_text, cat) in placeholder_map.items():
+    for placeholder, val in placeholder_map.items():
+        original_text = val[0]
+        cat = val[1]
+        raw_start = val[2] if len(val) > 2 else None
+        raw_end = val[3] if len(val) > 3 else None
+
         mode = active_modes.get(cat, "preserve")
-        pattern = re.compile(re.escape(placeholder), re.IGNORECASE)
-        if mode == "preserve":
-            result = pattern.sub(lambda _: original_text, result)
-        elif mode == "replace":
-            # Simplify placeholder to clean tag e.g. <URL>
-            result = pattern.sub(f"<{cat}>", result)
-        elif mode == "remove":
-            result = pattern.sub("", result)
+        lower_result = result.lower()
+        start_pos = lower_result.find(placeholder.lower())
+        if start_pos != -1:
+            end_pos = start_pos + len(placeholder)
+            if mode == "preserve":
+                result = result[:start_pos] + original_text + result[end_pos:]
+                restored_spans.append(
+                    ProtectedSpan(
+                        start=start_pos,
+                        end=start_pos + len(original_text),
+                        category=cat,
+                        text=original_text,
+                        raw_start=raw_start,
+                        raw_end=raw_end,
+                    )
+                )
+            elif mode == "replace":
+                replacement = f"<{cat}>"
+                result = result[:start_pos] + replacement + result[end_pos:]
+                restored_spans.append(
+                    ProtectedSpan(
+                        start=start_pos,
+                        end=start_pos + len(replacement),
+                        category=cat,
+                        text=replacement,
+                        raw_start=raw_start,
+                        raw_end=raw_end,
+                    )
+                )
+            elif mode == "remove":
+                # Remove placeholder and adjacent space to prevent orphan double spaces
+                if start_pos > 0 and result[start_pos - 1] in " \t":
+                    result = result[: start_pos - 1] + result[end_pos:]
+                elif end_pos < len(result) and result[end_pos] in " \t":
+                    result = result[:start_pos] + result[end_pos + 1 :]
+                else:
+                    result = result[:start_pos] + result[end_pos:]
 
+    restored_spans.sort(key=lambda s: s.start)
+
+    if return_spans:
+        return result, restored_spans
     return result
 
 
 def generate_diff(raw_text: str, normalized_text: str) -> str:
     """Generate human-readable side-by-side or unified diff string."""
-    diff_lines = list(difflib.ndiff([raw_text], [normalized_text]))
-    return "\n".join(diff_lines)
+    raw_lines = raw_text.splitlines(keepends=True)
+    norm_lines = normalized_text.splitlines(keepends=True)
+    if not raw_lines and raw_text:
+        raw_lines = [raw_text]
+    if not norm_lines and normalized_text:
+        norm_lines = [normalized_text]
+    diff_lines = list(difflib.ndiff(raw_lines, norm_lines))
+    return "".join(diff_lines)
