@@ -1,10 +1,11 @@
 # Romanized Nepali NLP Toolkit
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000.svg)](https://github.com/astral-sh/ruff)
 
 A specialized NLP toolkit engineered specifically for Romanized Nepali (Nepali written using the Latin alphabet, often mixed with English loanwords, slang, code-switching, emojis, and social web tokens).
+
+Maintained by **Suyash Ghimire**.
 
 It provides:
 - **Unicode-Safe Tokenization**: Exact code-point character offset tracking across Latin, Devanagari, emoticons, hashtags, mentions, and compound emojis.
@@ -40,7 +41,7 @@ Install in editable mode:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/romanized-nepali-nlp.git
+git clone https://github.com/ghimiresuyash18/romanized-nepali-nlp.git
 cd romanized-nepali-nlp
 
 # Library and sentiment baseline
@@ -323,9 +324,9 @@ If you use this toolkit in your research or application, please cite:
 ```bibtex
 @software{romanized_nepali_nlp_2026,
   title = {{Romanized Nepali NLP Toolkit}: Tokenization, Normalization, and Sentiment Baselines},
-  author = {Ghimire, Purushottam and contributors},
+  author = {Ghimire, Suyash and contributors},
   year = {2026},
-  url = {https://github.com/purushottamghimire/romanized-nepali-nlp},
+  url = {https://github.com/ghimiresuyash18/romanized-nepali-nlp},
   license = {MIT}
 }
 ```
