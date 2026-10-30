@@ -4,7 +4,7 @@
 Majority, word TF-IDF, and character `char_wb` TF-IDF + logistic regression baselines. Transformer/contextual models deferred.
 
 ## Training and evaluation
-Frozen split: `experiments/baseline_phase5/split_manifest.json`. Model artifacts: `runs/*/model.pkl`. Reproducible preprocessing ablations: `configs/ablation_phase6.json` and `scripts/run_ablation.py`.
+Model artifacts are available at `runs/*/model.pkl`. The included models are baseline demonstrations, not production-ready classifiers.
 
 ## Intended use
 Baseline research and regression testing for Romanized Nepali sentiment.

@@ -1,6 +1,6 @@
 # Error Taxonomy: Romanized Nepali Sentiment Baseline
 
-> Generated from `data/processed/error_analysis.jsonl` (16 reviewed errors, baseline_phase5).
+> General taxonomy of common Romanized Nepali sentiment-baseline failure modes.
 
 ## Categories
 
@@ -88,7 +88,7 @@ tokens that the tokenizer strips or mishandles.
 
 ---
 
-## Error Review (from `error_analysis.jsonl`)
+## Representative Review Patterns
 
 | error_id | record_id | gold | predicted | category | slice_tags | likely_cause | notes |
 |----------|-----------|------|-----------|----------|------------|--------------|-------|

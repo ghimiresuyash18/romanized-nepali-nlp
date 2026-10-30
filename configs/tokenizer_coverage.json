@@ -2,9 +2,9 @@
   "version": "1.0.0",
   "tokenizer_version": "0.1.0",
   "partitions": {
-    "roman_clean": "data/processed/nepali_flow_roman_full/roman_clean.jsonl",
-    "roman_mixed": "data/processed/nepali_flow_roman_full/roman_mixed.jsonl",
-    "roman_noisy": "data/processed/nepali_flow_roman_full/roman_noisy.jsonl"
+    "roman_clean": "data/processed/nepali_flow_roman_v2/roman_clean.jsonl",
+    "roman_mixed": "data/processed/nepali_flow_roman_v2/roman_mixed.jsonl",
+    "roman_noisy": "data/processed/nepali_flow_roman_v2/roman_noisy.jsonl"
   },
   "output_dir_v1": "data/interim/tokenizer_coverage_v1",
   "output_dir_v2": "data/interim/tokenizer_coverage_v2",

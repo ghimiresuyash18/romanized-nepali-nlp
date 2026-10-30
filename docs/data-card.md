@@ -5,7 +5,7 @@ Romanized Nepali sentiment toolkit and small reviewed benchmark fixtures.
 
 ## Sources
 - `tests/fixtures/romanized_examples.jsonl`: synthetic/permitted examples used for tests and baseline demonstrations.
-- `data/processed/baseline_phase5/`: frozen benchmark split and reviewed error records.
+- `data/processed/baseline_phase5/benchmark.jsonl`: frozen public benchmark split.
 - `data/processed/spelling_challenge.jsonl`: Task 22 challenge examples; synthetic variations, not raw source text.
 
 ## Labels

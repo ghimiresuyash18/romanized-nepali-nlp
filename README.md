@@ -246,29 +246,16 @@ romanized-nepali evaluate runs/char_run/val_predictions.jsonl --format markdown 
 romanized-nepali corpus data/raw/scraped_comments.jsonl --benchmark data/splits/test.jsonl --output-dir data/processed/corpus
 ```
 
-### 6. Robustness and Release Workflows
-
-Run the spelling-variation challenge evaluation, phenomenon slice analysis, and
-normalization ablation from the repository root:
+### 6. Demo and verification
 
 ```bash
-python3 scripts/evaluate_spelling_challenge.py
-python3 scripts/phenomena_analysis.py
-python3 scripts/run_ablation.py
 python3 scripts/demo.py
-```
-
-Outputs go to `reports/` and `experiments/ablation_phase6/`. The ablation runner
-selects preprocessing on validation macro-F1 and evaluates the frozen test set
-once. For a release check, run:
-
-```bash
 pytest
 ruff check .
 ```
 
-See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md), [docs/data-card.md](docs/data-card.md),
-and [docs/model-card.md](docs/model-card.md) before distributing results.
+See [docs/data-card.md](docs/data-card.md) and [docs/model-card.md](docs/model-card.md)
+before distributing results.
 
 ---
 
@@ -277,9 +264,7 @@ and [docs/model-card.md](docs/model-card.md) before distributing results.
 ```text
 ├── configs/               # Reproducible JSON configurations for baselines & preprocessing
 ├── docs/                  # Architecture specs, tokenization contracts, annotation guidelines
-├── experiments/           # Experiment logs, split manifests, and metrics
-├── reports/               # Tokenizer diagnostic reports, galleries, and charts
-├── runs/                  # Saved model artifacts, training logs, and validation reports
+├── runs/                  # Saved model artifacts
 ├── src/
 │   └── romanized_nepali_nlp/
 │       ├── cli.py             # Unified CLI entry points
@@ -310,15 +295,10 @@ and [docs/model-card.md](docs/model-card.md) before distributing results.
 - [docs/project-map.md](docs/project-map.md): End-to-end component flow and system lifecycle
 - [docs/api-contract.md](docs/api-contract.md): Core schemas, code-point offsets, and data contracts
 - [docs/tokenization.md](docs/tokenization.md): Tokenizer specification, character policy, and regex precedence
-- [docs/preprocessing-gallery.md](docs/preprocessing-gallery.md): Pipeline flow diagram and before/after normalization gallery
-- [docs/variant-dashboard.md](docs/variant-dashboard.md): Spelling variant registry and review status
 - [docs/annotation-guidelines.md](docs/annotation-guidelines.md): Guidelines for sentiment labeling Romanized Nepali
 - [docs/baseline-comparison.md](docs/baseline-comparison.md): Empirical comparison of majority, word, and character n-gram baselines
-- [docs/evaluation-report.md](docs/evaluation-report.md): Challenge slice robustness and error breakdown
 - [docs/data-card.md](docs/data-card.md): Data sources, privacy, labels, bias, and limits
 - [docs/model-card.md](docs/model-card.md): Baseline models, metrics, intended use, and failure modes
-- [docs/project-status.md](docs/project-status.md): Release-candidate status dashboard
-- [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md): Final verification and human-approval gate
 
 ---
 
