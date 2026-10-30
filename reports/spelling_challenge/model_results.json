@@ -1,0 +1,62 @@
+{
+  "models_evaluated": [
+    "char",
+    "word",
+    "majority"
+  ],
+  "total_examples": 150,
+  "overall_macro_f1": {
+    "char": 0.5293,
+    "word": 0.4205,
+    "majority": 0.1836
+  },
+  "macro_f1_per_category": {
+    "vowel_variation": {
+      "char": 0.4587,
+      "word": 0.3749,
+      "majority": 0.2095
+    },
+    "consonant_variation": {
+      "char": 0.3264,
+      "word": 0.305,
+      "majority": 0.1982
+    },
+    "repeated_chars": {
+      "char": 0.7259,
+      "word": 0.6434,
+      "majority": 0.2439
+    },
+    "omitted_letters": {
+      "char": 0.4517,
+      "word": 0.2421,
+      "majority": 0.1818
+    },
+    "abbreviations": {
+      "char": 0.5342,
+      "word": 0.4405,
+      "majority": 0.1414
+    },
+    "spacing_variation": {
+      "char": 0.5171,
+      "word": 0.3673,
+      "majority": 0.0952
+    }
+  },
+  "accuracy_per_sentiment": {
+    "positive": {
+      "char": 0.5789,
+      "word": 0.3684,
+      "majority": 1.0
+    },
+    "negative": {
+      "char": 0.4737,
+      "word": 0.3421,
+      "majority": 0.0
+    },
+    "neutral": {
+      "char": 0.5273,
+      "word": 0.5636,
+      "majority": 0.0
+    }
+  }
+}

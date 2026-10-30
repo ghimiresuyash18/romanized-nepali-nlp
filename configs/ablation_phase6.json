@@ -1,0 +1,12 @@
+{
+  "model": {
+    "model_type": "char",
+    "analyzer": "char_wb",
+    "ngram_range": [2, 5],
+    "seed": 42
+  },
+  "selection": "validation_macro_f1",
+  "test_evaluation": "selected_configuration_only",
+  "factors": ["raw", "unicode_whitespace", "protected_spans", "repetition", "variant_dictionary", "full"],
+  "split_manifest": "experiments/baseline_phase5/split_manifest.json"
+}

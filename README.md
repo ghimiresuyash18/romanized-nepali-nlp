@@ -36,17 +36,17 @@ It provides:
 
 ## Installation
 
-Install in editable mode with development and machine learning dependencies:
+Install in editable mode:
 
 ```bash
 # Clone the repository
 git clone https://github.com/<your-username>/romanized-nepali-nlp.git
 cd romanized-nepali-nlp
 
-# Core library only
+# Library and sentiment baseline
 pip install -e .
 
-# With Machine Learning and Evaluation extras (scikit-learn, numpy, matplotlib)
+# Add chart generation and other optional ML tooling
 pip install -e ".[ml]"
 
 # With Development extras (pytest, ruff)
@@ -246,6 +246,30 @@ romanized-nepali evaluate runs/char_run/val_predictions.jsonl --format markdown 
 romanized-nepali corpus data/raw/scraped_comments.jsonl --benchmark data/splits/test.jsonl --output-dir data/processed/corpus
 ```
 
+### 6. Robustness and Release Workflows
+
+Run the spelling-variation challenge evaluation, phenomenon slice analysis, and
+normalization ablation from the repository root:
+
+```bash
+python3 scripts/evaluate_spelling_challenge.py
+python3 scripts/phenomena_analysis.py
+python3 scripts/run_ablation.py
+python3 scripts/demo.py
+```
+
+Outputs go to `reports/` and `experiments/ablation_phase6/`. The ablation runner
+selects preprocessing on validation macro-F1 and evaluates the frozen test set
+once. For a release check, run:
+
+```bash
+pytest
+ruff check .
+```
+
+See [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md), [docs/data-card.md](docs/data-card.md),
+and [docs/model-card.md](docs/model-card.md) before distributing results.
+
 ---
 
 ## Repository Structure
@@ -291,6 +315,10 @@ romanized-nepali corpus data/raw/scraped_comments.jsonl --benchmark data/splits/
 - [docs/annotation-guidelines.md](docs/annotation-guidelines.md): Guidelines for sentiment labeling Romanized Nepali
 - [docs/baseline-comparison.md](docs/baseline-comparison.md): Empirical comparison of majority, word, and character n-gram baselines
 - [docs/evaluation-report.md](docs/evaluation-report.md): Challenge slice robustness and error breakdown
+- [docs/data-card.md](docs/data-card.md): Data sources, privacy, labels, bias, and limits
+- [docs/model-card.md](docs/model-card.md): Baseline models, metrics, intended use, and failure modes
+- [docs/project-status.md](docs/project-status.md): Release-candidate status dashboard
+- [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md): Final verification and human-approval gate
 
 ---
 

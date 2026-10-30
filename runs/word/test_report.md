@@ -61,7 +61,7 @@ Total misclassified instances: **5**
 | ID | Gold | Predicted | Conf | Slices | Text |
 |---|---|---|---|---|---|
 | `cs_002` | `neutral` | `negative` | 0.37 | code_switching | please malai support garnus na. |
-| `cs_006` | `neutral` | `negative` | 0.39 | code_switching, special_tokens | mero 9841000000 ma call garna saknu huncha. |
+| `cs_006` | `neutral` | `negative` | 0.39 | code_switching, special_tokens | mero <PHONE> ma call garna saknu huncha. |
 | `ord_003` | `neutral` | `negative` | 0.37 | none | bhat khanu bhayo ta aaja? |
 | `cs_007` | `negative` | `positive` | 0.46 | code_switching, special_tokens | delivery charge Rs 150 dherai mahango bhayo. |
 | `neg_010` | `negative` | `positive` | 0.38 | negation | sarai jhur kura garyau yar. |

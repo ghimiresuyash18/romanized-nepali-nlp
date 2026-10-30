@@ -62,7 +62,7 @@ Total misclassified instances: **9**
 |---|---|---|---|---|---|
 | `var_015` | `neutral` | `positive` | 0.37 | spelling_variation, short_text | k gardai xau sathi |
 | `cs_002` | `neutral` | `positive` | 0.37 | code_switching | please malai support garnus na. |
-| `cs_006` | `neutral` | `positive` | 0.37 | code_switching, special_tokens | mero 9841000000 ma call garna saknu huncha. |
+| `cs_006` | `neutral` | `positive` | 0.37 | code_switching, special_tokens | mero <PHONE> ma call garna saknu huncha. |
 | `ord_003` | `neutral` | `positive` | 0.37 | none | bhat khanu bhayo ta aaja? |
 | `ord_017` | `neutral` | `positive` | 0.37 | none | kehi bujhina feri bhandinus na. |
 | `var_016` | `negative` | `positive` | 0.37 | spelling_variation | mero phn ma chaldaina |

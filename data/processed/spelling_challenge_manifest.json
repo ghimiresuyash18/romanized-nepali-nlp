@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "frozen_at": "2026-10-30",
+  "total_examples": 150,
+  "variation_category_counts": {
+    "vowel_variation": {
+      "positive": 11,
+      "negative": 5,
+      "neutral": 8
+    },
+    "consonant_variation": {
+      "positive": 11,
+      "neutral": 9,
+      "negative": 6
+    },
+    "repeated_chars": {
+      "positive": 15,
+      "negative": 8,
+      "neutral": 3
+    },
+    "omitted_letters": {
+      "negative": 4,
+      "positive": 9,
+      "neutral": 11
+    },
+    "abbreviations": {
+      "neutral": 13,
+      "positive": 7,
+      "negative": 6
+    },
+    "spacing_variation": {
+      "neutral": 11,
+      "positive": 4,
+      "negative": 9
+    }
+  },
+  "sentiment_counts": {
+    "positive": 57,
+    "negative": 38,
+    "neutral": 55
+  },
+  "adversarial_count": 18,
+  "minimal_pairs_count": 15,
+  "dedup_check": "no_overlap_with_benchmark",
+  "review_note": "Synthetic examples; fluent-speaker review approved",
+  "human_approval": "approved",
+  "challenge_sha256": "09632a8e14cef392d912ec3fb45b4b163598f43c5b7452aa6f9ecfeda26b579d",
+  "automated_checks": {
+    "schema": "pass",
+    "unique_ids": "pass",
+    "sentiment_coverage": "pass",
+    "raw_fixture_overlap": "pass"
+  }
+}

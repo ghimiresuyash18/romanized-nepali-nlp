@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "note": "Conservative emoji sentiment mapping. Preserve original emoji in text.",
+  "categories": {
+    "face_positive": ["😊","😄","😁","😍","🥰","😀","🙂"],
+    "face_negative": ["😢","😭","😠","😡","😤","🙁","😔"],
+    "face_neutral":  ["😐","😑","🤔"],
+    "hand":          ["👍","👎","🙏","👋"],
+    "fire_strength": ["🔥","💯","⚡"],
+    "heart":         ["❤️","💔","💕"]
+  }
+}

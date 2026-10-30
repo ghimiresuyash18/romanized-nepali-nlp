@@ -119,7 +119,7 @@
     },
     {
       "id": "cs_006",
-      "text": "mero 9841000000 ma call garna saknu huncha.",
+      "text": "mero <PHONE> ma call garna saknu huncha.",
       "gold_label": "neutral",
       "predicted_label": "negative",
       "confidence": 0.3854,
