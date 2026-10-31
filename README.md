@@ -12,7 +12,7 @@ It provides:
 - **Configurable Preprocessing**: Normalizes elongated vowels (`ramrooo` -> `ramro`), irregular Unicode whitespaces, zero-width characters, and phonetic variations (`chha` -> `cha`, `vayo` -> `bhayo`) while strictly protecting URLs, handles, and emojis.
 - **Dataset Validation & Deduplication**: High-performance exact and near-duplicate detection, label conflict auditing, and field schema validation.
 - **Leakage-Safe Data Splitting**: Group-aware, transitive deduplication with union-find and stratification to prevent train/validation/test contamination.
-- **Sentiment Baseline**: Classical character n-gram (`char_wb`) TF-IDF and logistic regression baseline with challenge slice evaluation and bootstrap confidence intervals.
+- **Sentiment Baseline**: Classical character n-gram (`char_wb`) TF-IDF and logistic regression baseline with challenge slice evaluation, bootstrap confidence intervals, and explicit positive/negative/neutral emoticon features.
 - **External Corpus Ingestion**: Structural profiling and quality triage for large scraped web corpora (e.g. YouTube comments).
 
 ---

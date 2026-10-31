@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 from typing import Any, Dict, List
 
+from romanized_nepali_nlp.emoticons import emoticon_pattern
 from romanized_nepali_nlp.spans import validate_token_spans
 from romanized_nepali_nlp.types import Token, TokenCategory
 
@@ -34,8 +35,8 @@ EMOJI_PATTERN = (
     r")"
 )
 
-# Fix 5: common ASCII emoticons before generic punctuation so :D / :( survive intact.
-EMOTICON_PATTERN = r"(?:[:;=8B][-']?[)D(\[\]/\\OpP]|>?:\s*\()"
+# Known ASCII emoticons before generic punctuation so they remain single tokens.
+EMOTICON_PATTERN = rf"(?:{emoticon_pattern()})"
 
 # Unicode punctuation runs, quotation marks, ellipsis, currency, bullets, and symbols
 PUNCTUATION_RUN_PATTERN = (

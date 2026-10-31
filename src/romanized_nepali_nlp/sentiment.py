@@ -17,6 +17,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 
 from romanized_nepali_nlp.dataset import ALLOWED_LABELS, DatasetRecord
+from romanized_nepali_nlp.emoticons import append_emoticon_features
 from romanized_nepali_nlp.pipeline import PipelineConfig, PreprocessingPipeline
 
 
@@ -104,8 +105,8 @@ class SentimentModel:
     def _prepare_text(self, text: str) -> str:
         if self.pipeline:
             res = self.pipeline.preprocess(text)
-            return res.normalized_text
-        return text
+            text = res.normalized_text
+        return append_emoticon_features(text)
 
     def fit(
         self,
