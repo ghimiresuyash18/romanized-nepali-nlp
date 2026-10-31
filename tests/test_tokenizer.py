@@ -111,6 +111,17 @@ def test_alphanumeric_tokens():
             assert t.category != TokenCategory.UNKNOWN, f"UNKNOWN token {t.text!r} in {text!r}"
 
 
+def test_initial_based_words_stay_together():
+    for text, expected in [
+        ("U.S.A.", ["U.S.A."]),
+        ("U.S.A. is different from UAE.", ["U.S.A.", "is", "different", "from", "UAE", "."]),
+        ("e.g. ramro", ["e.g.", "ramro"]),
+    ]:
+        tokens = tokenize(text)
+        assert [token.text for token in tokens] == expected
+        assert tokens[0].category == TokenCategory.WORD
+
+
 def test_compound_emojis():
     """Fix 2: skin-tone modifiers and ZWJ family sequences must be single tokens."""
     text = "dami 👍🏻 family 👨‍👩‍👦 heart ❤️"

@@ -15,6 +15,8 @@ EMAIL_PATTERN = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 MENTION_PATTERN = r"@[a-zA-Z0-9_]+"
 HASHTAG_PATTERN = r"#[a-zA-Z0-9_]+"
 NUMBER_PATTERN = r"\b\d+(?:[.,]\d+)*(?:%|\b)"
+# Initial-based words such as U.S.A. must stay together before punctuation runs.
+ACRONYM_PATTERN = r"(?<![a-zA-Z0-9])(?:[a-zA-Z]\.)+[a-zA-Z](?:\.)?(?![a-zA-Z0-9])"
 
 # Fix 2: compound emojis, flags, skin-tone modifiers, and ZWJ sequences as one token.
 EMOJI_PATTERN = (
@@ -97,6 +99,7 @@ class Tokenizer:
             f"(?P<URL>{URL_PATTERN})|"
             f"(?P<MENTION>{MENTION_PATTERN})|"
             f"(?P<HASHTAG>{HASHTAG_PATTERN})|"
+            f"(?P<ACRONYM>{ACRONYM_PATTERN})|"
             f"(?P<ALPHANUM>{ALPHANUM_PATTERN})|"
             f"(?P<NUMBER>{NUMBER_PATTERN})|"
             f"(?P<EMOJI>{EMOJI_PATTERN})|"
@@ -147,10 +150,10 @@ class Tokenizer:
                     )
                     continue
 
-            # EMOTICON and ALPHANUM map to existing TokenCategory values
+            # EMOTICON, ACRONYM, and ALPHANUM map to existing TokenCategory values
             if group_name == "EMOTICON":
                 category = TokenCategory.PUNCTUATION
-            elif group_name == "ALPHANUM":
+            elif group_name in {"ACRONYM", "ALPHANUM"}:
                 category = TokenCategory.WORD
             else:
                 category = TokenCategory(group_name)
