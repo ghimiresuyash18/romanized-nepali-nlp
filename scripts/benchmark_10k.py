@@ -1,0 +1,197 @@
+"""Build and score a 10k silver-label benchmark from the scraped corpus."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import random
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+from romanized_nepali_nlp.dataset import DatasetRecord
+from romanized_nepali_nlp.evaluation import evaluate_predictions
+from romanized_nepali_nlp.sentiment import SentimentModel, SentimentModelConfig
+from romanized_nepali_nlp.splitting import SplitConfig, split
+
+PARTITIONS = ("roman_clean", "roman_mixed", "roman_noisy")
+LABELS = ("positive", "negative", "neutral")
+
+
+def load_corpus(root: Path) -> list[DatasetRecord]:
+    records: list[DatasetRecord] = []
+    for partition in PARTITIONS:
+        path = root / f"{partition}.jsonl"
+        with path.open(encoding="utf-8") as handle:
+            for line in handle:
+                if line.strip():
+                    record = DatasetRecord.from_dict(json.loads(line))
+                    records.append(record)
+    return records
+
+
+def select_records(records: list[DatasetRecord], n: int, seed: int) -> list[DatasetRecord]:
+    rng = random.Random(seed)
+    by_partition: dict[str, list[DatasetRecord]] = {p: [] for p in PARTITIONS}
+    for record in records:
+        partition = str(record.metadata.get("triage_partition", record.split))
+        if partition in by_partition:
+            by_partition[partition].append(record)
+    total = sum(len(items) for items in by_partition.values())
+    targets = {p: round(n * len(items) / total) for p, items in by_partition.items()}
+    targets["roman_clean"] += n - sum(targets.values())
+    selected: list[DatasetRecord] = []
+    for partition in PARTITIONS:
+        items = by_partition[partition]
+        if targets[partition] > len(items):
+            raise ValueError(f"Not enough records in {partition} for target sample")
+        selected.extend(rng.sample(items, targets[partition]))
+    rng.shuffle(selected)
+    return selected
+
+
+def write_batches(records: list[DatasetRecord], path: Path, batch_size: int) -> None:
+    with path.open("w", encoding="utf-8") as handle:
+        for start in range(0, len(records), batch_size):
+            batch = records[start : start + batch_size]
+            payload = [{"id": r.id, "text": r.text} for r in batch]
+            handle.write(json.dumps(payload, ensure_ascii=False) + "\n")
+
+
+def parse_llm_outputs(
+    selected: list[DatasetRecord], batch_output: Path, labeled_output: Path
+) -> tuple[list[DatasetRecord], Counter[str]]:
+    by_id = {record.id: record for record in selected}
+    labels: dict[str, dict[str, Any]] = {}
+    failures: list[str] = []
+    with batch_output.open(encoding="utf-8") as handle:
+        for line in handle:
+            row = json.loads(line)
+            if row.get("error"):
+                failures.append(str(row["error"]))
+                continue
+            output = row.get("output")
+            if isinstance(output, str):
+                output = json.loads(output)
+            for item in output["labels"]:
+                if item["id"] not in by_id or item["label"] not in LABELS:
+                    raise ValueError(f"Invalid LLM label item: {item}")
+                labels[item["id"]] = item
+    missing = sorted(set(by_id) - set(labels))
+    if missing or failures:
+        raise ValueError(f"Missing labels={len(missing)}, failed batches={len(failures)}")
+    counts: Counter[str] = Counter()
+    labeled: list[DatasetRecord] = []
+    with labeled_output.open("w", encoding="utf-8") as handle:
+        for record in selected:
+            annotation = labels[record.id]
+            metadata = dict(record.metadata)
+            metadata.update(
+                {
+                    "silver_labeler": "gpt-6-luna",
+                    "silver_label_confidence": annotation["confidence"],
+                    "silver_labeling_note": "LLM-generated; not human gold",
+                }
+            )
+            labeled_record = DatasetRecord(
+                id=record.id,
+                text=record.text,
+                label=annotation["label"],
+                source=record.source,
+                split=record.split,
+                metadata=metadata,
+            )
+            labeled.append(labeled_record)
+            counts[annotation["label"]] += 1
+            handle.write(json.dumps(labeled_record.to_dict(), ensure_ascii=False) + "\n")
+    return labeled, counts
+
+
+def run_benchmark(records: list[DatasetRecord], output_dir: Path, seed: int) -> None:
+    parts = split(records, SplitConfig(seed=seed))
+    configs = {
+        "majority": SentimentModelConfig(model_type="majority"),
+        "word_tfidf": SentimentModelConfig(model_type="word", analyzer="word", ngram_range=(1, 2)),
+        "char_tfidf": SentimentModelConfig(
+            model_type="char", analyzer="char_wb", ngram_range=(2, 5)
+        ),
+    }
+    summary: dict[str, Any] = {
+        "label_source": "silver labels generated by gpt-6-luna; not human gold",
+        "records": len(records),
+        "split_sizes": {
+            "train": len(parts.train),
+            "validation": len(parts.validation),
+            "test": len(parts.test),
+        },
+        "label_distribution": dict(Counter(r.label for r in records)),
+        "models": {},
+    }
+    for name, config in configs.items():
+        model = SentimentModel(config).fit(parts.train)
+        predictions = model.predict_records(parts.test)
+        report = evaluate_predictions(predictions, records=parts.test, n_bootstraps=500, seed=seed)
+        model_dir = output_dir / name
+        model_dir.mkdir(parents=True, exist_ok=True)
+        report.save_json(model_dir / "test_report.json")
+        (model_dir / "test_report.md").write_text(report.to_markdown(), encoding="utf-8")
+        summary["models"][name] = {
+            "accuracy": report.accuracy,
+            "macro_f1": report.macro_f1,
+            "weighted_f1": report.weighted_f1,
+            "bootstrap_ci": report.bootstrap_ci,
+        }
+    (output_dir / "benchmark_summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8"
+    )
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--corpus", type=Path, required=True)
+    parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--size", type=int, default=10_000)
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--batch-size", type=int, default=20)
+    parser.add_argument("command", choices=("prepare", "parse", "evaluate"))
+    args = parser.parse_args()
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    if args.command == "prepare":
+        selected = select_records(load_corpus(args.corpus), args.size, args.seed)
+        (args.output_dir / "selected.jsonl").write_text(
+            "\n".join(json.dumps(r.to_dict(), ensure_ascii=False) for r in selected) + "\n",
+            encoding="utf-8",
+        )
+        write_batches(selected, args.output_dir / "llm_batches.jsonl", args.batch_size)
+        print(
+            json.dumps(
+                {"selected": len(selected), "partitions": dict(Counter(r.split for r in selected))}
+            )
+        )
+    elif args.command == "parse":
+        selected = [
+            DatasetRecord.from_dict(json.loads(line))
+            for line in (args.output_dir / "selected.jsonl")
+            .read_text(encoding="utf-8")
+            .splitlines()
+            if line
+        ]
+        labeled, counts = parse_llm_outputs(
+            selected, args.output_dir / "llm_outputs.jsonl", args.output_dir / "labeled_10k.jsonl"
+        )
+        print(json.dumps({"labeled": len(labeled), "labels": counts}))
+    else:
+        records = [
+            DatasetRecord.from_dict(json.loads(line))
+            for line in (args.output_dir / "labeled_10k.jsonl")
+            .read_text(encoding="utf-8")
+            .splitlines()
+            if line
+        ]
+        run_benchmark(records, args.output_dir / "results", args.seed)
+        print(f"evaluated {len(records)} silver-labeled records")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

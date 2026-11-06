@@ -1,0 +1,6242 @@
+{
+  "total_records": 1495,
+  "accuracy": 0.7204,
+  "macro_f1": 0.6831,
+  "weighted_f1": 0.7232,
+  "classes": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "per_class": {
+    "negative": {
+      "precision": 0.5753,
+      "recall": 0.6141,
+      "f1": 0.5941,
+      "support": 311
+    },
+    "neutral": {
+      "precision": 0.6209,
+      "recall": 0.6501,
+      "f1": 0.6352,
+      "support": 403
+    },
+    "positive": {
+      "precision": 0.8421,
+      "recall": 0.799,
+      "f1": 0.82,
+      "support": 781
+    }
+  },
+  "confusion_matrix": {
+    "negative": {
+      "negative": 191,
+      "neutral": 67,
+      "positive": 53
+    },
+    "neutral": {
+      "negative": 77,
+      "neutral": 262,
+      "positive": 64
+    },
+    "positive": {
+      "negative": 64,
+      "neutral": 93,
+      "positive": 624
+    }
+  },
+  "bootstrap_ci": {
+    "accuracy": [
+      0.699,
+      0.7418
+    ],
+    "macro_f1": [
+      0.6596,
+      0.7092
+    ]
+  },
+  "slices": [
+    {
+      "name": "spelling_variation",
+      "count": 37,
+      "accuracy": 0.6486,
+      "macro_f1": 0.5627,
+      "note": null
+    },
+    {
+      "name": "negation",
+      "count": 41,
+      "accuracy": 0.6829,
+      "macro_f1": 0.5278,
+      "note": null
+    },
+    {
+      "name": "emojis",
+      "count": 6,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "note": null
+    },
+    {
+      "name": "code_switching",
+      "count": 300,
+      "accuracy": 0.7967,
+      "macro_f1": 0.6433,
+      "note": null
+    },
+    {
+      "name": "short_text",
+      "count": 116,
+      "accuracy": 0.7931,
+      "macro_f1": 0.6848,
+      "note": null
+    },
+    {
+      "name": "special_tokens",
+      "count": 151,
+      "accuracy": 0.7285,
+      "macro_f1": 0.721,
+      "note": null
+    }
+  ],
+  "error_count": 418,
+  "errors": [
+    {
+      "id": "nfr-0267837",
+      "text": "AaThi Nai Dame touching",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.423,
+      "scores": {
+        "negative": 0.42304359508355943,
+        "neutral": 0.1884612032923518,
+        "positive": 0.3884952016240887
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0171815",
+      "text": "Nawaj Ansari ON fire after coming in Nepal",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4217,
+      "scores": {
+        "negative": 0.26593856983487346,
+        "neutral": 0.4217205163796122,
+        "positive": 0.3123409137855143
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0076227",
+      "text": "Karma vai le atti diyotw aaja tw astinai ko vanda sushila.karki ko caricature",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4078,
+      "scores": {
+        "negative": 0.407760715809055,
+        "neutral": 0.40189779148967786,
+        "positive": 0.19034149270126716
+      },
+      "text_length": 77,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0030235",
+      "text": "dil ko Chhu Lene wali Kahani Hai. Doston Ham sabhi ko Apne Vatan Se Pyar karna chahie Apne Desh Ki Mitti ko Bhulna Nahin chahiye..",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4881,
+      "scores": {
+        "negative": 0.4881110241829121,
+        "neutral": 0.3446798558675592,
+        "positive": 0.1672091199495287
+      },
+      "text_length": 130,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0085917",
+      "text": "All the boys look like k-drama main lead... And the grandpa is adorable",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4598,
+      "scores": {
+        "negative": 0.23085401379001735,
+        "neutral": 0.4598037412761596,
+        "positive": 0.30934224493382306
+      },
+      "text_length": 71,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0057698",
+      "text": "Like many Indians... I like Nepal and Russia after India ... I am enjoying the Nepali music",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.534,
+      "scores": {
+        "negative": 0.16599444214051362,
+        "neutral": 0.5340394766675102,
+        "positive": 0.2999660811919761
+      },
+      "text_length": 91,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0155250",
+      "text": "Mahabir pun vneko yo des ko prabidi ko king ho",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4922,
+      "scores": {
+        "negative": 0.49216905589306126,
+        "neutral": 0.3153643689935612,
+        "positive": 0.19246657511337756
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0115364",
+      "text": "Da ak bit. Ak.bit. Ak din sun nu hunxa. Mero pani din awxa",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3995,
+      "scores": {
+        "negative": 0.24809729233366581,
+        "neutral": 0.3994562494721448,
+        "positive": 0.3524464581941894
+      },
+      "text_length": 58,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0063514",
+      "text": "Khola gang myachiss . Day by day yo dai ko songs ko fam hune ma matra ta hain hola hai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.46,
+      "scores": {
+        "negative": 0.3095222002054776,
+        "neutral": 0.46001468304660814,
+        "positive": 0.2304631167479144
+      },
+      "text_length": 86,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0173983",
+      "text": "Album ni chaiyo xitoo Yota matra intro ho",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4381,
+      "scores": {
+        "negative": 0.3712678892436243,
+        "neutral": 0.4380518883352942,
+        "positive": 0.19068022242108143
+      },
+      "text_length": 41,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0020916",
+      "text": "yarr sach me handsome hote hai yarr muzhe laga sirf idols makeup karte hai isliye achhe dikhte hai but no !!!! Yarr jaunga ek din bandi ko leke bande dekhne",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.417,
+      "scores": {
+        "negative": 0.31738531186147917,
+        "neutral": 0.4170274755082599,
+        "positive": 0.2655872126302609
+      },
+      "text_length": 156,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0026898",
+      "text": "Deshko change ko lagi yetiko content banayera janatalai sacho ra jhuto xutyauna sikaune 101 vineska sabai patra harulai mero hardik naman",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4095,
+      "scores": {
+        "negative": 0.409543364076785,
+        "neutral": 0.2962733042540384,
+        "positive": 0.2941833316691766
+      },
+      "text_length": 137,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0058993",
+      "text": "Raju dai lok gitko ta raja ho Tara kaiile nadekheko sita didi Pani lok gitma ta raninai ho",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4854,
+      "scores": {
+        "negative": 0.17249474266086726,
+        "neutral": 0.4854199594803626,
+        "positive": 0.3420852978587702
+      },
+      "text_length": 90,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0125969",
+      "text": "maile ne star maker bata thaha payar here KO dami raixa",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4518,
+      "scores": {
+        "negative": 0.18422018204042526,
+        "neutral": 0.45177535712535516,
+        "positive": 0.36400446083421956
+      },
+      "text_length": 55,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0251296",
+      "text": "Bro is also rocking in rap",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5125,
+      "scores": {
+        "negative": 0.29012288664478836,
+        "neutral": 0.5124876542455175,
+        "positive": 0.19738945910969424
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0070477",
+      "text": "Tapaile yesko version lai nai change gardinu vaxa ta Literally awesome Keep going",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5016,
+      "scores": {
+        "negative": 0.5016469765354108,
+        "neutral": 0.11646228506408059,
+        "positive": 0.38189073840050863
+      },
+      "text_length": 81,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0148135",
+      "text": "Punm ko voes ramro k grnu vot dine hru le mistek",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.472,
+      "scores": {
+        "negative": 0.47195468776315774,
+        "neutral": 0.13356193452876075,
+        "positive": 0.3944833777080815
+      },
+      "text_length": 48,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0273067",
+      "text": "la aba majja auni bhayo",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3622,
+      "scores": {
+        "negative": 0.36221932423091957,
+        "neutral": 0.2830118951590665,
+        "positive": 0.35476878061001393
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0149700",
+      "text": "Aap ka video bahot achchha lagta hai bhai hamko",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5679,
+      "scores": {
+        "negative": 0.11882369041964733,
+        "neutral": 0.5679110387026022,
+        "positive": 0.3132652708777506
+      },
+      "text_length": 47,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0046764",
+      "text": "Aati sudar lagyo ..KTM basi lai jumla ko maulik Sanskritic ani prakitik Ananda pradan garnu bhayeko ma",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3639,
+      "scores": {
+        "negative": 0.36267576585201855,
+        "neutral": 0.36393343025869684,
+        "positive": 0.2733908038892846
+      },
+      "text_length": 102,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0118531",
+      "text": "Iswor KO sadai akshath vayako hos pitahajur lai dandy bsd",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5848,
+      "scores": {
+        "negative": 0.5848154155810923,
+        "neutral": 0.203599582193586,
+        "positive": 0.2115850022253217
+      },
+      "text_length": 57,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0286593",
+      "text": "K saro hasako ho yll",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3887,
+      "scores": {
+        "negative": 0.38870609477233264,
+        "neutral": 0.33898044915377873,
+        "positive": 0.2723134560738886
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0024938",
+      "text": "We Nepalese don't want anyone we are self sustained n no one dare try to manipulate us coz we are army of nation living at every house of Nepal",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3973,
+      "scores": {
+        "negative": 0.39727343987779196,
+        "neutral": 0.2298470971125675,
+        "positive": 0.3728794630096405
+      },
+      "text_length": 143,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0226969",
+      "text": "Xito lyauni hai next season pni",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6013,
+      "scores": {
+        "negative": 0.15165078280556102,
+        "neutral": 0.601271441215301,
+        "positive": 0.2470777759791381
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0215458",
+      "text": "Samrat bro le po udayo yo pali ta",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4683,
+      "scores": {
+        "negative": 0.46833805263686107,
+        "neutral": 0.32253978573008374,
+        "positive": 0.20912216163305516
+      },
+      "text_length": 33,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0067034",
+      "text": "Christopher Nolan ko camera bata shoot gareko ki k ho video quality ta babal cha ta",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4882,
+      "scores": {
+        "negative": 0.2631665116897427,
+        "neutral": 0.4881869959262516,
+        "positive": 0.2486464923840056
+      },
+      "text_length": 83,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0041071",
+      "text": "Kasto mitho sabda Timile afai bujhan rahai kun khoji rahexu Mai pagal ho ki ausi ko raat ma jun khoji rahexu..",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4529,
+      "scores": {
+        "negative": 0.4406730647905857,
+        "neutral": 0.4528951588345149,
+        "positive": 0.10643177637489944
+      },
+      "text_length": 110,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0096923",
+      "text": "Najer ko agadau pol saha ko aching khi hoina najer is a good acter",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3829,
+      "scores": {
+        "negative": 0.36724591575755033,
+        "neutral": 0.38287086707115237,
+        "positive": 0.24988321717129727
+      },
+      "text_length": 66,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0005697",
+      "text": "As a Indian I support you brother. There's a huge propoganda spreading in India to hate pakistani, nepali, bangladeshi people. India see themselves as superior to their neighbouring countries and troll their neighbouring countries in social media. I never supported all these stupidity.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4782,
+      "scores": {
+        "negative": 0.478164627123062,
+        "neutral": 0.21316637235512945,
+        "positive": 0.3086690005218086
+      },
+      "text_length": 286,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0041494",
+      "text": "1st 8 mints pe hi din shandar ban gaya Nepal the elegant beauty with DRS marvellous presentation .. keya baat",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3512,
+      "scores": {
+        "negative": 0.3389716252596576,
+        "neutral": 0.3511836334346436,
+        "positive": 0.30984474130569867
+      },
+      "text_length": 109,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0137796",
+      "text": "Sath wala joker mast hai. Is character ko aur bulao",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4797,
+      "scores": {
+        "negative": 0.2989268545914243,
+        "neutral": 0.4797133115935504,
+        "positive": 0.2213598338150252
+      },
+      "text_length": 51,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0046281",
+      "text": "Ma ta biraj bhatta dada ko hall maa ni film herna gako Ani CD DVD kinera ta jhan kati kati herthe yyarr",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3662,
+      "scores": {
+        "negative": 0.31961252108615207,
+        "neutral": 0.3662239257430144,
+        "positive": 0.3141635531708336
+      },
+      "text_length": 103,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0162971",
+      "text": "La voli ko exam ko lagi sabailai suvakamana!",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4756,
+      "scores": {
+        "negative": 0.265822628325306,
+        "neutral": 0.47557824560934125,
+        "positive": 0.2585991260653527
+      },
+      "text_length": 44,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0129077",
+      "text": "shikhar ice chai xodnu hunna haii daiilove from butwal",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3995,
+      "scores": {
+        "negative": 0.25066847782616,
+        "neutral": 0.39945331169362375,
+        "positive": 0.3498782104802162
+      },
+      "text_length": 54,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0041078",
+      "text": "Khana dekh ke to mera dimagg hi band ho jata hai jab takk wo tasty food Mujhe khane ko na mill jayee #bhukkhad",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5138,
+      "scores": {
+        "negative": 0.3388585643303933,
+        "neutral": 0.5137748909070396,
+        "positive": 0.14736654476256705
+      },
+      "text_length": 110,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0164296",
+      "text": "Vishnu didi ko awaaj ko k tarif garum mo ...",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.466,
+      "scores": {
+        "negative": 0.22977078601196232,
+        "neutral": 0.46600555048712233,
+        "positive": 0.30422366350091534
+      },
+      "text_length": 44,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0082494",
+      "text": "Dashain, tika ko din yo geeeta sunera ramailo manaune ma matraa hola ta!!",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4853,
+      "scores": {
+        "negative": 0.2569575423725293,
+        "neutral": 0.4853419001484281,
+        "positive": 0.2577005574790425
+      },
+      "text_length": 73,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0226121",
+      "text": "Ronaldo be like: jalwa hai apna",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6108,
+      "scores": {
+        "negative": 0.19604499628220975,
+        "neutral": 0.61076040538609,
+        "positive": 0.19319459833170022
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0093321",
+      "text": "Yo video ma nachne ra padhaune nani lai sarai suhayekoxa tyo atirema",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5022,
+      "scores": {
+        "negative": 0.5021685369858648,
+        "neutral": 0.21024323320399574,
+        "positive": 0.28758822981013943
+      },
+      "text_length": 68,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0116875",
+      "text": "Views vanda like dherai History in the making Myyy boyyyyy",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4794,
+      "scores": {
+        "negative": 0.24075808820287983,
+        "neutral": 0.4794344827765908,
+        "positive": 0.2798074290205293
+      },
+      "text_length": 58,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0187136",
+      "text": "100M Durgesh Thapa hero hoina brand ho",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5164,
+      "scores": {
+        "negative": 0.24278228056932172,
+        "neutral": 0.5164394235804194,
+        "positive": 0.24077829585025898
+      },
+      "text_length": 38,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0113228",
+      "text": "Jasla ja vanani yo pali jitana vanw ko balen ni ho jai gati",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3728,
+      "scores": {
+        "negative": 0.2555101676976023,
+        "neutral": 0.3728335814493416,
+        "positive": 0.3716562508530561
+      },
+      "text_length": 59,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0110017",
+      "text": "Bro was like I just came uppp but also his cart was on point",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4095,
+      "scores": {
+        "negative": 0.40952818163643373,
+        "neutral": 0.362855359308286,
+        "positive": 0.2276164590552803
+      },
+      "text_length": 60,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0108950",
+      "text": "U made me hungry bro that food looks awesome.....missing home",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4361,
+      "scores": {
+        "negative": 0.17927489851392067,
+        "neutral": 0.4360957948760384,
+        "positive": 0.384629306610041
+      },
+      "text_length": 61,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0152836",
+      "text": "aaya hai live bata vakar arjun daii lovely song",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5625,
+      "scores": {
+        "negative": 0.07780332784338503,
+        "neutral": 0.5625202330664187,
+        "positive": 0.35967643909019614
+      },
+      "text_length": 47,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0300102",
+      "text": "K saro beauty hou",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3876,
+      "scores": {
+        "negative": 0.38758053409366094,
+        "neutral": 0.3498823520321038,
+        "positive": 0.26253711387423523
+      },
+      "text_length": 17,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0062059",
+      "text": "Facebook ko rells dekhi liyer 1, episode dekhi ahile samm herdei xu my fourvite siriyal",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4146,
+      "scores": {
+        "negative": 0.2555224363489742,
+        "neutral": 0.41455188360299056,
+        "positive": 0.32992568004803524
+      },
+      "text_length": 87,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0025736",
+      "text": "Aatinai mitho vaka but sangite le garda git hit vaneko jasto lagxa yasma miujikako thulo vumika xa.yastai sangitele garda hit vako ho yo git",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.612,
+      "scores": {
+        "negative": 0.6119882024212183,
+        "neutral": 0.10962695636840553,
+        "positive": 0.2783848412103761
+      },
+      "text_length": 140,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0078053",
+      "text": "Nepali janata le yesta baudik byaktittwo lai ho neta rup ma paunu prne chai.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.6496,
+      "scores": {
+        "negative": 0.649604904153709,
+        "neutral": 0.21280024905909975,
+        "positive": 0.1375948467871913
+      },
+      "text_length": 76,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0250965",
+      "text": "Balen Shah KO lagi ek like",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6021,
+      "scores": {
+        "negative": 0.14811414365751496,
+        "neutral": 0.6021387611802403,
+        "positive": 0.2497470951622447
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0203755",
+      "text": "Kasto saskari hunudo roixa sister t",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5855,
+      "scores": {
+        "negative": 0.5854564827757791,
+        "neutral": 0.1961856843935232,
+        "positive": 0.2183578328306978
+      },
+      "text_length": 35,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0291890",
+      "text": "Kasto mitho swar ho",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4583,
+      "scores": {
+        "negative": 0.4583044948661445,
+        "neutral": 0.17355833550094352,
+        "positive": 0.3681371696329119
+      },
+      "text_length": 19,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0110665",
+      "text": "Kaam pani garera chai dekhaaunu hola hai! Mero suvakamana...",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4658,
+      "scores": {
+        "negative": 0.2793479178087068,
+        "neutral": 0.46580470570681815,
+        "positive": 0.25484737648447514
+      },
+      "text_length": 60,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0160378",
+      "text": "Yasto ramro songlai pani dislike grni ko hola",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4678,
+      "scores": {
+        "negative": 0.4678212554648044,
+        "neutral": 0.17659280810414504,
+        "positive": 0.3555859364310506
+      },
+      "text_length": 45,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0152104",
+      "text": "Shell roti tea ke sath aur jada aaxi lagati hai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.527,
+      "scores": {
+        "negative": 0.3342798720991303,
+        "neutral": 0.5270143780660569,
+        "positive": 0.13870574983481276
+      },
+      "text_length": 47,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0073663",
+      "text": "Yo sang ta upasana singh thakuri le nai gako hoki kya ho thyakkai suhayeko xa .",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.582,
+      "scores": {
+        "negative": 0.5819896606596389,
+        "neutral": 0.2630334165175533,
+        "positive": 0.15497692282280795
+      },
+      "text_length": 79,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0050724",
+      "text": "Night duty ma randomly sunirathi lastai chuyo lyrics ra music le.. video ma chai katti ramri model",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3676,
+      "scores": {
+        "negative": 0.36758099272837275,
+        "neutral": 0.34082835299600406,
+        "positive": 0.2915906542756233
+      },
+      "text_length": 98,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0284354",
+      "text": "yo chai khatra hai la",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3884,
+      "scores": {
+        "negative": 0.27648537777556204,
+        "neutral": 0.3883870883281643,
+        "positive": 0.33512753389627364
+      },
+      "text_length": 21,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0224678",
+      "text": "Kasto mitho gari khanu hunxa di",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5297,
+      "scores": {
+        "negative": 0.5297275953249285,
+        "neutral": 0.18663218065358078,
+        "positive": 0.28364022402149075
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0025220",
+      "text": "Om nama Shiva gautam budhha bhagwan Vishnu ko rupko budhhist ra Hindu eutai dhrma ho satya Aatma bako manchhe lai like garxa papi lai gardaina",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5708,
+      "scores": {
+        "negative": 0.5708344886784817,
+        "neutral": 0.2829943597837423,
+        "positive": 0.1461711515377759
+      },
+      "text_length": 142,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0212545",
+      "text": "Bhi AP ko hmari terf se full spot",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4254,
+      "scores": {
+        "negative": 0.4253811224318538,
+        "neutral": 0.4211472820929344,
+        "positive": 0.1534715954752118
+      },
+      "text_length": 33,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177353",
+      "text": "Yo deusi vailo kahile pani purano hudaina",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4862,
+      "scores": {
+        "negative": 0.48620787263468296,
+        "neutral": 0.2919102698252352,
+        "positive": 0.22188185754008186
+      },
+      "text_length": 41,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0171682",
+      "text": "Mero ni vetghat ko butti momo favourite ho",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4641,
+      "scores": {
+        "negative": 0.2844104508323421,
+        "neutral": 0.46410497228406405,
+        "positive": 0.25148457688359366
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0210988",
+      "text": "Yes yes yes i like nepal and indai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4546,
+      "scores": {
+        "negative": 0.2645712641037649,
+        "neutral": 0.45459254472527977,
+        "positive": 0.28083619117095543
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0235007",
+      "text": "Hait 2019 ma ni feri herdimna",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4793,
+      "scores": {
+        "negative": 0.20070879477284556,
+        "neutral": 0.47928223210340354,
+        "positive": 0.3200089731237508
+      },
+      "text_length": 29,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0047314",
+      "text": "Tesadüfennbu belgeseli izledim.Emeğinize sağlık.Değişik kültürleri izlemek çok keyifliydi.Teşekkürler.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3773,
+      "scores": {
+        "negative": 0.37727765651308953,
+        "neutral": 0.3561868532396923,
+        "positive": 0.26653549024721823
+      },
+      "text_length": 102,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0137822",
+      "text": "Shyama Shree ko charm le screen jhan ramailo banayo",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4212,
+      "scores": {
+        "negative": 0.42117800574951253,
+        "neutral": 0.2584543916365898,
+        "positive": 0.3203676026138978
+      },
+      "text_length": 51,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0109187",
+      "text": "Yo geet ko mahato prabin bedwel nepal idol gayapaxi tha bhayo",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4155,
+      "scores": {
+        "negative": 0.2764142666461897,
+        "neutral": 0.4154690964178848,
+        "positive": 0.3081166369359255
+      },
+      "text_length": 61,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0048859",
+      "text": "Mene apni soltina se shadi ki or jb hum relationship me the tb me ye gana bahut sunta tha Rip legend",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4592,
+      "scores": {
+        "negative": 0.3012631932918683,
+        "neutral": 0.4591857472104171,
+        "positive": 0.23955105949771466
+      },
+      "text_length": 100,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0018489",
+      "text": "Dherei ma han hunu Hun chha pailei kina xinenan k asto ramro Dr.jasto mahan bekti. Pun sir Lai Jai hush sir Lai jt ko kamana Cha sabeile vote diyera jitaunu par chha",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4325,
+      "scores": {
+        "negative": 0.43248022769274425,
+        "neutral": 0.14502430353788506,
+        "positive": 0.4224954687693706
+      },
+      "text_length": 165,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0157023",
+      "text": "seto kurtha launey taw CR7 HORAAA jasto xa taw",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5861,
+      "scores": {
+        "negative": 0.5860515025757396,
+        "neutral": 0.20130251486957634,
+        "positive": 0.21264598255468414
+      },
+      "text_length": 46,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0220169",
+      "text": "Nepal is verry beautyfull contry",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4093,
+      "scores": {
+        "negative": 0.18936583189270562,
+        "neutral": 0.4092744901104771,
+        "positive": 0.40135967799681727
+      },
+      "text_length": 32,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0054618",
+      "text": "Music chai man parena hai aru dami chha remix banayesi music ali extra banaunu parne .. hoittt",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5239,
+      "scores": {
+        "negative": 0.5238750946673898,
+        "neutral": 0.10623169753623526,
+        "positive": 0.3698932077963751
+      },
+      "text_length": 94,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0098743",
+      "text": "Iam very popular girl in Nepal Nepal only because I live in Nepal",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5147,
+      "scores": {
+        "negative": 0.23285454907334843,
+        "neutral": 0.5146916171462314,
+        "positive": 0.2524538337804202
+      },
+      "text_length": 65,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0118664",
+      "text": "Kasto ruwani Dubai bata herdai chu ate nai teallly ma cha",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4931,
+      "scores": {
+        "negative": 0.49309106295762417,
+        "neutral": 0.3234468540421779,
+        "positive": 0.1834620830001981
+      },
+      "text_length": 57,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0134127",
+      "text": "Nepal is Buddhist rashtra, walk on Lord Buddha path.",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4002,
+      "scores": {
+        "negative": 0.23685338670838274,
+        "neutral": 0.4002296360036137,
+        "positive": 0.3629169772880035
+      },
+      "text_length": 52,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0041326",
+      "text": "Why not visit the kathmandu zoo or monkey temple trust me it is so good i went there oh and the kathmandu park",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3574,
+      "scores": {
+        "negative": 0.3574494212202479,
+        "neutral": 0.29279110125317304,
+        "positive": 0.3497594775265791
+      },
+      "text_length": 110,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0156571",
+      "text": "Yo geet jati sune ni na aagaune ma matra ho ki",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4865,
+      "scores": {
+        "negative": 0.21339634192923812,
+        "neutral": 0.4864645994377388,
+        "positive": 0.300139058633023
+      },
+      "text_length": 46,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0083171",
+      "text": "Overall manche talented ho.. kamai manche ma hunxa yesari public ma aaune",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5102,
+      "scores": {
+        "negative": 0.3066656606338928,
+        "neutral": 0.5101872810242644,
+        "positive": 0.1831470583418428
+      },
+      "text_length": 73,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0082090",
+      "text": "top music brother sano huda sano mobile ma sunako thiya aaja samjhana aayo",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4461,
+      "scores": {
+        "negative": 0.14187192176555594,
+        "neutral": 0.4460574396154813,
+        "positive": 0.41207063861896287
+      },
+      "text_length": 74,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0271662",
+      "text": "Ramrah cha lv frm india",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3648,
+      "scores": {
+        "negative": 0.3384899104184156,
+        "neutral": 0.3647946716095179,
+        "positive": 0.2967154179720666
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0230354",
+      "text": "Kya baat he bhai, kya likha he",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5622,
+      "scores": {
+        "negative": 0.2381772803021911,
+        "neutral": 0.5622268801326391,
+        "positive": 0.19959583956516977
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0297848",
+      "text": "That's a steal bro",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4393,
+      "scores": {
+        "negative": 0.30771411749436023,
+        "neutral": 0.43931940400630304,
+        "positive": 0.25296647849933673
+      },
+      "text_length": 18,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0262651",
+      "text": "Brand song hai bhai....,",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4758,
+      "scores": {
+        "negative": 0.06842392917617535,
+        "neutral": 0.47583498182001455,
+        "positive": 0.45574108900381016
+      },
+      "text_length": 24,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0047488",
+      "text": "dami layo Bro Tara addi really kohi pitna yayo bhane frank gari ra xa vanera na vagda problem hunxa ki",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4549,
+      "scores": {
+        "negative": 0.4549160968194165,
+        "neutral": 0.28570582034573067,
+        "positive": 0.25937808283485275
+      },
+      "text_length": 102,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0154582",
+      "text": "Hello guys aaunus hai back to back gardai jaum",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5354,
+      "scores": {
+        "negative": 0.14839517898246687,
+        "neutral": 0.5353725580931583,
+        "positive": 0.31623226292437473
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0059927",
+      "text": "Koi baat nahin aap bahut acchi ho kaun kaun 2026 mein March ko dekh raha hai 14 tarikh ko",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6901,
+      "scores": {
+        "negative": 0.17262508739959265,
+        "neutral": 0.6900689380653637,
+        "positive": 0.13730597453504362
+      },
+      "text_length": 89,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0110555",
+      "text": "International khanxw dai le aaba Support garnu parxw dai Lai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3882,
+      "scores": {
+        "negative": 0.2582693927415838,
+        "neutral": 0.3881658522465914,
+        "positive": 0.3535647550118249
+      },
+      "text_length": 60,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0214015",
+      "text": "K saro ramree tmii fida vayavmotw",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3624,
+      "scores": {
+        "negative": 0.3624020687052126,
+        "neutral": 0.28030863225659947,
+        "positive": 0.35728929903818796
+      },
+      "text_length": 33,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0100878",
+      "text": "I don't understand lyrics but real Vibe *Paisa * From Bangladesh",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5613,
+      "scores": {
+        "negative": 0.56132804410833,
+        "neutral": 0.24209956667630972,
+        "positive": 0.19657238921536033
+      },
+      "text_length": 64,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0056643",
+      "text": "Mein nahi jhukne Wala nepal ko chhoro(chhora) We can fight for our country until last breath",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3612,
+      "scores": {
+        "negative": 0.3611682803119012,
+        "neutral": 0.286379201151527,
+        "positive": 0.3524525185365718
+      },
+      "text_length": 92,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0068189",
+      "text": "Aauda jada deuralima full chadaya maile timlai samjhi chadako full oelidain kahile",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5477,
+      "scores": {
+        "negative": 0.19154580175912012,
+        "neutral": 0.5477469841955944,
+        "positive": 0.2607072140452855
+      },
+      "text_length": 82,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0199758",
+      "text": "Paschimako san baitadiko rap ko hero",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4289,
+      "scores": {
+        "negative": 0.4288721718534996,
+        "neutral": 0.22002209709776685,
+        "positive": 0.35110573104873355
+      },
+      "text_length": 36,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177951",
+      "text": "ufff mare hai ma ta.. kasaily pani deu na",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.701,
+      "scores": {
+        "negative": 0.18039535895316966,
+        "neutral": 0.7009590990097075,
+        "positive": 0.11864554203712284
+      },
+      "text_length": 41,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0091322",
+      "text": "You're pretty hard core if you make your own fire just smoke a joint.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4201,
+      "scores": {
+        "negative": 0.4201160194233623,
+        "neutral": 0.1768961459123243,
+        "positive": 0.4029878346643133
+      },
+      "text_length": 69,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0251260",
+      "text": "Bro gorkha is too powerful",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4764,
+      "scores": {
+        "negative": 0.20507444808885938,
+        "neutral": 0.47638334124406406,
+        "positive": 0.31854221066707644
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0050083",
+      "text": "dhanyabad sir hamilai ni souraha ghume jasto bhayo ma dhading jwalamukhi 2 bata narayan simkhada!!!",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4036,
+      "scores": {
+        "negative": 0.3752961916510044,
+        "neutral": 0.4036454577556574,
+        "positive": 0.2210583505933382
+      },
+      "text_length": 99,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0106037",
+      "text": "Naya sathi haru yata hajir hum Hai yak arkai lai support garam",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4699,
+      "scores": {
+        "negative": 0.24257374150080496,
+        "neutral": 0.46991502817072,
+        "positive": 0.2875112303284752
+      },
+      "text_length": 62,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0113717",
+      "text": "Nepali girls are absolutely beautiful i am also Nepali girl",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4424,
+      "scores": {
+        "negative": 0.15191111316577705,
+        "neutral": 0.4424136148417522,
+        "positive": 0.4056752719924708
+      },
+      "text_length": 59,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0185599",
+      "text": "Sachi vanko yo get la man choio mero ta",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4536,
+      "scores": {
+        "negative": 0.45362203585429467,
+        "neutral": 0.21153350258918052,
+        "positive": 0.3348444615565248
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0219883",
+      "text": "Manzarayı çok seviyorum bu köyde",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4233,
+      "scores": {
+        "negative": 0.42333728009307425,
+        "neutral": 0.32767565671130583,
+        "positive": 0.24898706319561978
+      },
+      "text_length": 32,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0169883",
+      "text": "Aunu hos ak arka support gara ra agi borum",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.413,
+      "scores": {
+        "negative": 0.41295948717631786,
+        "neutral": 0.2673349194042434,
+        "positive": 0.3197055934194387
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0073187",
+      "text": "Moo Medziphema, Nagaland India Dekhi sundai chu hai Dai.. Atti sundar bhajan...",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4795,
+      "scores": {
+        "negative": 0.10950658236797224,
+        "neutral": 0.479484274911179,
+        "positive": 0.41100914272084876
+      },
+      "text_length": 79,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0007211",
+      "text": "All these comments comparing him towards the Fuhrer is absolutely irrelevant. As an Indian, I hope that Nepal shall prosper and that the Indians can support that. His speech should be an example towards every other country as to now how to run a government.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5065,
+      "scores": {
+        "negative": 0.5064803291613856,
+        "neutral": 0.16996456627560574,
+        "positive": 0.3235551045630087
+      },
+      "text_length": 257,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0149782",
+      "text": "Alish kati hasayko ho k uff...ma ta hasda hasda",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4434,
+      "scores": {
+        "negative": 0.17860984271869382,
+        "neutral": 0.44344088105258217,
+        "positive": 0.37794927622872404
+      },
+      "text_length": 47,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0053880",
+      "text": "Ye song bht acha hai! Iski melody aur lyrics dil ko choo jate hain. Sunte hi mood ban jata hai!",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.3624,
+      "scores": {
+        "negative": 0.3623756784646442,
+        "neutral": 0.27536127258376053,
+        "positive": 0.3622630489515953
+      },
+      "text_length": 95,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0195169",
+      "text": "Sir namaskar subhakamana Bhaut 3naman",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5043,
+      "scores": {
+        "negative": 0.18084828681585177,
+        "neutral": 0.5043134318912222,
+        "positive": 0.314838281292926
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0278649",
+      "text": "mama vanja live lovely",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4324,
+      "scores": {
+        "negative": 0.25292471293462293,
+        "neutral": 0.43236326048803647,
+        "positive": 0.31471202657734054
+      },
+      "text_length": 22,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0281922",
+      "text": "Miss those school day",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4262,
+      "scores": {
+        "negative": 0.426236264600513,
+        "neutral": 0.20263196104830616,
+        "positive": 0.3711317743511807
+      },
+      "text_length": 21,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0163281",
+      "text": "Molai ta raani saiba ko acting ramro laagxa.",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.463,
+      "scores": {
+        "negative": 0.4629951626175463,
+        "neutral": 0.08819123327015592,
+        "positive": 0.4488136041122978
+      },
+      "text_length": 44,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0016408",
+      "text": "Dr Sunil sarma neta ban sakne layk Manche ho waha Sahi Manche ho kanres bhitr2 4 Jana ramrari Manche Chan chanra bhandari kancharam tamang Sekhar koirala eni haru ramrari chan",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5079,
+      "scores": {
+        "negative": 0.507860660463236,
+        "neutral": 0.26270947145889406,
+        "positive": 0.22942986807787005
+      },
+      "text_length": 175,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0065550",
+      "text": "4k comments ho ya na ho but bhai tu laga rhe I hope ese aur Collabs mukamal ho aapko",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6109,
+      "scores": {
+        "negative": 0.2583898167432502,
+        "neutral": 0.6109363146676888,
+        "positive": 0.130673868589061
+      },
+      "text_length": 84,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0018635",
+      "text": "aare momo ke sath maa hara chatni lal chatni mayo kon khata hey yar. Momo khana hey to nepal aake khawo yar. Kabhi nepal aawoge to mere ko bolo may khilaawonga momo.",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3714,
+      "scores": {
+        "negative": 0.2903043799981079,
+        "neutral": 0.37142220965283923,
+        "positive": 0.338273410349053
+      },
+      "text_length": 165,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0256040",
+      "text": "yati hyrnaa paye k chaiyoo",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.382,
+      "scores": {
+        "negative": 0.3820104261456903,
+        "neutral": 0.29325389459384094,
+        "positive": 0.3247356792604688
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0020122",
+      "text": "dashain 2078 aunu lagera eta feri sunna aunu hune ko ko hunuhuncha??Nepali haru sbai milera ek arkako channel subscribe garera agadi badaun..sabko bhalo hoss!!",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4027,
+      "scores": {
+        "negative": 0.2735459087159016,
+        "neutral": 0.402736657644762,
+        "positive": 0.32371743363933636
+      },
+      "text_length": 159,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0168825",
+      "text": "Yo git nasuni ta dasain aako jasto lagdaina",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5199,
+      "scores": {
+        "negative": 0.5199101250596396,
+        "neutral": 0.23703688259429323,
+        "positive": 0.2430529923460672
+      },
+      "text_length": 43,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0290380",
+      "text": "Bro does write fast",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3976,
+      "scores": {
+        "negative": 0.27844762648109356,
+        "neutral": 0.39762897414913506,
+        "positive": 0.3239233993697713
+      },
+      "text_length": 19,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0078615",
+      "text": "haena ho samaragee k saro ramri ho ma ta herda herdae vutukkae vaesake vanya",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5519,
+      "scores": {
+        "negative": 0.25400426277368643,
+        "neutral": 0.5518920364324442,
+        "positive": 0.19410370079386935
+      },
+      "text_length": 76,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0043481",
+      "text": "dhido k saath local chicken curry,timur and tomato ka chutny,gundruk ko achar and mutton curry achha hota h",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4671,
+      "scores": {
+        "negative": 0.27444234103474974,
+        "neutral": 0.46708621464001815,
+        "positive": 0.25847144432523217
+      },
+      "text_length": 107,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0241879",
+      "text": "Ma ta yo song ma addicted xu",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5532,
+      "scores": {
+        "negative": 0.13689173040458227,
+        "neutral": 0.5531805866062284,
+        "positive": 0.30992768298918943
+      },
+      "text_length": 28,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0266354",
+      "text": "V-Ten bro is masterpiece",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4546,
+      "scores": {
+        "negative": 0.31136570443859835,
+        "neutral": 0.4545688721386472,
+        "positive": 0.23406542342275455
+      },
+      "text_length": 24,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0225401",
+      "text": "Modi jaisa nahi Balen bolo bhai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3423,
+      "scores": {
+        "negative": 0.34097069021967785,
+        "neutral": 0.34232042938388085,
+        "positive": 0.3167088803964413
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0211265",
+      "text": "dai brt ma meetup garnu paryoo nii",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5457,
+      "scores": {
+        "negative": 0.1859915941104683,
+        "neutral": 0.5457007009390679,
+        "positive": 0.2683077049504638
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0145092",
+      "text": "Views ta ramro aako xa ta bro continue garnu paro",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4227,
+      "scores": {
+        "negative": 0.42270757070684467,
+        "neutral": 0.22139796962450795,
+        "positive": 0.3558944596686474
+      },
+      "text_length": 49,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0256809",
+      "text": "Bhai voice ka fan ho gaya",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4616,
+      "scores": {
+        "negative": 0.15283515208370593,
+        "neutral": 0.46164724256992445,
+        "positive": 0.38551760534636964
+      },
+      "text_length": 25,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0271067",
+      "text": "Napal. India ko bap bol",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4689,
+      "scores": {
+        "negative": 0.46888794125765465,
+        "neutral": 0.40985624678802535,
+        "positive": 0.12125581195432007
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0081673",
+      "text": "There is no one like Modi...so my proposal is ' Nepal 29th state of India'",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4263,
+      "scores": {
+        "negative": 0.2521976390179442,
+        "neutral": 0.4263094481612317,
+        "positive": 0.3214929128208241
+      },
+      "text_length": 74,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0073641",
+      "text": "Yo git le tihar Ka git sabai lai paxi pariyo yo sall ta jata Pani ahi git damii",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4851,
+      "scores": {
+        "negative": 0.48506493038963383,
+        "neutral": 0.09932649153575522,
+        "positive": 0.415608578074611
+      },
+      "text_length": 79,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0170642",
+      "text": "GenZ haru ko favorite Prithvi Subba gurung",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.461,
+      "scores": {
+        "negative": 0.4609936773134273,
+        "neutral": 0.2860676980955681,
+        "positive": 0.2529386245910046
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0197217",
+      "text": "Bhai kya shot khele nepal ki team ne",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6671,
+      "scores": {
+        "negative": 0.15860881588073641,
+        "neutral": 0.667065441369406,
+        "positive": 0.1743257427498576
+      },
+      "text_length": 36,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0024794",
+      "text": "Kabaddi kabaddi, kabaddi kabaddi, kabaddi kabaddi, kabaddi kabaddi yo film kaile banne ho malaita ekdam hatar vaisakyo kaile aaune hola vanera.",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.368,
+      "scores": {
+        "negative": 0.32682223101359886,
+        "neutral": 0.36798655812937564,
+        "positive": 0.3051912108570255
+      },
+      "text_length": 143,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0236440",
+      "text": "Mullo ko ye video psnd aayega",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4972,
+      "scores": {
+        "negative": 0.27251819357601736,
+        "neutral": 0.497202800230039,
+        "positive": 0.23027900619394379
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0063499",
+      "text": "Katti saral katti mitho katti sumadhur awaz thiyo pahile ko gayiki ko ani geet haru ma",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4174,
+      "scores": {
+        "negative": 0.41739429367132347,
+        "neutral": 0.2279239838478182,
+        "positive": 0.3546817224808583
+      },
+      "text_length": 86,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0150422",
+      "text": "Durgesh Daju Dusman Hereko Herai 2 Pani Chaiyyo",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4081,
+      "scores": {
+        "negative": 0.1923276344963566,
+        "neutral": 0.4080772151599869,
+        "positive": 0.3995951503436565
+      },
+      "text_length": 47,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0019300",
+      "text": "Sikaune tarika ramro cha,but most of people desktop bhanda pani mobile bata nai edit garna chanchan.mobilebata kasari garne yo subjectma pani sikaya ramro hunthyo",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5929,
+      "scores": {
+        "negative": 0.5929056411228181,
+        "neutral": 0.06852503522082183,
+        "positive": 0.33856932365635994
+      },
+      "text_length": 162,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0220808",
+      "text": "Sariy mito voice hojur ko Ne day",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.446,
+      "scores": {
+        "negative": 0.3342099040844158,
+        "neutral": 0.4460338257422604,
+        "positive": 0.21975627017332372
+      },
+      "text_length": 32,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0253039",
+      "text": "Lastai hasaunu vayo bro le",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5003,
+      "scores": {
+        "negative": 0.5002945058202998,
+        "neutral": 0.20499615950355055,
+        "positive": 0.2947093346761496
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0063482",
+      "text": "Kaile raute hunxau kaile serpa t kaile gothalo vyr sabaiko mn jiteu suvkamana mero vai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.3717,
+      "scores": {
+        "negative": 0.3403116149273047,
+        "neutral": 0.37167961430969393,
+        "positive": 0.28800877076300124
+      },
+      "text_length": 86,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0132228",
+      "text": "ratna chowk ko durga momo khayena bhane tyo trip fail",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4222,
+      "scores": {
+        "negative": 0.4169927492292893,
+        "neutral": 0.42217731948027576,
+        "positive": 0.16082993129043488
+      },
+      "text_length": 53,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0083996",
+      "text": "Aba New song ko parkhaii ma xu kina risa garxsa mero vanne songs chahiyo",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4885,
+      "scores": {
+        "negative": 0.17388076300544136,
+        "neutral": 0.4884809285164856,
+        "positive": 0.337638308478073
+      },
+      "text_length": 72,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0066811",
+      "text": "11:52 yo brother lai tw yek chiyan ko drama ma dekhko yrr damni acting ha xa Dai le",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.482,
+      "scores": {
+        "negative": 0.4820063001829283,
+        "neutral": 0.2356767582088964,
+        "positive": 0.28231694160817533
+      },
+      "text_length": 83,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0052115",
+      "text": "2074 ko dasain ma yo git sunne haru yta hajir jati sunepani sunirahan man lagxa pardesko thau ma",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4591,
+      "scores": {
+        "negative": 0.16107553309523778,
+        "neutral": 0.4591305691211053,
+        "positive": 0.37979389778365685
+      },
+      "text_length": 96,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0084017",
+      "text": "Aja ekkasi yo geet kaha bata bajna aayo bado Annanda aayo ali ali bhabuk",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.419,
+      "scores": {
+        "negative": 0.4190293110305321,
+        "neutral": 0.2715422505182823,
+        "positive": 0.3094284384511856
+      },
+      "text_length": 72,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0165495",
+      "text": "Agadi ko diss vanda chai alik ramo xa lauda",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5534,
+      "scores": {
+        "negative": 0.5533801891438599,
+        "neutral": 0.24030612653700947,
+        "positive": 0.20631368431913055
+      },
+      "text_length": 43,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0164497",
+      "text": "Ye kam to koi pahadi driver hi kar sakta hai",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5526,
+      "scores": {
+        "negative": 0.552565276540792,
+        "neutral": 0.291779609531616,
+        "positive": 0.155655113927592
+      },
+      "text_length": 44,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0115356",
+      "text": "Coolest PM in the world Opps harulai diss hanna parxa aaba",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.5829,
+      "scores": {
+        "negative": 0.582889038185146,
+        "neutral": 0.17903105977749512,
+        "positive": 0.2380799020373588
+      },
+      "text_length": 58,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0232032",
+      "text": "Upar vale ne mujhe tarasha hai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6506,
+      "scores": {
+        "negative": 0.17011692816450863,
+        "neutral": 0.6505768281252613,
+        "positive": 0.17930624371023018
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0282101",
+      "text": "Nepal girl are pretty",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4062,
+      "scores": {
+        "negative": 0.40620750802058125,
+        "neutral": 0.26366976308031387,
+        "positive": 0.3301227288991049
+      },
+      "text_length": 21,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0024346",
+      "text": "Adi kasaile pani yo path bata sikera future ma kai banne ho bane .. Balen jastai jeet huncha jasto lagcha .,. 4 jana ko khubi eklai ma rakhne ..",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5449,
+      "scores": {
+        "negative": 0.26957836308037597,
+        "neutral": 0.5449224082446007,
+        "positive": 0.18549922867502336
+      },
+      "text_length": 144,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0271203",
+      "text": "Nepal need pm like modi",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.4386,
+      "scores": {
+        "negative": 0.25338750248653363,
+        "neutral": 0.4385845339522533,
+        "positive": 0.3080279635612132
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0227596",
+      "text": "naypal ki ye dish try karni hai",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.6452,
+      "scores": {
+        "negative": 0.20921862328059282,
+        "neutral": 0.645220713705393,
+        "positive": 0.14556066301401419
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0174289",
+      "text": "Bholi ko lagi sabai lai happy badaa dasmi",
+      "gold_label": "positive",
+      "predicted_label": "negative",
+      "confidence": 0.4373,
+      "scores": {
+        "negative": 0.4373081765492936,
+        "neutral": 0.19141493736334558,
+        "positive": 0.37127688608736087
+      },
+      "text_length": 41,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0089966",
+      "text": "Dai tapai lai 100% RAI vannu suhauxa hau Ma ney rai ho new subscriber",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.586,
+      "scores": {
+        "negative": 0.17721809203560895,
+        "neutral": 0.5860065847052734,
+        "positive": 0.2367753232591176
+      },
+      "text_length": 69,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0072729",
+      "text": "Do bhai dono Mithai was epic mere editor bhai, inn sabse jyada to tu hai tabahi",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5626,
+      "scores": {
+        "negative": 0.12131920473513373,
+        "neutral": 0.5626168081913481,
+        "positive": 0.3160639870735182
+      },
+      "text_length": 79,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0055142",
+      "text": "Aba chei salad dressing, avocado wala gakamol,...esatei testai appetiser...etc Pakka hai next",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5019,
+      "scores": {
+        "negative": 0.2923240995322812,
+        "neutral": 0.5019118417856769,
+        "positive": 0.2057640586820419
+      },
+      "text_length": 93,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0242563",
+      "text": "Op bhai hami pani ff gang ho",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5749,
+      "scores": {
+        "negative": 0.1540743868435003,
+        "neutral": 0.5748916888025031,
+        "positive": 0.27103392435399654
+      },
+      "text_length": 28,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0299856",
+      "text": "I like norzza bro",
+      "gold_label": "positive",
+      "predicted_label": "neutral",
+      "confidence": 0.5507,
+      "scores": {
+        "negative": 0.18426772159623028,
+        "neutral": 0.5507117878124183,
+        "positive": 0.26502049059135147
+      },
+      "text_length": 17,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0143490",
+      "text": "He is a nepali Not an abrahamic bastard Jai nepal",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4558,
+      "scores": {
+        "negative": 0.16388621162498565,
+        "neutral": 0.380317000093753,
+        "positive": 0.4557967882812614
+      },
+      "text_length": 49,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0099882",
+      "text": "copied from ful ma bhamara ; kamse kam credit dina janna parxa ni",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4514,
+      "scores": {
+        "negative": 0.28631376446517953,
+        "neutral": 0.45142249286683417,
+        "positive": 0.2622637426679863
+      },
+      "text_length": 65,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0250889",
+      "text": "BDO ki liaj karna nahi ata",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4447,
+      "scores": {
+        "negative": 0.4039159528913449,
+        "neutral": 0.4447385331430151,
+        "positive": 0.15134551396564
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0093840",
+      "text": "Being brahmin i feel hurt that u forgot us From nepal lumbini palpa",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4155,
+      "scores": {
+        "negative": 0.31572638198641345,
+        "neutral": 0.4154609845919827,
+        "positive": 0.2688126334216038
+      },
+      "text_length": 67,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0058118",
+      "text": "Yo prashna ko jawaf Rajendra Baniya le dinu parxa Tapai prashna sodnu janu bhako ki gungaan",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6166,
+      "scores": {
+        "negative": 0.25333102225045506,
+        "neutral": 0.6166037161657459,
+        "positive": 0.13006526158379894
+      },
+      "text_length": 91,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0017186",
+      "text": "Alish bro ma tapaiko thulo fan hai tara yespaali chai tapaiko prank maa doubt laagyo tyo leather ko jacket lagaauney ko sound tetti clear kasari bhayo ra staged hoina ni??",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4516,
+      "scores": {
+        "negative": 0.38907507903050925,
+        "neutral": 0.45164640224272196,
+        "positive": 0.15927851872676896
+      },
+      "text_length": 171,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0279073",
+      "text": "250me kon deta h bhai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.7503,
+      "scores": {
+        "negative": 0.11629917704896423,
+        "neutral": 0.7503062388256886,
+        "positive": 0.13339458412534724
+      },
+      "text_length": 21,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0155510",
+      "text": "Nepal sarkar ko is bali ko band karwana chahie",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5711,
+      "scores": {
+        "negative": 0.2501450985129534,
+        "neutral": 0.5711359982931601,
+        "positive": 0.17871890319388659
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0040409",
+      "text": "Ma jun geet kasaile nasunda sundai hidthe Tei geet sabaile Sunna thalyo vane Malai man parna xodxa Khai kina ho",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4114,
+      "scores": {
+        "negative": 0.29593863082330174,
+        "neutral": 0.29266613344838854,
+        "positive": 0.41139523572830966
+      },
+      "text_length": 111,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0100288",
+      "text": "Ani yesko aarko part chaii aaudaiinw k ho yetro din voisakyo ani",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4686,
+      "scores": {
+        "negative": 0.29561685434488205,
+        "neutral": 0.46857345539066697,
+        "positive": 0.23580969026445098
+      },
+      "text_length": 64,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0201932",
+      "text": "Adolf Hitler back in Nepali version",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5041,
+      "scores": {
+        "negative": 0.25990031796826385,
+        "neutral": 0.5040889401412189,
+        "positive": 0.23601074189051732
+      },
+      "text_length": 35,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0148569",
+      "text": "Total milake 52000 ka kharcha bhut mhenga ga hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6086,
+      "scores": {
+        "negative": 0.21824813829758366,
+        "neutral": 0.608584587218051,
+        "positive": 0.17316727448436545
+      },
+      "text_length": 48,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0060071",
+      "text": "Nepali please control yourself These are your property don't destroy it love your country",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5472,
+      "scores": {
+        "negative": 0.29713260939252506,
+        "neutral": 0.15561922096483422,
+        "positive": 0.5472481696426408
+      },
+      "text_length": 89,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0235764",
+      "text": "Khasai ramro xoin yo git hait",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4755,
+      "scores": {
+        "negative": 0.43801679429961865,
+        "neutral": 0.0864361952240985,
+        "positive": 0.47554701047628284
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0295803",
+      "text": "Hasu ki rubabbal x",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.7325,
+      "scores": {
+        "negative": 0.2049530150010793,
+        "neutral": 0.7324588675572596,
+        "positive": 0.0625881174416611
+      },
+      "text_length": 18,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0046476",
+      "text": "South Asia main Problem only Indian RAW please help Nepal Bangladesh Pakistan Bhutan Sri Lanka Maldives",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6449,
+      "scores": {
+        "negative": 0.22737950251109018,
+        "neutral": 0.6449030412152282,
+        "positive": 0.12771745627368153
+      },
+      "text_length": 103,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0103959",
+      "text": "Surura last ma mani ruya aru roko thekhna sakdanni ta teibhayar",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.431,
+      "scores": {
+        "negative": 0.3386092716463926,
+        "neutral": 0.43095024424129147,
+        "positive": 0.2304404841123159
+      },
+      "text_length": 63,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0038836",
+      "text": "Ab India ka momo ka sawad itna kharab hai ki nepali momo ka sawad samjh hi nhi Aya bandar Kya Jane adrak ka sawad",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4634,
+      "scores": {
+        "negative": 0.4153859872554577,
+        "neutral": 0.4633989524197293,
+        "positive": 0.12121506032481293
+      },
+      "text_length": 113,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0023166",
+      "text": "Lumbini Lions ko T-shirt kholer SudurPaschim Royals ko laga feri janx show height ma...natr Lumbini Lions ko jastai halat hunx Bhandari tero show ko",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4395,
+      "scores": {
+        "negative": 0.3939444301077665,
+        "neutral": 0.43950340458001597,
+        "positive": 0.1665521653122176
+      },
+      "text_length": 148,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0031916",
+      "text": "Make sure to befriend a Nepali person on your road trips and shopping tours. Bus conductors and local vendors scam you easily.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.6556,
+      "scores": {
+        "negative": 0.17686291975006166,
+        "neutral": 0.16750351483348583,
+        "positive": 0.6556335654164525
+      },
+      "text_length": 126,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0191767",
+      "text": "yoo Radey ko banle k vneki Reesh uthne",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4176,
+      "scores": {
+        "negative": 0.37207803567042336,
+        "neutral": 0.4175674940237592,
+        "positive": 0.21035447030581747
+      },
+      "text_length": 38,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0138479",
+      "text": "arkako vedio ma nepali anubad garer poisa kamako xa",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3738,
+      "scores": {
+        "negative": 0.33504656084149165,
+        "neutral": 0.29117612313242597,
+        "positive": 0.3737773160260825
+      },
+      "text_length": 51,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0050963",
+      "text": "Yati dukha diye paxi Last ma Per person 500 ko khaja order gardeko vaye ajha best huntyo alish bro",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4094,
+      "scores": {
+        "negative": 0.2778866810816744,
+        "neutral": 0.31274520182472526,
+        "positive": 0.4093681170936004
+      },
+      "text_length": 98,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0284497",
+      "text": "4k comments is tough",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6406,
+      "scores": {
+        "negative": 0.18815248976197607,
+        "neutral": 0.6405922975395186,
+        "positive": 0.17125521269850538
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0080808",
+      "text": "Fir baad me thagesh ko tiger dhikha fir thagesh tiger ki pent gilli ho gai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5925,
+      "scores": {
+        "negative": 0.30093267910163696,
+        "neutral": 0.5924857384319118,
+        "positive": 0.10658158246645133
+      },
+      "text_length": 74,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0103665",
+      "text": "New song is good but old song jasto vibes chai xaina raixa teti",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5313,
+      "scores": {
+        "negative": 0.30468291228362987,
+        "neutral": 0.16399190103773587,
+        "positive": 0.5313251866786343
+      },
+      "text_length": 63,
+      "slice_tags": [
+        "negation",
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0109978",
+      "text": "Bro don't do that! It'll be uncomfortable for the waitress!!",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4224,
+      "scores": {
+        "negative": 0.3531270314312129,
+        "neutral": 0.22443794790565844,
+        "positive": 0.4224350206631287
+      },
+      "text_length": 60,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0093928",
+      "text": "Bro he wanted to Cheers with you and you totally missed it poor guy",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5183,
+      "scores": {
+        "negative": 0.2551696465235865,
+        "neutral": 0.22649717567145866,
+        "positive": 0.5183331778049548
+      },
+      "text_length": 67,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0011341",
+      "text": "You forgot one point @dhruvrathee ...let me remind you that the government of nepal depends heavily on remmitance...So when you try to disconnect the nepalese from outer world then it was going to be a problem",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.6276,
+      "scores": {
+        "negative": 0.2029467447190708,
+        "neutral": 0.16946284625689476,
+        "positive": 0.6275904090240345
+      },
+      "text_length": 209,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0201581",
+      "text": "+I miss my school friend Rit$《2073》",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4425,
+      "scores": {
+        "negative": 0.28626553708708563,
+        "neutral": 0.2711958191149869,
+        "positive": 0.4425386437979274
+      },
+      "text_length": 35,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0202474",
+      "text": "Bro they scamed you it is 10 rs bro",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4344,
+      "scores": {
+        "negative": 0.252960833895095,
+        "neutral": 0.4343911101658507,
+        "positive": 0.31264805593905426
+      },
+      "text_length": 35,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0247750",
+      "text": "Malai ta jhan nid po harayo",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4149,
+      "scores": {
+        "negative": 0.3566170531067299,
+        "neutral": 0.2284680710716941,
+        "positive": 0.4149148758215759
+      },
+      "text_length": 27,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0203865",
+      "text": "Kis ko NAHI Mila majay bi NAHI mila",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4837,
+      "scores": {
+        "negative": 0.3373332372995093,
+        "neutral": 0.4837303078872724,
+        "positive": 0.1789364548132182
+      },
+      "text_length": 35,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0071734",
+      "text": "Nepal Ka klapani Kali Kari Nepali vumi jnmar jashti kbjakarki dada giri matkarau",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4788,
+      "scores": {
+        "negative": 0.14970683301350046,
+        "neutral": 0.4788170156680237,
+        "positive": 0.37147615131847583
+      },
+      "text_length": 80,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0230188",
+      "text": "Kati man nai ruwane vajan ho k",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4945,
+      "scores": {
+        "negative": 0.32400363781535535,
+        "neutral": 0.1814538410074289,
+        "positive": 0.4945425211772157
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0083026",
+      "text": "Me to my ex: Juni katchu vanthew ni masita man KO saino jora chaw KO SITA",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5613,
+      "scores": {
+        "negative": 0.20542253127891058,
+        "neutral": 0.2333086608129461,
+        "positive": 0.5612688079081434
+      },
+      "text_length": 73,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0211652",
+      "text": "she is acting like love from nepal",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.7917,
+      "scores": {
+        "negative": 0.031165966916437034,
+        "neutral": 0.1771071985196558,
+        "positive": 0.7917268345639071
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0139250",
+      "text": "Babal episode jhole harulai man naparna pani sakxa",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.6312,
+      "scores": {
+        "negative": 0.296953369678299,
+        "neutral": 0.07189307065932467,
+        "positive": 0.6311535596623764
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0009748",
+      "text": "Ma nepal mai chu ramrai kamai garchu tara still malai gau ma gayara sano kaath ko ghar banayara farming garera simple life jeuna mancha tara feri insecurity feel huncha bachha ko lagi! Hope ekdin tapai ko jastai power aaula!",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4091,
+      "scores": {
+        "negative": 0.27866863739675024,
+        "neutral": 0.4091330089495539,
+        "positive": 0.3121983536536959
+      },
+      "text_length": 224,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0160658",
+      "text": "bro scam he said 250 !!!! Orginal price 20 rs",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4415,
+      "scores": {
+        "negative": 0.43994102470019575,
+        "neutral": 0.4414914736375185,
+        "positive": 0.11856750166228573
+      },
+      "text_length": 45,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0194321",
+      "text": "Mandir ko oripari ysto danc vayna hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.607,
+      "scores": {
+        "negative": 0.22100931440451937,
+        "neutral": 0.6070148536471162,
+        "positive": 0.17197583194836458
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0184865",
+      "text": "Mali ta Paul pagal bhayako herna man xa",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4712,
+      "scores": {
+        "negative": 0.45362089231503744,
+        "neutral": 0.07513095607179684,
+        "positive": 0.47124815161316586
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0090796",
+      "text": "Paul shah balatkari ra ganaune boko ho ko ko mannu hunxa like garum .",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.7736,
+      "scores": {
+        "negative": 0.1367022636581693,
+        "neutral": 0.7736075596152742,
+        "positive": 0.08969017672655655
+      },
+      "text_length": 69,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0003970",
+      "text": "Yo geet sunda, sabai kura xodera ghar jau lagxa yrr. Yetro samaye eklo huda ni kei lagena, sabai ramrai thyo. Tara aaudai gareko dashain, ani yo geet..... Aakha var aasu tilpil parera, ghar samjhera basine vaiyo yo dashain ma... Badadashain 2082 ko desh bidesh ma rahanu vayeka nepali dajuvai didi baini haru lai dherai dherai subhakamana",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4882,
+      "scores": {
+        "negative": 0.39646860686408286,
+        "neutral": 0.11532582886633196,
+        "positive": 0.48820556426958506
+      },
+      "text_length": 338,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0187959",
+      "text": "Bro took notes from German Painter man",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.53,
+      "scores": {
+        "negative": 0.17698209669312998,
+        "neutral": 0.2930404261211313,
+        "positive": 0.5299774771857387
+      },
+      "text_length": 38,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0245559",
+      "text": "Bro got roasted for nothing",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5683,
+      "scores": {
+        "negative": 0.25539008855739814,
+        "neutral": 0.17633571052696545,
+        "positive": 0.5682742009156364
+      },
+      "text_length": 27,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0154745",
+      "text": "India walo ko pesa ke alawa kuch smaj aaya kya",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4589,
+      "scores": {
+        "negative": 0.4197999236266859,
+        "neutral": 0.45892843224487617,
+        "positive": 0.12127164412843795
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0232102",
+      "text": "Video le geet ko bejjat garayo",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4123,
+      "scores": {
+        "negative": 0.2923884531976916,
+        "neutral": 0.295336207795188,
+        "positive": 0.4122753390071204
+      },
+      "text_length": 30,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0131208",
+      "text": "Pisslami jihadi hai ye...plz aware this types of pigs",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3864,
+      "scores": {
+        "negative": 0.2600011882948712,
+        "neutral": 0.3864038176187698,
+        "positive": 0.3535949940863591
+      },
+      "text_length": 53,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0239224",
+      "text": "Aajo chai hasauna sakena hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5882,
+      "scores": {
+        "negative": 0.21802327768592117,
+        "neutral": 0.5882020021971124,
+        "positive": 0.19377472011696642
+      },
+      "text_length": 28,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0099797",
+      "text": "Yo geet nasunii dashin aaye jastai nalgane Malai matra haina hola",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3933,
+      "scores": {
+        "negative": 0.25040229033962974,
+        "neutral": 0.35632631571795553,
+        "positive": 0.3932713939424147
+      },
+      "text_length": 65,
+      "slice_tags": [
+        "negation",
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0153381",
+      "text": "17000 Marne le Jima Lene ki nai Ranjit tamang.",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4839,
+      "scores": {
+        "negative": 0.3867025538384829,
+        "neutral": 0.4839499748784438,
+        "positive": 0.12934747128307333
+      },
+      "text_length": 46,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0043548",
+      "text": "5:46 Gro bro tyo desi bhaiya.... dhoti ko restaurant kata ho Butaal ma then you with moti kali dhotinieey!",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6059,
+      "scores": {
+        "negative": 0.2546498350873484,
+        "neutral": 0.6058682108637123,
+        "positive": 0.13948195404893912
+      },
+      "text_length": 106,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0019736",
+      "text": "Jindagi ma kunai video herero Asu niskeko tiyena life ma first time yo video herero akha bata asu niskiyo afnu char bar ma grh ma na huna sarai dhuko lagdo raxo",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.394,
+      "scores": {
+        "negative": 0.3499023381302559,
+        "neutral": 0.39400225595094035,
+        "positive": 0.25609540591880375
+      },
+      "text_length": 160,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0067122",
+      "text": "Durgesh bhai ali naya types ma song nikalana yrr jaile ni tei dj types ko geet auxa",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3709,
+      "scores": {
+        "negative": 0.2815989389431582,
+        "neutral": 0.370880142753782,
+        "positive": 0.3475209183030598
+      },
+      "text_length": 83,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0063996",
+      "text": "Yes ta murkh sang ke ko antarbarta garnu prio parvakar dai rial Hiro only pm balen dai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4791,
+      "scores": {
+        "negative": 0.27098984592187997,
+        "neutral": 0.47912916266113703,
+        "positive": 0.249880991416983
+      },
+      "text_length": 86,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0107432",
+      "text": "Bichko hindi raple bigaryo natra yo geet ko hype khatra hunca",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3907,
+      "scores": {
+        "negative": 0.3172814900418358,
+        "neutral": 0.2920665729361023,
+        "positive": 0.3906519370220619
+      },
+      "text_length": 61,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0187494",
+      "text": "All indian bro vibe 100% understand 0%",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4098,
+      "scores": {
+        "negative": 0.22332001406630414,
+        "neutral": 0.36687065691520615,
+        "positive": 0.4098093290184897
+      },
+      "text_length": 38,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0270908",
+      "text": "Messi kötü şöyle destek",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.368,
+      "scores": {
+        "negative": 0.35887020086269006,
+        "neutral": 0.3679831278259814,
+        "positive": 0.2731466713113285
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177332",
+      "text": "Yo Song ta 10000 choti sune ani agaudaina",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.6426,
+      "scores": {
+        "negative": 0.17500277449394708,
+        "neutral": 0.18240572301596059,
+        "positive": 0.6425915024900922
+      },
+      "text_length": 41,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0254157",
+      "text": "Puranai prank ho alish dai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5342,
+      "scores": {
+        "negative": 0.2518752070341394,
+        "neutral": 0.5341697562838013,
+        "positive": 0.2139550366820594
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0005525",
+      "text": "seriosly dai video ko essence euta flow ma jada ramro auxa but advertisement within 2 or 3 min, I dont know if its happening just here in uk or all over but is bit too much , Yes I know you need to feed and earn as well but sorry dai being your and your's channe admirer,add le dikka lagayo.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3927,
+      "scores": {
+        "negative": 0.3823946492342165,
+        "neutral": 0.2249436248106789,
+        "positive": 0.3926617259551046
+      },
+      "text_length": 291,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0237810",
+      "text": "Vlog band hunu parxa Nepal ma",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5129,
+      "scores": {
+        "negative": 0.2495667537816147,
+        "neutral": 0.5128995242244742,
+        "positive": 0.23753372199391115
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0184380",
+      "text": "Jyanmara Lai hero banauni din Pani aayo",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4973,
+      "scores": {
+        "negative": 0.3174153839128932,
+        "neutral": 0.18525945859603327,
+        "positive": 0.4973251574910735
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0135138",
+      "text": "apko akal nahi he ek bhude uncle ko dakha de rahi Ho",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5121,
+      "scores": {
+        "negative": 0.35225486541057127,
+        "neutral": 0.5121124258519225,
+        "positive": 0.1356327087375061
+      },
+      "text_length": 52,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0186433",
+      "text": "Yo pali pani pradesh mai manaunu perney",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3889,
+      "scores": {
+        "negative": 0.36266614484758447,
+        "neutral": 0.3889010248395595,
+        "positive": 0.24843283031285596
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0210555",
+      "text": "This man's first victim is Poland.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5132,
+      "scores": {
+        "negative": 0.30967540653881886,
+        "neutral": 0.17712320018762404,
+        "positive": 0.5132013932735571
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0003070",
+      "text": "bhai thailand me b nahi khayaa adhura chod diya yaha pe b same. feeeeka pad gya vdo... thoda daring ki need hai. asli foodie try sab karta h acha lage ki na lage. if you are made up ur mind, going diff cities, state or country and not trying then fir worth ni h vdo banane ka. and camera man kisi bache ko rakha h lagta h uski budhi or jokes \"SHABJI\" dont f**kin do it next time.",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4467,
+      "scores": {
+        "negative": 0.4257589402640267,
+        "neutral": 0.44665191091376205,
+        "positive": 0.12758914882221117
+      },
+      "text_length": 379,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0075415",
+      "text": "kalo hainw nawAj dai Halka kalo xah Lil jolha ko muk mh nawAj dai ko lad*o xah",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4719,
+      "scores": {
+        "negative": 0.3430204259928872,
+        "neutral": 0.47194140809254853,
+        "positive": 0.18503816591456426
+      },
+      "text_length": 78,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0101362",
+      "text": "Nepal me Uber ola nahi hai kya ? These taxi always charge extra.",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6131,
+      "scores": {
+        "negative": 0.1546833421783791,
+        "neutral": 0.6131040429783035,
+        "positive": 0.23221261484331737
+      },
+      "text_length": 64,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0011321",
+      "text": "The stupidity of man Why waste your life to a silly mountain. I'd rather visit Jerusalem the Eternal City, , Mt Olives, The Way of the Cross, River Jordan , Nazareth and other Biblical places. In normal times.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5234,
+      "scores": {
+        "negative": 0.3281778837650661,
+        "neutral": 0.14838789460054955,
+        "positive": 0.5234342216343844
+      },
+      "text_length": 209,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0193103",
+      "text": "Fedanba jhakri ko asto comedy Nabanaw",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.482,
+      "scores": {
+        "negative": 0.2969786903855027,
+        "neutral": 0.48200812672078425,
+        "positive": 0.22101318289371322
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0232761",
+      "text": "geet matra ramro video naramro",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.6462,
+      "scores": {
+        "negative": 0.3121545164859859,
+        "neutral": 0.041684888403691445,
+        "positive": 0.6461605951103228
+      },
+      "text_length": 30,
+      "slice_tags": [
+        "negation",
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0017178",
+      "text": "18saal tk.. Chhath pooja dekhti aayii hu! Pr Dadi ke jane ke baad ish saal chhath pooja ni dekh paungii .... Buraa lg rha!! Prr aap logo ko meri trf se Happy chhath poojaa",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4538,
+      "scores": {
+        "negative": 0.3654243972078409,
+        "neutral": 0.453813037806215,
+        "positive": 0.18076256498594398
+      },
+      "text_length": 171,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0013281",
+      "text": "The lady who is anchoring this lady is shit ... Its Nepal not Nephal ..ani kati hasya ramrari sodhna .. ani buddha buddha vanera buddha kai billa hanuvayecha .. yak .. i just disliked this video",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3698,
+      "scores": {
+        "negative": 0.3355486326399399,
+        "neutral": 0.3697827285765436,
+        "positive": 0.2946686387835165
+      },
+      "text_length": 194,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0123626",
+      "text": "Bhai aanedo trump ko khopachi me ghusauga Nepal me nahi",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.8034,
+      "scores": {
+        "negative": 0.07030587829900209,
+        "neutral": 0.8034003285621997,
+        "positive": 0.12629379313879815
+      },
+      "text_length": 55,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0058040",
+      "text": "Why nepal ? Why ?? Why can't you choose secular candidate why so much religious jingoism???",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3764,
+      "scores": {
+        "negative": 0.3652091057594127,
+        "neutral": 0.25843088865872016,
+        "positive": 0.3763600055818671
+      },
+      "text_length": 91,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0180893",
+      "text": "Rahul gandhi ko hatao ye bhi nepokid hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5911,
+      "scores": {
+        "negative": 0.2599833059994414,
+        "neutral": 0.5910544629015222,
+        "positive": 0.14896223109903642
+      },
+      "text_length": 40,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0252273",
+      "text": "I hate india nepal is best",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5467,
+      "scores": {
+        "negative": 0.12832003979733853,
+        "neutral": 0.3249765350097064,
+        "positive": 0.5467034251929551
+      },
+      "text_length": 26,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0035015",
+      "text": "La thik xa yesma bhyani khei twa lekhexau, Aru geet bhnda twa thikai xa. Not gona lie, Meme in M/V is better then song..",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4677,
+      "scores": {
+        "negative": 0.39546260165415503,
+        "neutral": 0.13686709491445917,
+        "positive": 0.4676703034313858
+      },
+      "text_length": 120,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0157812",
+      "text": "Bro literally started simping on the waitress",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3678,
+      "scores": {
+        "negative": 0.28999486213892944,
+        "neutral": 0.3677654146631354,
+        "positive": 0.34223972319793505
+      },
+      "text_length": 45,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0257340",
+      "text": "Dhari jholey ho yamale ko",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4827,
+      "scores": {
+        "negative": 0.3823382690821049,
+        "neutral": 0.48266884458177917,
+        "positive": 0.13499288633611595
+      },
+      "text_length": 25,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0009104",
+      "text": "23:11 mero reaction estai thio i was like 120 ma esto swaad, bro missed baiju daiki jeri puri sadly ani sima momo ya evereast momo for mutton momo in hospital chowk, btw poluwa noble ma haina ghinaghat ya milan chowk ma best paucha",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5036,
+      "scores": {
+        "negative": 0.2070883647726819,
+        "neutral": 0.5036232878773924,
+        "positive": 0.28928834734992576
+      },
+      "text_length": 231,
+      "slice_tags": [
+        "negation",
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0087804",
+      "text": "Amale kangres tero parale bharstale Garda dukha payo jantale.jay nepal",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5187,
+      "scores": {
+        "negative": 0.3502937031423117,
+        "neutral": 0.13101269002553906,
+        "positive": 0.5186936068321493
+      },
+      "text_length": 70,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0038287",
+      "text": "Bhai shuru Se tumhara video dekhte aaya hun but kSSC ka student hone ke Karan thoda pareshan hun please video bana",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6793,
+      "scores": {
+        "negative": 0.20969299576533248,
+        "neutral": 0.6792804913535563,
+        "positive": 0.11102651288111132
+      },
+      "text_length": 114,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0228451",
+      "text": "Bakbas karta hai tu angrej hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5518,
+      "scores": {
+        "negative": 0.24989105522109384,
+        "neutral": 0.551843794459318,
+        "positive": 0.19826515031958813
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0107325",
+      "text": "BCCI should give Nepal cricket team better coaches from india",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4781,
+      "scores": {
+        "negative": 0.275686700484813,
+        "neutral": 0.24621348702769444,
+        "positive": 0.47809981248749256
+      },
+      "text_length": 61,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0085105",
+      "text": "Sab Ramro cha Ujjan ko Dance chai bhaeena hai…..Dance nagarda hudaina ra",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5058,
+      "scores": {
+        "negative": 0.41490619885994906,
+        "neutral": 0.07925020054990167,
+        "positive": 0.5058436005901492
+      },
+      "text_length": 72,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0157847",
+      "text": "Bro wanted to cheers and u just turned around",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4399,
+      "scores": {
+        "negative": 0.2735294878130505,
+        "neutral": 0.2865667752620277,
+        "positive": 0.4399037369249218
+      },
+      "text_length": 45,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0087076",
+      "text": "Tara thyo din aawxa mo pani. Tpi ko jaga ma aawxu. Aama kasam. Hernu da",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4381,
+      "scores": {
+        "negative": 0.2821256883647111,
+        "neutral": 0.43813619189361797,
+        "positive": 0.2797381197416709
+      },
+      "text_length": 71,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0195484",
+      "text": "Tu mera lekar hi kyu video banata hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4222,
+      "scores": {
+        "negative": 0.2846679417825516,
+        "neutral": 0.42221173085219676,
+        "positive": 0.2931203273652517
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0161662",
+      "text": "Bhai ali ramro banau, narration, story, poor",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4601,
+      "scores": {
+        "negative": 0.3385992024848128,
+        "neutral": 0.20132997126160931,
+        "positive": 0.460070826253578
+      },
+      "text_length": 44,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0066382",
+      "text": "Still talk too big-which will never happen.there is a prison wide open for this man.",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5176,
+      "scores": {
+        "negative": 0.3388311349695568,
+        "neutral": 0.14352648069466706,
+        "positive": 0.5176423843357761
+      },
+      "text_length": 84,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0006361",
+      "text": "Malai mann ma lagya kura harka is a good guy tara tyo analytical thinking ko necessity xa tyo chai Harka sir ma dekhina. Cross-checking verification i mean he is a good guy and i hope He wins tara i am unsure that he can lead or can be in leading seats of the government !!",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4788,
+      "scores": {
+        "negative": 0.3193567218203445,
+        "neutral": 0.20182632618899068,
+        "positive": 0.47881695199066476
+      },
+      "text_length": 273,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0106160",
+      "text": "Paile maya mohani lagaune Aaile vetau vanda ni na aaune sai ho",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4175,
+      "scores": {
+        "negative": 0.35672637360325343,
+        "neutral": 0.4174766054675518,
+        "positive": 0.22579702092919482
+      },
+      "text_length": 62,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0051735",
+      "text": "Saarei man xunxa . aba asta lok gayek nepal ma janxan xanki janmadeinan vanne chinta pani lagxa .",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4241,
+      "scores": {
+        "negative": 0.20831179444041503,
+        "neutral": 0.36759649143381923,
+        "positive": 0.42409171412576585
+      },
+      "text_length": 97,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0023444",
+      "text": "I m master degree holder of nepal in double subject i knew already it is useless Now i m getting its totally useless and aging and wastage of money",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4242,
+      "scores": {
+        "negative": 0.18354870690775157,
+        "neutral": 0.392280557908139,
+        "positive": 0.4241707351841094
+      },
+      "text_length": 147,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0209615",
+      "text": "Nepal is best oi India fogy mo gar",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.679,
+      "scores": {
+        "negative": 0.13893239006217636,
+        "neutral": 0.18204340877621178,
+        "positive": 0.6790242011616118
+      },
+      "text_length": 34,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0232943",
+      "text": "maxa marnu hudaina ho pap lagx",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4316,
+      "scores": {
+        "negative": 0.3856059458617405,
+        "neutral": 0.4316369218587698,
+        "positive": 0.18275713227948975
+      },
+      "text_length": 30,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0133113",
+      "text": "Dirty bitches of progressing modern nepali society .",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.3735,
+      "scores": {
+        "negative": 0.3550234013482203,
+        "neutral": 0.27151707045583334,
+        "positive": 0.37345952819594636
+      },
+      "text_length": 52,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0156213",
+      "text": "This video tells how nepal human abus nepal is",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4006,
+      "scores": {
+        "negative": 0.2043775365894106,
+        "neutral": 0.40057497604093545,
+        "positive": 0.39504748736965395
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0059689",
+      "text": "Drink for 250 rupees? Not sure about Nepal but in India you can get the same in 50 rupees",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5286,
+      "scores": {
+        "negative": 0.3760659199714514,
+        "neutral": 0.5286413872295749,
+        "positive": 0.09529269279897383
+      },
+      "text_length": 89,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0131158",
+      "text": "Omg it's been 14 years rest in peace yamma Buddha dai",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4551,
+      "scores": {
+        "negative": 0.21005045474378,
+        "neutral": 0.3348806998640931,
+        "positive": 0.45506884539212683
+      },
+      "text_length": 53,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0086773",
+      "text": "Nah you didn't eat Nepali food cuz you didn't give 10 out of 10 to momo",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.4924,
+      "scores": {
+        "negative": 0.24168544049065638,
+        "neutral": 0.26594334340489123,
+        "positive": 0.4923712161044525
+      },
+      "text_length": 71,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0119800",
+      "text": "Yettiko ta Nepali movies pani hereko xain.. mutunai lageu",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.3898,
+      "scores": {
+        "negative": 0.35758646766596947,
+        "neutral": 0.3897723946075008,
+        "positive": 0.2526411377265297
+      },
+      "text_length": 57,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0246499",
+      "text": "Hehehe over comedy xa, dada",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5299,
+      "scores": {
+        "negative": 0.23753720988509577,
+        "neutral": 0.2325241455321413,
+        "positive": 0.529938644582763
+      },
+      "text_length": 27,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0068321",
+      "text": "Bihar sa hai gabar mat samajna warna pura sahar jam ho jaya ga jaldi subscribe kar",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4204,
+      "scores": {
+        "negative": 0.30798966390551785,
+        "neutral": 0.4203526212111814,
+        "positive": 0.27165771488330087
+      },
+      "text_length": 82,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0278243",
+      "text": "Yuck Sandip KO 0veract",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6986,
+      "scores": {
+        "negative": 0.26029179369396366,
+        "neutral": 0.6986417549648337,
+        "positive": 0.041066451341202716
+      },
+      "text_length": 22,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0126936",
+      "text": "Geet nai man parina jhur geet oll the best swastima de",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.8429,
+      "scores": {
+        "negative": 0.1231485733727016,
+        "neutral": 0.033950036206417226,
+        "positive": 0.8429013904208811
+      },
+      "text_length": 54,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0007799",
+      "text": "This is not rap song this is comedy song if you want real nepali hip-hop rap song or listening NWNj Ansari song real lyrics everything also nd dong, unique poet, sakar ,lauradai or another artist give real nepali hip hop vibes this song is Wank wank",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5861,
+      "scores": {
+        "negative": 0.276803704737707,
+        "neutral": 0.13706148544253202,
+        "positive": 0.5861348098197611
+      },
+      "text_length": 249,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0294360",
+      "text": "miss my school life",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5406,
+      "scores": {
+        "negative": 0.26526429133565016,
+        "neutral": 0.19408604612628608,
+        "positive": 0.5406496625380637
+      },
+      "text_length": 19,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0140441",
+      "text": "Ko ho samanti ko xauro vasata purai gulami ko xata",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6161,
+      "scores": {
+        "negative": 0.2517860191451325,
+        "neutral": 0.6161098330439129,
+        "positive": 0.13210414781095467
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0061426",
+      "text": "They are so overreacting xa low budget ko xa story Pani na ramro xa ma disappointed vaye",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.5585,
+      "scores": {
+        "negative": 0.367467416875986,
+        "neutral": 0.07401922540190371,
+        "positive": 0.5585133577221104
+      },
+      "text_length": 88,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0210964",
+      "text": "Ye kya hai Aap bujurg ko daakha di",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5372,
+      "scores": {
+        "negative": 0.3265881087216007,
+        "neutral": 0.5372094267779299,
+        "positive": 0.1362024645004693
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0040617",
+      "text": "Vai tum ekbar Pokhara to aajao tereko etna marunga na next time se tera ya 500 me full service kavi nahi aayaga",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4767,
+      "scores": {
+        "negative": 0.3419497114215712,
+        "neutral": 0.47670833006975466,
+        "positive": 0.1813419585086742
+      },
+      "text_length": 111,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0114444",
+      "text": "Yo geet mero lagi banako ho Aaja yo geet sunera dherai roye",
+      "gold_label": "negative",
+      "predicted_label": "positive",
+      "confidence": 0.505,
+      "scores": {
+        "negative": 0.2742262739813956,
+        "neutral": 0.22076868628475402,
+        "positive": 0.5050050397338504
+      },
+      "text_length": 59,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0083240",
+      "text": "Reel banane keliye ese dhodna aur buzurgo ko dhaka dena wah kya bakti hai",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4729,
+      "scores": {
+        "negative": 0.3196090550910168,
+        "neutral": 0.47294344582932657,
+        "positive": 0.2074474990796567
+      },
+      "text_length": 73,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0172722",
+      "text": "Vauman le timilai hagna ko lagi sakti diun",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.4351,
+      "scores": {
+        "negative": 0.42938956439679177,
+        "neutral": 0.43505488476658394,
+        "positive": 0.13555555083662435
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0271198",
+      "text": "Nepal ma rail kaha xara",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.6685,
+      "scores": {
+        "negative": 0.18494601595676777,
+        "neutral": 0.6684577498471754,
+        "positive": 0.14659623419605675
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0258220",
+      "text": "It's Nepal Tf is Ne-paul?",
+      "gold_label": "negative",
+      "predicted_label": "neutral",
+      "confidence": 0.5148,
+      "scores": {
+        "negative": 0.1566559398729322,
+        "neutral": 0.5147895802602227,
+        "positive": 0.32855447986684505
+      },
+      "text_length": 25,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0065871",
+      "text": "Good morning sir Pradhan mnteri ji mdes prdes parsa Nepal kalikamai gawpalika murali",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.7175,
+      "scores": {
+        "negative": 0.09037743311041783,
+        "neutral": 0.19215060544277623,
+        "positive": 0.7174719614468059
+      },
+      "text_length": 84,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0256392",
+      "text": "Abo para song Pani chaiyo",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4864,
+      "scores": {
+        "negative": 0.192666269977258,
+        "neutral": 0.3209126202924041,
+        "positive": 0.48642110973033803
+      },
+      "text_length": 25,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0064596",
+      "text": "Harka sampang video banauda old facebook ko status haru ma discuss garna navulnu hola",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3982,
+      "scores": {
+        "negative": 0.398233374160157,
+        "neutral": 0.39001250179941416,
+        "positive": 0.2117541240404287
+      },
+      "text_length": 85,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0267934",
+      "text": "Aba kahile auxa yo show",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4746,
+      "scores": {
+        "negative": 0.47457244419717215,
+        "neutral": 0.35533720720924195,
+        "positive": 0.17009034859358588
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0262769",
+      "text": "Bro sounds very familiar",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.415,
+      "scores": {
+        "negative": 0.28926538863641776,
+        "neutral": 0.2957541226098525,
+        "positive": 0.4149804887537296
+      },
+      "text_length": 24,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0096634",
+      "text": "Kafla pati 1.5 lagxa ani hinna thulo Fadi basbasna ani bihana trek",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3672,
+      "scores": {
+        "negative": 0.31317626156561695,
+        "neutral": 0.31966166749852937,
+        "positive": 0.3671620709358537
+      },
+      "text_length": 66,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0301126",
+      "text": "Ronaldo ko fan po",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5272,
+      "scores": {
+        "negative": 0.17350374820414088,
+        "neutral": 0.29925273251303164,
+        "positive": 0.5272435192828274
+      },
+      "text_length": 17,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0087376",
+      "text": "Yo vag ta astinako hapta diusa aako thiyo ani delete vako thiyo kina ho",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5622,
+      "scores": {
+        "negative": 0.5621546335203537,
+        "neutral": 0.3461780386201227,
+        "positive": 0.09166732785952356
+      },
+      "text_length": 71,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0260957",
+      "text": "Yo jodi ni herna paaiyo..",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5105,
+      "scores": {
+        "negative": 0.5105080357162631,
+        "neutral": 0.19792110656902104,
+        "positive": 0.2915708577147158
+      },
+      "text_length": 25,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0150208",
+      "text": "Chandragiri hills jaane mein Kitna Paisa lagega",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4455,
+      "scores": {
+        "negative": 0.44550277940443966,
+        "neutral": 0.365672081580524,
+        "positive": 0.1888251390150364
+      },
+      "text_length": 47,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0151336",
+      "text": "Ma kasto manchhe aaj aayer yo video herdai chhu",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5355,
+      "scores": {
+        "negative": 0.5354702815568297,
+        "neutral": 0.2727661096405139,
+        "positive": 0.19176360880265642
+      },
+      "text_length": 47,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0218391",
+      "text": "Different test your new song dai",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.6705,
+      "scores": {
+        "negative": 0.07616807342904981,
+        "neutral": 0.2533264071297424,
+        "positive": 0.6705055194412078
+      },
+      "text_length": 32,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0075440",
+      "text": "malai yo vdo kasaile summarize gardeu ta, tyo kt le mann parako chai kaslai ho",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4849,
+      "scores": {
+        "negative": 0.48485647077668964,
+        "neutral": 0.2631491548975996,
+        "positive": 0.2519943743257108
+      },
+      "text_length": 78,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0210823",
+      "text": "Who is after Rahul gAndi jai Nepal",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4493,
+      "scores": {
+        "negative": 0.11491167279951255,
+        "neutral": 0.43573866704411696,
+        "positive": 0.4493496601563704
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0078897",
+      "text": "Ands when you are blown a fire then make sure to covers your cookie food's?",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4772,
+      "scores": {
+        "negative": 0.3831768701983112,
+        "neutral": 0.13963910124244763,
+        "positive": 0.47718402855924125
+      },
+      "text_length": 75,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0265616",
+      "text": "Pardip ra puja aaunn pro",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3924,
+      "scores": {
+        "negative": 0.3924160877793406,
+        "neutral": 0.34753349226247865,
+        "positive": 0.2600504199581807
+      },
+      "text_length": 24,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0192721",
+      "text": "Come to birtamode it's near to dharan",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.6156,
+      "scores": {
+        "negative": 0.1716677743492683,
+        "neutral": 0.2127142343090524,
+        "positive": 0.6156179913416794
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0018258",
+      "text": "Chatpate, panipuri, purichat, alu chop, laphing, chowmein, Nepali khaja set, Dhedo, Baraf, fish (there are many times of fish, like anchovie, or like latiao), ETC ETC",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4139,
+      "scores": {
+        "negative": 0.41387096307281157,
+        "neutral": 0.38765538949981604,
+        "positive": 0.1984736474273724
+      },
+      "text_length": 166,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0146731",
+      "text": "Dhanna tikyok le Khana sakena use garey Pani....",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4596,
+      "scores": {
+        "negative": 0.45956809932514087,
+        "neutral": 0.33371850876982045,
+        "positive": 0.20671339190503873
+      },
+      "text_length": 48,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0281372",
+      "text": "Kp mg le heryo ki nai",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6186,
+      "scores": {
+        "negative": 0.6186006728934866,
+        "neutral": 0.279883923006176,
+        "positive": 0.10151540410033738
+      },
+      "text_length": 21,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0123725",
+      "text": "Bro eis trek ko korne keliye kitna budget hona chahiye?",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3868,
+      "scores": {
+        "negative": 0.3868056371592789,
+        "neutral": 0.37998550379519425,
+        "positive": 0.23320885904552688
+      },
+      "text_length": 55,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0160536",
+      "text": "Yo st man KO hawa lagyo aaru ramrai xa sab ko",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5483,
+      "scores": {
+        "negative": 0.5482944098108139,
+        "neutral": 0.11086728199332219,
+        "positive": 0.3408383081958639
+      },
+      "text_length": 45,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0139199",
+      "text": "Areli kadeile market hallayo Ra always hallaune xa",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4643,
+      "scores": {
+        "negative": 0.3345041789445839,
+        "neutral": 0.2011538458604031,
+        "positive": 0.464341975195013
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0160256",
+      "text": "What??? Are they normal people or k actors...",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.603,
+      "scores": {
+        "negative": 0.6029864017333093,
+        "neutral": 0.22691887192544716,
+        "positive": 0.1700947263412436
+      },
+      "text_length": 45,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0223884",
+      "text": "Gastric huda eggs nakahnu ramro",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.8739,
+      "scores": {
+        "negative": 0.11349265171263326,
+        "neutral": 0.012587669345577679,
+        "positive": 0.873919678941789
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0284545",
+      "text": "Aagoo xa tww jhola..",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.7263,
+      "scores": {
+        "negative": 0.7263425623553769,
+        "neutral": 0.07073446652989439,
+        "positive": 0.20292297111472873
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0116079",
+      "text": "Looking care after Balen has become PM Rainfall pani vayo,",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4495,
+      "scores": {
+        "negative": 0.3089513256827459,
+        "neutral": 0.24151294153412164,
+        "positive": 0.4495357327831325
+      },
+      "text_length": 58,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0092923",
+      "text": "Sambhu Rai jiu yes geet ma karaoke banai dinu tapai sita request cha",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.495,
+      "scores": {
+        "negative": 0.18440899417683246,
+        "neutral": 0.32063244987227063,
+        "positive": 0.49495855595089694
+      },
+      "text_length": 68,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0017669",
+      "text": "Nepali food is amazing, but the comparison with Indian food is incorrect. The food and spices differ from state to state. Nepali food is very close to Sikkimese cuisine.",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.6218,
+      "scores": {
+        "negative": 0.22351221548619377,
+        "neutral": 0.15463842105318665,
+        "positive": 0.6218493634606196
+      },
+      "text_length": 169,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0224605",
+      "text": "K ho pura boxing khela di jasto",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5133,
+      "scores": {
+        "negative": 0.5132962554580186,
+        "neutral": 0.26099764599116637,
+        "positive": 0.22570609855081497
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0032136",
+      "text": "terai ko gamindar haru le aangrej lai sath deko tye.But northen terai ko jamindar haru le nepal sita basne iccha janayeka tye.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.7021,
+      "scores": {
+        "negative": 0.7021285301817602,
+        "neutral": 0.14664485885465675,
+        "positive": 0.15122661096358306
+      },
+      "text_length": 126,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0267612",
+      "text": ". I. you have to. Nepal",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.7582,
+      "scores": {
+        "negative": 0.10304447058909216,
+        "neutral": 0.1387714692598044,
+        "positive": 0.7581840601511035
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0278572",
+      "text": "kin hasX yo aafai bata",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5934,
+      "scores": {
+        "negative": 0.5934023496125228,
+        "neutral": 0.3249627792830043,
+        "positive": 0.08163487110447291
+      },
+      "text_length": 22,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0089227",
+      "text": "Word Kai best couples bishnu dada la Elana Dela sekanu bho dance garna",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.68,
+      "scores": {
+        "negative": 0.1789670865720078,
+        "neutral": 0.14104779140998877,
+        "positive": 0.6799851220180034
+      },
+      "text_length": 70,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0154010",
+      "text": "Bro just flirting and flirting again and again",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4226,
+      "scores": {
+        "negative": 0.29766611939939996,
+        "neutral": 0.2797013225755499,
+        "positive": 0.4226325580250501
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0230854",
+      "text": "Mu se supade nikle ke rap gawo",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5469,
+      "scores": {
+        "negative": 0.5469059476165538,
+        "neutral": 0.32177449399129454,
+        "positive": 0.13131955839215168
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0141064",
+      "text": "Prasna k prasna kati sahaj kasto banawty herana ya",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.449,
+      "scores": {
+        "negative": 0.4490091363556572,
+        "neutral": 0.3560878522367169,
+        "positive": 0.19490301140762584
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0154888",
+      "text": "Joti magar ani badri dai ko po ho yo geet toit",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4848,
+      "scores": {
+        "negative": 0.1554288001618243,
+        "neutral": 0.3598139747195842,
+        "positive": 0.4847572251185916
+      },
+      "text_length": 46,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0115442",
+      "text": "Depart nai different x compare garera hun x ta army samga.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5284,
+      "scores": {
+        "negative": 0.5284294690159371,
+        "neutral": 0.3440170195836459,
+        "positive": 0.12755351140041704
+      },
+      "text_length": 58,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0122837",
+      "text": "Yo lil jhola ho ki vola ho nawaj dada loii dis hanxa yrr",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5343,
+      "scores": {
+        "negative": 0.5343029763354236,
+        "neutral": 0.39443300276714494,
+        "positive": 0.07126402089743156
+      },
+      "text_length": 56,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0254198",
+      "text": "Ram dai ko swormaa jhaannn",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4726,
+      "scores": {
+        "negative": 0.11590197776263952,
+        "neutral": 0.41151117576674395,
+        "positive": 0.4725868464706165
+      },
+      "text_length": 26,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0250934",
+      "text": "Back to back old v ten dai",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4924,
+      "scores": {
+        "negative": 0.13190102115549743,
+        "neutral": 0.375689760393955,
+        "positive": 0.4924092184505476
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0105433",
+      "text": "Hamare yahan Gorakhpur UP mein bacche lagna paap Mana jata hai",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.481,
+      "scores": {
+        "negative": 0.48095356970153536,
+        "neutral": 0.2606953893530309,
+        "positive": 0.2583510409454338
+      },
+      "text_length": 62,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0122765",
+      "text": "Yo Kuhiro hoina yeslai balla Tuwalo bhanchha Samrat Babu",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3888,
+      "scores": {
+        "negative": 0.3888076899223361,
+        "neutral": 0.37813251942093595,
+        "positive": 0.233059790656728
+      },
+      "text_length": 56,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0186525",
+      "text": "any lyris for this song ?? in nepali ??",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.7266,
+      "scores": {
+        "negative": 0.12196020611799603,
+        "neutral": 0.15144857275788473,
+        "positive": 0.7265912211241191
+      },
+      "text_length": 39,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0144274",
+      "text": "Modi k sath bhi vahi krna h suruat kro age bhadho",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4965,
+      "scores": {
+        "negative": 0.49652105088668946,
+        "neutral": 0.29243160321926137,
+        "positive": 0.21104734589404914
+      },
+      "text_length": 49,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0008549",
+      "text": "Bade bujurgon ka recorded karms dikha lu pahela mam videos chakar m kuch may kar do just a slow i think camar allowed nhi hona chahiye temple fir dekhta kitne jasta hai hai shaam on you aage jaane ke liye kisi Ko piche karna niche dikhana",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5423,
+      "scores": {
+        "negative": 0.542320315388532,
+        "neutral": 0.2663582019285191,
+        "positive": 0.19132148268294888
+      },
+      "text_length": 238,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0304310",
+      "text": "Ye Nepali song h",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.6909,
+      "scores": {
+        "negative": 0.1105094720226636,
+        "neutral": 0.19860774614710175,
+        "positive": 0.6908827818302347
+      },
+      "text_length": 16,
+      "slice_tags": [
+        "code_switching",
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0155455",
+      "text": "Nepal ak aisi country hai jo Buddhist hoke bhi",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3529,
+      "scores": {
+        "negative": 0.31071141622953774,
+        "neutral": 0.3364064832924427,
+        "positive": 0.3528821004780196
+      },
+      "text_length": 46,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0303387",
+      "text": "Ke Chha Vai Haru",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6066,
+      "scores": {
+        "negative": 0.6065522302710684,
+        "neutral": 0.1712062777964737,
+        "positive": 0.22224149193245782
+      },
+      "text_length": 16,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0253535",
+      "text": "Muji dai Tihar sakina Layo",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5635,
+      "scores": {
+        "negative": 0.5634527012369157,
+        "neutral": 0.13388073089336502,
+        "positive": 0.30266656786971935
+      },
+      "text_length": 26,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0253496",
+      "text": "Model ko name nai xaina ta",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6611,
+      "scores": {
+        "negative": 0.6611012381368035,
+        "neutral": 0.25204129750659665,
+        "positive": 0.08685746435659977
+      },
+      "text_length": 26,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0185189",
+      "text": "Nepal tourist totally depends on indian",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.384,
+      "scores": {
+        "negative": 0.31784563060612886,
+        "neutral": 0.29817067318276474,
+        "positive": 0.3839836962111064
+      },
+      "text_length": 39,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0076144",
+      "text": "India vs America vs China brought change in Nepal over the years in the past.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4375,
+      "scores": {
+        "negative": 0.43752118156948294,
+        "neutral": 0.3826963720194008,
+        "positive": 0.17978244641111626
+      },
+      "text_length": 77,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0235382",
+      "text": "It's not nepalese it's nepali",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3642,
+      "scores": {
+        "negative": 0.3641814012910339,
+        "neutral": 0.3375077456724292,
+        "positive": 0.29831085303653687
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0219245",
+      "text": "Jhola tw aafno jhola ma luk aaba",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4819,
+      "scores": {
+        "negative": 0.48185531017398103,
+        "neutral": 0.40415620682814535,
+        "positive": 0.11398848299787355
+      },
+      "text_length": 32,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0294714",
+      "text": "90M pugisake xa tw",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4251,
+      "scores": {
+        "negative": 0.42512548346051104,
+        "neutral": 0.18096608903078637,
+        "positive": 0.3939084275087027
+      },
+      "text_length": 18,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0284932",
+      "text": "Because of miss Pani",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4847,
+      "scores": {
+        "negative": 0.39264763350903725,
+        "neutral": 0.1226042956451888,
+        "positive": 0.484748070845774
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0213411",
+      "text": "Hait Dherai Giu khanu hudaina Bro",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4425,
+      "scores": {
+        "negative": 0.2597819522492815,
+        "neutral": 0.29769026829841483,
+        "positive": 0.4425277794523036
+      },
+      "text_length": 33,
+      "slice_tags": [
+        "negation"
+      ]
+    },
+    {
+      "id": "nfr-0294730",
+      "text": "Aachal ko fan yata",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4843,
+      "scores": {
+        "negative": 0.14007954476667955,
+        "neutral": 0.3756001853301508,
+        "positive": 0.4843202699031697
+      },
+      "text_length": 18,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0041459",
+      "text": "tbh I don't think nepal as more bhudism country it's more Hindu religion but I can say bhuda was BORN IN nepal",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4153,
+      "scores": {
+        "negative": 0.4153054767338961,
+        "neutral": 0.34118638659616196,
+        "positive": 0.24350813666994203
+      },
+      "text_length": 110,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0052440",
+      "text": "It will be hard form me *Sigma noises* the man: Oh you don't want to get wet I will make you wet",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5345,
+      "scores": {
+        "negative": 0.36549523481025825,
+        "neutral": 0.10004144463989256,
+        "positive": 0.5344633205498492
+      },
+      "text_length": 96,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177935",
+      "text": "thats the h&k mp7 gun for those wondering",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4202,
+      "scores": {
+        "negative": 0.3659166844353998,
+        "neutral": 0.21391104190319654,
+        "positive": 0.42017227366140353
+      },
+      "text_length": 41,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0030409",
+      "text": "H bccha ur ch i thulo bt tr t hu highway tr gf tu toh february bhul vr trf se frnd ko try ga gt hefty gt bbye gn tc sd tc schl yr",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4664,
+      "scores": {
+        "negative": 0.4664096011653089,
+        "neutral": 0.33142370239312285,
+        "positive": 0.20216669644156826
+      },
+      "text_length": 129,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0128851",
+      "text": "dherai jaso suni Rahanxu yo geetma purano Yaad haru xa",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4803,
+      "scores": {
+        "negative": 0.4803284300328485,
+        "neutral": 0.0935702972754259,
+        "positive": 0.42610127269172554
+      },
+      "text_length": 54,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0273725",
+      "text": "Aata pani hajar humnao",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3649,
+      "scores": {
+        "negative": 0.3648815749221167,
+        "neutral": 0.3307990117157235,
+        "positive": 0.3043194133621598
+      },
+      "text_length": 22,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0092071",
+      "text": "Dude, It's just a speech to elect the president of the school class.",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4451,
+      "scores": {
+        "negative": 0.40987491502638407,
+        "neutral": 0.14498899721902767,
+        "positive": 0.4451360877545884
+      },
+      "text_length": 68,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0221142",
+      "text": "Tourist na pugya vayara safa xa.",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3863,
+      "scores": {
+        "negative": 0.31909302483385593,
+        "neutral": 0.2946150170060513,
+        "positive": 0.3862919581600927
+      },
+      "text_length": 32,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0304110",
+      "text": "To mat aho Nepal",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5788,
+      "scores": {
+        "negative": 0.22555985496726194,
+        "neutral": 0.19566529801667837,
+        "positive": 0.5787748470160597
+      },
+      "text_length": 16,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0193193",
+      "text": "Gen z ko darlle vageyo xa kto amerika",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3953,
+      "scores": {
+        "negative": 0.39534336625800376,
+        "neutral": 0.3252866810820124,
+        "positive": 0.2793699526599838
+      },
+      "text_length": 37,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0064415",
+      "text": "Bro don’t forgot you are muslim this all foods are haram so be aware from this things",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4481,
+      "scores": {
+        "negative": 0.4153644327471648,
+        "neutral": 0.13652313788398604,
+        "positive": 0.4481124293688491
+      },
+      "text_length": 85,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0034488",
+      "text": "Modifications 6th and the first place in a few days to nepali and the first place in a long way coad the first place in a",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4951,
+      "scores": {
+        "negative": 0.23971198192494292,
+        "neutral": 0.26514961192231423,
+        "positive": 0.49513840615274285
+      },
+      "text_length": 121,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0243322",
+      "text": "Thos 30 seconds of sujan dai",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4923,
+      "scores": {
+        "negative": 0.17025752512631545,
+        "neutral": 0.3374861648056217,
+        "positive": 0.49225631006806286
+      },
+      "text_length": 28,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0156184",
+      "text": "There are at least 30 kinds of momos in nepal.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4802,
+      "scores": {
+        "negative": 0.4801718570182998,
+        "neutral": 0.27923730599563196,
+        "positive": 0.24059083698606834
+      },
+      "text_length": 46,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0139252",
+      "text": "Babal wear ko advertisement garya jasto lagyo broo",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4756,
+      "scores": {
+        "negative": 0.4755991181434311,
+        "neutral": 0.15457756828330782,
+        "positive": 0.36982331357326104
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0206155",
+      "text": "bro said are u the boss of the shop",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4747,
+      "scores": {
+        "negative": 0.4747409229854714,
+        "neutral": 0.16990406376080022,
+        "positive": 0.35535501325372837
+      },
+      "text_length": 35,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0288330",
+      "text": "The st man lyrics is",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5539,
+      "scores": {
+        "negative": 0.2959945414704928,
+        "neutral": 0.1501497267287961,
+        "positive": 0.553855731800711
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0212315",
+      "text": "BRO LITERALLY TOLD YOU THE ANSWER",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3871,
+      "scores": {
+        "negative": 0.29688291757880225,
+        "neutral": 0.3160658459153841,
+        "positive": 0.3870512365058137
+      },
+      "text_length": 33,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0232139",
+      "text": "Vten dai ko chrcha pari chrcha",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.6173,
+      "scores": {
+        "negative": 0.09892790935183093,
+        "neutral": 0.2837843128012746,
+        "positive": 0.6172877778468945
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177630",
+      "text": "dhoor ke dhol suhane lagte he esa hi kuch",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5312,
+      "scores": {
+        "negative": 0.5312093587855755,
+        "neutral": 0.3122715773109178,
+        "positive": 0.1565190639035066
+      },
+      "text_length": 41,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0284409",
+      "text": "1:36 E pani hunxa ra",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4585,
+      "scores": {
+        "negative": 0.4584683874792098,
+        "neutral": 0.33388873137847896,
+        "positive": 0.2076428811423112
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0068985",
+      "text": "Pork ko masu khanu huntyo hoina ra samita Didi ley pork momo ta khanu vayo ta aani",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4762,
+      "scores": {
+        "negative": 0.4761719912631248,
+        "neutral": 0.4327343845556046,
+        "positive": 0.09109362418127051
+      },
+      "text_length": 82,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0165455",
+      "text": "Aba YouTube channel sell garne idia ne aayo",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3772,
+      "scores": {
+        "negative": 0.3772426979708681,
+        "neutral": 0.3751674794347986,
+        "positive": 0.24758982259433315
+      },
+      "text_length": 43,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0233572",
+      "text": "Acha ya sale pani chaldai cha",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4404,
+      "scores": {
+        "negative": 0.287034312967445,
+        "neutral": 0.2725683634422033,
+        "positive": 0.44039732359035166
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0085332",
+      "text": "VOICE VOICE VOICE MUSIC OF NEPALI SINGER SINGER NAME PLZZZ TIMI SAMU ...",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5591,
+      "scores": {
+        "negative": 0.23586983652181975,
+        "neutral": 0.20506819004752852,
+        "positive": 0.5590619734306517
+      },
+      "text_length": 72,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0135161",
+      "text": "bhai itna aaye the to gorakhpur bhi aaa he gaye hote",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3846,
+      "scores": {
+        "negative": 0.299904517121491,
+        "neutral": 0.31548621458441045,
+        "positive": 0.3846092682940985
+      },
+      "text_length": 52,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0202857",
+      "text": "Dona le rato Tika lagdaina thiyo ta",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5888,
+      "scores": {
+        "negative": 0.5887593197925409,
+        "neutral": 0.2556352373562147,
+        "positive": 0.15560544285124442
+      },
+      "text_length": 35,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0160502",
+      "text": "Yo manchey ta rati ni sutdaina jastyo lagyooo",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6061,
+      "scores": {
+        "negative": 0.6060985272499505,
+        "neutral": 0.28689302528044,
+        "positive": 0.10700844746960948
+      },
+      "text_length": 45,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0228834",
+      "text": "Bro's just rizzing up the girl",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3779,
+      "scores": {
+        "negative": 0.37794187284477704,
+        "neutral": 0.3314159193813559,
+        "positive": 0.290642207773867
+      },
+      "text_length": 30,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0288327",
+      "text": "The old man tried XD",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5846,
+      "scores": {
+        "negative": 0.24828982845368536,
+        "neutral": 0.16714105138687005,
+        "positive": 0.5845691201594446
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0169470",
+      "text": "*_KATI LAGXA PAISA YO 3TAI LAI KINDA HUH_*",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6537,
+      "scores": {
+        "negative": 0.6537499259039812,
+        "neutral": 0.2024005221900626,
+        "positive": 0.14384955190595608
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0255725",
+      "text": "lau khai ta Ra PRa Paa ???",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4829,
+      "scores": {
+        "negative": 0.48293185181914655,
+        "neutral": 0.3628748412272956,
+        "positive": 0.15419330695355773
+      },
+      "text_length": 26,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0242647",
+      "text": "Phere arko teeth jar cha hai",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5921,
+      "scores": {
+        "negative": 0.12933416555398747,
+        "neutral": 0.2785465594124235,
+        "positive": 0.5921192750335891
+      },
+      "text_length": 28,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0307971",
+      "text": "St man , ..",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5415,
+      "scores": {
+        "negative": 0.27157067177957706,
+        "neutral": 0.18694209508884063,
+        "positive": 0.5414872331315823
+      },
+      "text_length": 11,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0200090",
+      "text": "She is a mixture of Nepali and white",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.434,
+      "scores": {
+        "negative": 0.19861447912473335,
+        "neutral": 0.367372261011384,
+        "positive": 0.4340132598638828
+      },
+      "text_length": 36,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0184139",
+      "text": "I go to and live in nepal go to pokhara",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4885,
+      "scores": {
+        "negative": 0.14282744450341955,
+        "neutral": 0.3686393816847605,
+        "positive": 0.4885331738118198
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0246531",
+      "text": "Hijo episode 7 aayena ta ni",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5657,
+      "scores": {
+        "negative": 0.5656571090256399,
+        "neutral": 0.2909359387495959,
+        "positive": 0.1434069522247643
+      },
+      "text_length": 27,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0243175",
+      "text": "Tes type ko mind va ko manxe",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4791,
+      "scores": {
+        "negative": 0.479057564590728,
+        "neutral": 0.3518827775506263,
+        "positive": 0.16905965785864557
+      },
+      "text_length": 28,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0149293",
+      "text": "music ali loud vayo vocal heri ..ntra thikai cha",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4875,
+      "scores": {
+        "negative": 0.487527798449311,
+        "neutral": 0.1068042330456892,
+        "positive": 0.40566796850499987
+      },
+      "text_length": 48,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0017741",
+      "text": "for those wondering it’s typical to not use your left hand to do things like eat and shake people’s hand’s in Nepal because it is the hand which you use to wipe your ass",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3824,
+      "scores": {
+        "negative": 0.29722164944470186,
+        "neutral": 0.3203382031684565,
+        "positive": 0.3824401473868416
+      },
+      "text_length": 169,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0113520",
+      "text": "Malai makai godne & dang lagaune mecine chayeko cha, no pls",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4434,
+      "scores": {
+        "negative": 0.27313011548235533,
+        "neutral": 0.2834734973958538,
+        "positive": 0.4433963871217909
+      },
+      "text_length": 59,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0271534",
+      "text": "Parxa kasai lai life ma",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3981,
+      "scores": {
+        "negative": 0.3980571315741356,
+        "neutral": 0.32311022016362906,
+        "positive": 0.2788326482622353
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0185218",
+      "text": "Nepali maithali mager limbu and bojpuri",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4848,
+      "scores": {
+        "negative": 0.09427859250151437,
+        "neutral": 0.4209263979660057,
+        "positive": 0.48479500953248
+      },
+      "text_length": 39,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0170536",
+      "text": "Every nepali adult and youths are gorkhali",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5453,
+      "scores": {
+        "negative": 0.21736265199514482,
+        "neutral": 0.2373124977260835,
+        "positive": 0.5453248502787716
+      },
+      "text_length": 42,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0031805",
+      "text": "Guess minee... Asia Tiger Pani Puriii Bharatnatyam White, orange, green, blue The 3rd one literally gives it up...Gud luckk...",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3879,
+      "scores": {
+        "negative": 0.2662479305321897,
+        "neutral": 0.34588367933022807,
+        "positive": 0.3878683901375822
+      },
+      "text_length": 126,
+      "slice_tags": [
+        "spelling_variation"
+      ]
+    },
+    {
+      "id": "nfr-0134819",
+      "text": "Vten ko fan jatti sap yeta hai keta ho naya song ayo",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.579,
+      "scores": {
+        "negative": 0.13685220496848394,
+        "neutral": 0.2841269140089497,
+        "positive": 0.5790208810225664
+      },
+      "text_length": 52,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0226206",
+      "text": "Samrat bro le po lagdiyo ta mta",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4765,
+      "scores": {
+        "negative": 0.47653789564303345,
+        "neutral": 0.3169196481958328,
+        "positive": 0.20654245616113373
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0089875",
+      "text": "Breastfeeding garne Nani ko ama le tyasto khursani khanu hunna ni....",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5191,
+      "scores": {
+        "negative": 0.519101835432352,
+        "neutral": 0.34179378401322164,
+        "positive": 0.13910438055442642
+      },
+      "text_length": 69,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0271169",
+      "text": "Nepal is the indias dad",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4892,
+      "scores": {
+        "negative": 0.13750933606164353,
+        "neutral": 0.3733250702539157,
+        "positive": 0.48916559368444085
+      },
+      "text_length": 23,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0112718",
+      "text": "Comedian le rap hanyo vanni le 20m plus views dekhyo ki noi",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4941,
+      "scores": {
+        "negative": 0.4941001071331096,
+        "neutral": 0.35125234046111864,
+        "positive": 0.1546475524057718
+      },
+      "text_length": 59,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0295318",
+      "text": "Bro trying to rizz",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4179,
+      "scores": {
+        "negative": 0.29448011395717805,
+        "neutral": 0.28765028123285175,
+        "positive": 0.4178696048099703
+      },
+      "text_length": 18,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0193992",
+      "text": "Ko ko lai yo geet man paryo hajir vau",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4503,
+      "scores": {
+        "negative": 0.18927878480569751,
+        "neutral": 0.3604430103908382,
+        "positive": 0.45027820480346425
+      },
+      "text_length": 37,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0149690",
+      "text": "Aaisakyo hai ferri hamro veten daju ko new song",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5198,
+      "scores": {
+        "negative": 0.09187536613477357,
+        "neutral": 0.38829189062642233,
+        "positive": 0.519832743238804
+      },
+      "text_length": 47,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0011857",
+      "text": "Hi didi 6 Mero bds ma cms ma paying ma name niskeko xa. Bds padhna mec le suruko barsa 1/3rd bujaune bhaneko xa tara tetakata kura haru sunda cms le 6 month vitraw 20 lakh nai linxa bhaneko xa, horw didi?",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4042,
+      "scores": {
+        "negative": 0.40421976522304015,
+        "neutral": 0.2969979534833814,
+        "positive": 0.29878228129357837
+      },
+      "text_length": 204,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0276442",
+      "text": "May pani tiyasti banxu",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3804,
+      "scores": {
+        "negative": 0.3803519244897722,
+        "neutral": 0.35748924342447713,
+        "positive": 0.2621588320857508
+      },
+      "text_length": 22,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0175418",
+      "text": "Kaha ho yo maikhola ho ki. Jasto lagyo tw",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5331,
+      "scores": {
+        "negative": 0.5331144370786222,
+        "neutral": 0.3846035240729381,
+        "positive": 0.08228203884843975
+      },
+      "text_length": 41,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0180702",
+      "text": "Oh 'momo' hota hai.... if you don't know",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5464,
+      "scores": {
+        "negative": 0.5463894027838873,
+        "neutral": 0.28848680874728677,
+        "positive": 0.165123788468826
+      },
+      "text_length": 40,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0138981",
+      "text": "2080ma sabai vanda vadi herni chai ma nai yo vedio",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.405,
+      "scores": {
+        "negative": 0.4049827232767863,
+        "neutral": 0.31503392550509235,
+        "positive": 0.27998335121812146
+      },
+      "text_length": 50,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0288318",
+      "text": "That’s vten ko sound",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3899,
+      "scores": {
+        "negative": 0.38986196104427545,
+        "neutral": 0.3625943303044162,
+        "positive": 0.24754370865130826
+      },
+      "text_length": 20,
+      "slice_tags": [
+        "code_switching",
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0233283",
+      "text": "1:24 NEPAL song dam in tongue",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5766,
+      "scores": {
+        "negative": 0.12335061576233164,
+        "neutral": 0.30000379853297976,
+        "positive": 0.5766455857046886
+      },
+      "text_length": 29,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0173739",
+      "text": "2025 may tara aajhe yaad haru. College ko",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5942,
+      "scores": {
+        "negative": 0.5941601606015795,
+        "neutral": 0.26033195887126204,
+        "positive": 0.14550788052715846
+      },
+      "text_length": 41,
+      "slice_tags": [
+        "code_switching",
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0247877",
+      "text": "Mero song ni sundeu na haii",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4608,
+      "scores": {
+        "negative": 0.1945175937473042,
+        "neutral": 0.34465588454315793,
+        "positive": 0.4608265217095379
+      },
+      "text_length": 27,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0300098",
+      "text": "K ho hairdo vneko",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4631,
+      "scores": {
+        "negative": 0.4630953777318897,
+        "neutral": 0.4039542136373908,
+        "positive": 0.13295040863071955
+      },
+      "text_length": 17,
+      "slice_tags": [
+        "short_text"
+      ]
+    },
+    {
+      "id": "nfr-0004517",
+      "text": "Hindi is not an official language of Nepal, as Nepal has more than 120+ indigenous languages. But some Nepali people may understand Hindi because Bollywood is popular around the world. It has to do with widespread media, but it is not because of culture. Not every Nepali person can speak Hindi nor are we required to.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5693,
+      "scores": {
+        "negative": 0.5692964202098234,
+        "neutral": 0.20329967115897474,
+        "positive": 0.2274039086312018
+      },
+      "text_length": 318,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0199474",
+      "text": "Nepal girls is always Nepal girls ok",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5111,
+      "scores": {
+        "negative": 0.15578593327239112,
+        "neutral": 0.3331264780948717,
+        "positive": 0.5110875886327371
+      },
+      "text_length": 36,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0248364",
+      "text": "Oh hoojur oh sahb g cha gye",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4635,
+      "scores": {
+        "negative": 0.385175768816545,
+        "neutral": 0.15127660275670965,
+        "positive": 0.46354762842674535
+      },
+      "text_length": 27,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0245530",
+      "text": "Bro about to raise his arm.",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.465,
+      "scores": {
+        "negative": 0.4649544317979094,
+        "neutral": 0.328049157879029,
+        "positive": 0.2069964103230616
+      },
+      "text_length": 27,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0237405",
+      "text": "Stadium ko chain k xa halat??",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3944,
+      "scores": {
+        "negative": 0.3944245786209406,
+        "neutral": 0.24757545315712565,
+        "positive": 0.3579999682219338
+      },
+      "text_length": 29,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0177382",
+      "text": "Yo geet sunne bitakai Ghar ko yaad aaunxa",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.3795,
+      "scores": {
+        "negative": 0.37945749118937266,
+        "neutral": 0.291758516571456,
+        "positive": 0.32878399223917143
+      },
+      "text_length": 41,
+      "slice_tags": [
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0215878",
+      "text": "Tyo topi ke laki hola baba achama",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5701,
+      "scores": {
+        "negative": 0.5701450707323236,
+        "neutral": 0.3407498090459525,
+        "positive": 0.08910512022172384
+      },
+      "text_length": 33,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0187814",
+      "text": "Bijay shahi memory king Lai lyaunu aba",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4005,
+      "scores": {
+        "negative": 0.400507469397277,
+        "neutral": 0.2745401232955215,
+        "positive": 0.32495240730720154
+      },
+      "text_length": 38,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0130707",
+      "text": "Laa darchula lai tw country nai banaidiyo kta le 4:00",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.6611,
+      "scores": {
+        "negative": 0.6610670479525739,
+        "neutral": 0.16756381802350115,
+        "positive": 0.17136913402392498
+      },
+      "text_length": 53,
+      "slice_tags": [
+        "special_tokens"
+      ]
+    },
+    {
+      "id": "nfr-0209734",
+      "text": "Nepali polities. Wwe wrestlemania.",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5469,
+      "scores": {
+        "negative": 0.10314480117803869,
+        "neutral": 0.3499789398235642,
+        "positive": 0.5468762589983971
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0094248",
+      "text": "Hami is Jojo always calling me SMS our loving ().(()) I’m (our Jojo",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.5071,
+      "scores": {
+        "negative": 0.1928161597940116,
+        "neutral": 0.30008609470897374,
+        "positive": 0.5070977454970146
+      },
+      "text_length": 67,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0144625",
+      "text": "Purano din haru ko yaad ayo kantipur FM ma sunthe",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5547,
+      "scores": {
+        "negative": 0.5546978602793722,
+        "neutral": 0.2713666935517299,
+        "positive": 0.17393544616889792
+      },
+      "text_length": 49,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0147359",
+      "text": "K jasto vayo pani lil jhola honii yrr sathi haru",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.8268,
+      "scores": {
+        "negative": 0.8268089659370573,
+        "neutral": 0.0726168194853027,
+        "positive": 0.10057421457763999
+      },
+      "text_length": 48,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0025367",
+      "text": "your video , tera maan haina mera maan ho song sano fuche ko lagalu jab tu lipstick hilela sara district dance , dungri khako dekhayenau ta ??",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.4265,
+      "scores": {
+        "negative": 0.3427230591147444,
+        "neutral": 0.23075013899219338,
+        "positive": 0.4265268018930622
+      },
+      "text_length": 142,
+      "slice_tags": [
+        "negation",
+        "code_switching"
+      ]
+    },
+    {
+      "id": "nfr-0209328",
+      "text": "Mamaghar ko yaad aauxa malaii tahh",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4239,
+      "scores": {
+        "negative": 0.423875430218309,
+        "neutral": 0.3496710877997273,
+        "positive": 0.22645348198196377
+      },
+      "text_length": 34,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0181489",
+      "text": "Video ley ni abhisekh lai khojako xa hai",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.4489,
+      "scores": {
+        "negative": 0.4488735074675397,
+        "neutral": 0.14999207048901397,
+        "positive": 0.40113442204344635
+      },
+      "text_length": 40,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0227295",
+      "text": "bro s trying to date the waiter",
+      "gold_label": "neutral",
+      "predicted_label": "positive",
+      "confidence": 0.3666,
+      "scores": {
+        "negative": 0.3355226653876378,
+        "neutral": 0.2979141637880686,
+        "positive": 0.36656317082429357
+      },
+      "text_length": 31,
+      "slice_tags": []
+    },
+    {
+      "id": "nfr-0173836",
+      "text": "Aaba k e nachalesi garne yeai ho gari kha",
+      "gold_label": "neutral",
+      "predicted_label": "negative",
+      "confidence": 0.5521,
+      "scores": {
+        "negative": 0.552066556924642,
+        "neutral": 0.36633338822898076,
+        "positive": 0.0816000548463771
+      },
+      "text_length": 41,
+      "slice_tags": []
+    }
+  ]
+}
